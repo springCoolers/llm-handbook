@@ -3,16 +3,45 @@
 
 format: jb-book
 root: _contents/intro
-chapters:
+parts:
+- caption: LLM Engineering 실전
+  chapters:
+  - file: _contents/llm-engineering/2. Vector DB/intro
+    sections:
+    - glob: _contents/llm-engineering/2. Vector DB/sections/**
 
-- file: _contents/llm-engineering/intro
-  sections:
-  - glob: _contents/llm-engineering/sections/**
+  - file: _contents/llm-engineering/3. RAG/intro
+    sections: 
+    - glob: _contents/llm-engineering/3. RAG/sections/**
 
-- file: _contents/embedding-and-model-combining/intro
-  sections:
-  - glob: _contents/embedding-and-model-combining/sections/**
+  - file: _contents/llm-engineering/4. Agents and Tools/intro
+    sections:
+    - glob: _contents/llm-engineering/4. Agents and Tools/sections/**
 
-- file: _contents/finetuning-for-llms/intro
-  sections:
-  - glob: _contents/finetuning-for-llms/sections/**
+  - file: _contents/llm-engineering/5. Inference Optimzation/intro
+    sections:
+    - glob: _contents/llm-engineering/5. Inference Optimzation/sections/**
+
+  - file: _contents/llm-engineering/6. Deployment/intro
+    sections:
+    - glob: _contents/llm-engineering/6. Deployment/sections/**
+
+  - file: _contents/llm-engineering/7. Security - Hacking & Guardrails/intro
+    sections:
+    - glob: _contents/llm-engineering/7. Security - Hacking & Guardrails/sections/**
+
+  - file: _contents/llm-engineering/9. Advanced Prompt Engineering/intro
+    sections:
+    - glob: _contents/llm-engineering/9. Advanced Prompt Engineering/sections/**
+
+- caption: Embedding & Model Combining 
+  chapters:
+  - file: _contents/embedding-and-model-combining/intro
+    sections:
+    - glob: _contents/embedding-and-model-combining/sections/**
+
+- caption: Finetuning Methods for LLMs
+  chapters:
+  - file: _contents/finetuning-for-llms/intro
+    sections:
+    - glob: _contents/finetuning-for-llms/sections/**
