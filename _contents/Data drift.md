@@ -1,0 +1,1 @@
+Co-author Hamel Husain illustrates the importance of these skills in his recent work around detecting [data drift](https://github.com/hamelsmu/ft-drift) and [designing domain-specific evals](https://hamel.dev/blog/posts/evals/).

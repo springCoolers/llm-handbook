@@ -1,1 +1,4 @@
 _build
+
+# Ignore the .obsidian directory
+_contents/.obsidian/
