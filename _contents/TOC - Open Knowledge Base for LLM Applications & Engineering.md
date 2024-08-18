@@ -5,7 +5,7 @@
 ### proprietary APIs
 - **LLM APIs**: APIs are a convenient way to deploy LLMs. This space is divided between private LLMs ([OpenAI](https://platform.openai.com/), [Google](https://cloud.google.com/vertex-ai/docs/generative-ai/learn/overview), [Anthropic](https://docs.anthropic.com/claude/reference/getting-started-with-the-api), [Cohere](https://docs.cohere.com/docs), etc.) and open-source LLMs ([OpenRouter](https://openrouter.ai/), [Hugging Face](https://huggingface.co/inference-api), [Together AI](https://www.together.ai/), etc.) 
 
-### prompt engineering
+### prompt engineering (playground)
 - Few-Shot Examples
 - Chain-of-Thought
 - Retrieval-Augmented Generation (RAG)
