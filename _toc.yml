@@ -9,6 +9,7 @@ parts:
   - file: _contents/llm-engineering/1. API + Prompt Engineering
     sections:
     - glob: _contents/llm-engineering/1. API + Prompt Engineering/sections/**
+
   - file: _contents/llm-engineering/2. Vector DB/intro
     sections:
     - glob: _contents/llm-engineering/2. Vector DB/sections/**
