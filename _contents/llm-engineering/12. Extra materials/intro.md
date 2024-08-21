@@ -1,3 +1,5 @@
+# Extra materials - from GenAI 핸드북
+
 ## Chapter 31: LLMs for Synthetic Data
 
 An increasing number of applications are making use of LLM-generated data for training or evaluations, including distillation, dataset augmentation, AI-assisted evaluation and labeling, self-critique, and more. This [post](https://www.promptingguide.ai/applications/synthetic_rag) demonstrates how to construct such a synthetic dataset (in a RAG context), and this [post](https://argilla.io/blog/mantisnlp-rlhf-part-4/) from Argilla gives an overview of RLAIF, which is often a popular alternative to RLHF, given the challenges associated with gathering pairwise human preference data. AI-assisted feedback is also a central component of the “Constitutional AI” alignment method pioneered by Anthropic (see their [blog](https://www.anthropic.com/news/claudes-constitution) for an overview).
