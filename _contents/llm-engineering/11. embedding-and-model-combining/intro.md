@@ -1,4 +1,6 @@
-# Embedding & Model Combining 
+#intro
+
+## Embedding & Model Combining 
 
 ```{tableofcontents}
 ```
