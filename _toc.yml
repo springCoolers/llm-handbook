@@ -49,11 +49,3 @@ parts:
   - file: _contents/llm-engineering/12. Extra materials/intro
     sections:
     - glob: _contents/llm-engineering/12. Extra materials/sections/**
-
-- caption: 시즌 프로젝트
-  chapters:
-  - file: _contents/season_projects/season_4/readme.md
-    sections:
-    - glob: _contentsseason_projects/season_4/sections/**
-
-
