@@ -1,4 +1,4 @@
-# Finetuning Methods for LLMs
+# 10. Finetuning Methods for LLMs
 
 ```{tableofcontents}
 ```
