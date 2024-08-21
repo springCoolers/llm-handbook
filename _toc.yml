@@ -6,6 +6,9 @@ root: _contents/intro
 parts:
 - caption: LLM Engineering 실전
   chapters:
+  - file: _contents/llm-engineering/1. API + Prompt Engineering
+    sections:
+    - glob: _contents/llm-engineering/1. API + Prompt Engineering/sections/**
   - file: _contents/llm-engineering/2. Vector DB/intro
     sections:
     - glob: _contents/llm-engineering/2. Vector DB/sections/**
@@ -33,6 +36,18 @@ parts:
   - file: _contents/llm-engineering/9. Advanced Prompt Engineering/intro
     sections:
     - glob: _contents/llm-engineering/9. Advanced Prompt Engineering/sections/**
+
+  - file: _contents/llm-engineering/10. finetuning-for-llms/intro
+    sections:
+    - glob: _contents/llm-engineering/10. finetuning-for-llms/sections/**
+
+  - file: _contents/llm-engineering/11. embedding-and-model-combined/intro
+    sections:
+    - glob: _contents/llm-engineering/11. embedding-and-model-combined/sections/**
+
+  - file: _contents/llm-engineering/12. Extra materials/intro
+    sections:
+    - glob: _contents/llm-engineering/12. Extra materials/sections/**
 
 - caption: Embedding & Model Combining 
   chapters:
