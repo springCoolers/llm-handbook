@@ -50,14 +50,4 @@ parts:
     sections:
     - glob: _contents/llm-engineering/12. Extra materials/sections/**
 
-- caption: Embedding & Model Combining 
-  chapters:
-  - file: _contents/embedding-and-model-combining/intro
-    sections:
-    - glob: _contents/embedding-and-model-combining/sections/**
 
-- caption: Finetuning Methods for LLMs
-  chapters:
-  - file: _contents/finetuning-for-llms/intro
-    sections:
-    - glob: _contents/finetuning-for-llms/sections/**
