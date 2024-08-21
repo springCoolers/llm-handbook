@@ -1,4 +1,4 @@
-# 011-fintuning
+# finetuning
 
 작성 예정
 
