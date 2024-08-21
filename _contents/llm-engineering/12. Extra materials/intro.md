@@ -1,4 +1,4 @@
-# Extra materials - from GenAI 핸드북
+# 12. Extra materials - from GenAI 핸드북
 
 ## Chapter 31: LLMs for Synthetic Data
 
