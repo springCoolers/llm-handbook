@@ -1,4 +1,4 @@
-# 11. Embedding & Model Combining 
+# 11. Embedding & Ensembles
 
 ```{tableofcontents}
 ```
