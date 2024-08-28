@@ -32,7 +32,7 @@ html:
   use_repository_button: true
   comments:
     utterances:
-      repo: "springcoolers/llm-handbook"
+      repo: github-org/github-repo
 
 
 
