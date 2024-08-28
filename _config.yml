@@ -36,17 +36,3 @@ html:
 
 
 
-
-sphinx:
-  config:
-    mathjax_path: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
-
-    mathjax_config:
-      loader: 
-        load: ['[tex]/mathtools'] 
-      tex: 
-        packages: {'[+]': ['mathtools']}
-        macros: {
-          "bold": ["\\mathbf{#1}", 1],
-          "R": "\\mathbb R"
-        }
