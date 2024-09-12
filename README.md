@@ -19,3 +19,6 @@ docker run --rm -ti \
 ```
 
 빌드된 HTML 페이지는 [`./_build/html/index.html`](./_build/html/index.html)을 통해 확인할 수 있습니다. 
+
+> [!NOTE] 
+> 로컬에서 빌드된 페이지에서는 댓글을 확인할 수 없습니다.
