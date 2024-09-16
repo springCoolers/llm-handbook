@@ -1,4 +1,4 @@
-# Vector DB
+# Template example
 (템플릿 예시)
 작성자 : 이경찬
 작성일 : Sep. 2024
@@ -30,6 +30,7 @@ Embedding Model의 특징은 다음과 같습니다.
 Word2Vec:
 
 Word2Vec은 개별 단어를 고정된 크기의 벡터로 변환하는 모델입니다. 이 모델은 단어의 의미적 유사성을 반영하여, 비슷한 의미를 가진 단어들을 벡터 공간에서 가깝게 배치합니다.
+
 GloVe:
 
 GloVe는 Word2Vec과 유사하지만, 단어의 동시 등장 행렬(co-occurrence matrix)을 사용하여 단어 간 관계를 학습하는 모델입니다.
@@ -49,7 +50,6 @@ Sentence-BERT (SBERT):
 
 OpenAI는 3세대 임베딩 모델을 제공합니다. 보통 모델 ID에 '-3'을 붙여 나타냅니다. 인풋 토큰당 가격은 아래 와 같습니다.
 
-![img.png](img.png)
-
+![img.png](../../assets/Template example/openai_embedding_models.png)
 
 ## References
