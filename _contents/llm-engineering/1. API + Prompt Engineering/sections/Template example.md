@@ -50,6 +50,10 @@ Sentence-BERT (SBERT):
 
 OpenAI는 3세대 임베딩 모델을 제공합니다. 보통 모델 ID에 '-3'을 붙여 나타냅니다. 인풋 토큰당 가격은 아래 와 같습니다.
 
-![](_contents/assets/Template example/openai_embedding_models.png)
+![Untitled](_contents/assets/Template example/openai_embedding_models.png)
+
+![Untitled](../../../../assets/Template example/openai_embedding_models.png)
+
+![Untitled](https://github.com/springcoolers/llm-handbook/blob/main/_contents/assets/Template%20example/openai_embedding_models.png?raw=true)
 
 ## References
