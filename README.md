@@ -22,3 +22,16 @@ docker run --rm -ti \
 
 > [!NOTE] 
 > 로컬에서 빌드된 페이지에서는 댓글을 확인할 수 없습니다.
+
+
+## jupyber-book build . 사용하기
+
+1. 라이브러리 설치
+```
+pip install -r requirements.txt
+```
+
+2. 빌드
+```
+jupyber-book build .
+```

@@ -1,21 +1,25 @@
 # Template example
 (템플릿 예시)
-작성자 : 이경찬
-작성일 : Sep. 2024
+
+<div style="text-align: right"> 작성자 : 이경찬</div>
+
+<div style="text-align: right"> 작성일 : Sep. 2024</div>
 
 ## TL;DR
 Embedding model은 자연어 처리(NLP)와 같은 작업에서 단어, 문장, 또는 문서를 고정된 크기의 벡터 공간으로 변환하는 모델입니다. 이 벡터 표현은 컴퓨터가 텍스트 데이터를 수치적으로 이해하고 처리할 수 있도록 하는 핵심적인 역할을 합니다.
 
 ## Introduction
-**LLM(Large Language Model)**에서 Embedding model은 텍스트 데이터를 벡터로 변환하는 중요한 역할을 합니다. LLM은 매우 큰 언어 모델을 의미하며, 텍스트 데이터를 효과적으로 처리하고 문맥을 이해하기 위해서는 자연어 텍스트를 수치적 표현(벡터)으로 바꾸는 과정이 필요합니다. 이때 Embedding model이 사용됩니다.
+LLM(Large Language Model)에서 Embedding model은 텍스트 데이터를 벡터로 변환하는 중요한 역할을 합니다. LLM은 매우 큰 언어 모델을 의미하며, 텍스트 데이터를 효과적으로 처리하고 문맥을 이해하기 위해서는 자연어 텍스트를 수치적 표현(벡터)으로 바꾸는 과정이 필요합니다. 이때 Embedding model이 사용됩니다.
 
 ## Embedding의 목적
-텍스트를 벡터로 변환하면 각 단어 또는 문장이 일정한 차원을 가지는 실수형 벡터로 표현됩니다. 이렇게 변환된 벡터는 텍스트 간의 유사성을 비교하거나 머신러닝 모델의 입력으로 사용될 수 있습니다.
+__텍스트를__ 벡터로 변환하면 각 단어 또는 문장이 일정한 차원을 가지는 실수형 벡터로 표현됩니다. 이렇게 변환된 벡터는 텍스트 간의 유사성을 비교하거나 머신러닝 모델의 입력으로 사용될 수 있습니다.
 
 예를 들어, 다음 두 문장이 있을 때:
 
 "고양이는 귀엽다"
+
 "강아지는 귀엽다"
+
 Embedding model은 두 문장의 의미적 유사성을 반영하여 이 문장들을 서로 가까운 벡터로 변환하게 됩니다. 반면에 "자동차가 빠르다"와 같은 문장은 이들과 멀리 떨어진 벡터로 변환됩니다. 이를 통해 모델은 문장 간의 의미적 관계를 벡터 공간에서 학습할 수 있습니다.
 
 Embedding Model의 특징은 다음과 같습니다.
@@ -27,13 +31,10 @@ Embedding Model의 특징은 다음과 같습니다.
 고차원 공간: Embedding 벡터는 고차원 공간에서 문맥적 정보, 의미적 정보를 포함합니다. 이 벡터 공간에서 벡터 간의 거리 또는 방향을 이용해 단어 간 또는 문장 간의 관계를 표현할 수 있습니다.
 
 ## 대표적인 Embedding 모델
-Word2Vec:
 
-Word2Vec은 개별 단어를 고정된 크기의 벡터로 변환하는 모델입니다. 이 모델은 단어의 의미적 유사성을 반영하여, 비슷한 의미를 가진 단어들을 벡터 공간에서 가깝게 배치합니다.
+Word2Vec: Word2Vec은 개별 단어를 고정된 크기의 벡터로 변환하는 모델입니다. 이 모델은 단어의 의미적 유사성을 반영하여, 비슷한 의미를 가진 단어들을 벡터 공간에서 가깝게 배치합니다.
 
-GloVe:
-
-GloVe는 Word2Vec과 유사하지만, 단어의 동시 등장 행렬(co-occurrence matrix)을 사용하여 단어 간 관계를 학습하는 모델입니다.
+GloVe: GloVe는 Word2Vec과 유사하지만, 단어의 동시 등장 행렬(co-occurrence matrix)을 사용하여 단어 간 관계를 학습하는 모델입니다.
 BERT Embeddings:
 
 BERT는 문맥을 고려하여 단어를 벡터로 변환하는 모델입니다. 이전의 Embedding 모델과는 달리, BERT는 단어의 문맥적 의미를 반영한 벡터를 생성하므로, 동일한 단어라도 다른 문맥에서는 다른 벡터로 표현될 수 있습니다.
@@ -50,10 +51,20 @@ Sentence-BERT (SBERT):
 
 OpenAI는 3세대 임베딩 모델을 제공합니다. 보통 모델 ID에 '-3'을 붙여 나타냅니다. 인풋 토큰당 가격은 아래 와 같습니다.
 
-![Untitled](_contents/assets/Template example/openai_embedding_models.png)
+![Untitled](https://github.com/user-attachments/assets/6c945018-9cbf-46b3-aa2e-a39143996a2f)
 
-![Untitled](../../../../assets/Template example/openai_embedding_models.png)
-
-![Untitled](https://github.com/springcoolers/llm-handbook/blob/main/_contents/assets/Template%20example/openai_embedding_models.png?raw=true)
+```python
+# 1부터 5까지의 합을 계산하는 코드
+total = 0
+for i in range(1, 6):
+    total += i
+print("1부터 5까지의 합은:", total)
+```
 
 ## References
+
+| Title                                                                     | 설명                                            | 비고   |
+|-------------------------------------------------------------------------------------|-----------------------------------------------|------|
+| [(보충수업) 1.5. LLM에서 임베딩(embedding) 이란?](https://www.youtube.com/watch?v=A5IU1onjh4c) | 임베딩에 대한 기초 개념 설명해주는 5분짜리 영상                   |  |
+| [랭체인의 핵심, Retrieval-Text Embeddings](https://www.youtube.com/watch?v=qH69XGQZHDg)                                              | 모두의 AI에서 제공하는 Retrieval 강의의 Text embedding 파트 |  |
+

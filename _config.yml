@@ -35,4 +35,16 @@ html:
       repo: springcoolers/llm-handbook
 
 
+sphinx:
+  setup:
+    thebe: true
+# _config.yml
+
+extensions:
+  - myst_parser
+  - sphinx.ext.autodoc
+  - sphinx.ext.autosummary
+  # - sphinx_thebe  # 이 줄을 주석 처리하거나 제거
+  - sphinxcontrib.bibtex
+  # ... 다른 확장들
 
