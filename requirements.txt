@@ -1,4 +1,4 @@
-accessible-pygments==0.0.5
+accessible-pygments==0.0.4
 alabaster==0.7.16
 appnope==0.1.4
 asttokens==2.4.1
