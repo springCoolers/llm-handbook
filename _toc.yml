@@ -61,6 +61,11 @@ parts:
     sections:
     - glob: _contents/season_projects/season_4/sections/**
 
+  chapters:
+  - file: _contents/season_projects/season_2/intro
+    sections:
+    - glob: _contents/season_projects/season_5/sections/**
+
 - caption: 컨트리뷰션 가이드
   chapters:
   - file: _contents/contribution_intro/contribution-guide/intro
