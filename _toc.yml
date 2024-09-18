@@ -6,6 +6,11 @@ root: _contents/intro
 parts:
 - caption: LLM Engineering 실전
   chapters:
+  
+  - file: _contents/llm-engineering/0. Prologue: What is LLM?/intro
+    sections:
+    - glob: _contents/llm-engineering/0. Prologue: What is LLM?/sections/**
+  
   - file: _contents/llm-engineering/1. API + Prompt Engineering/intro
     sections:
     - glob: _contents/llm-engineering/1. API + Prompt Engineering/sections/**
