@@ -60,3 +60,9 @@ parts:
   - file: _contents/season_projects/season_4/intro
     sections:
     - glob: _contents/season_projects/season_4/sections/**
+
+- caption: 컨트리뷰션 가이드
+  chapters:
+  - file: _contents/contribution_intro/contribution-guide/intro
+    sections:
+    - glob: _contents/contribution_intro/contribution-guide/sections/**
