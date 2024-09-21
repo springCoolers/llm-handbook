@@ -68,7 +68,7 @@ parts:
   chapters:
   - file: _contents/season_projects/season_2/intro
     sections:
-    - glob: _contents/season_projects/season_5/sections/**
+    - glob: _contents/season_projects/season_2/sections/**
 
 - caption: 컨트리뷰션 가이드
   chapters:
