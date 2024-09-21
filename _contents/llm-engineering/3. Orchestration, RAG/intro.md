@@ -1,4 +1,4 @@
-# 3. RAG
+# 3. Orchestration, RAG
 
 ```{tableofcontents}
 ```
