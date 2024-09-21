@@ -1,4 +1,4 @@
-# 1. API + Prompt Engineering
+# 1. Foundation Model, Prompt Engineering
 
 ```{tableofcontents}
 ```
