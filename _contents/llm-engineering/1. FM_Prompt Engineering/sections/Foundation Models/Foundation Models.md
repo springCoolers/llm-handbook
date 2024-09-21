@@ -1,4 +1,4 @@
-# 1a. Proprietary APIs (Foundation Models)
+# Foundation Models
 
 ![[Pasted image 20240814204755.png]]
 모델과 그 특징에 대해 알아야 한다
