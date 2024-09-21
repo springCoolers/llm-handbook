@@ -35,9 +35,9 @@ parts:
     sections:
     - glob: _contents/llm-engineering/6. Deployment/sections/**
 
-  - file: _contents/llm-engineering/7. Inference Optimzation/intro
+  - file: _contents/llm-engineering/7. Inference Optimization/intro
     sections:
-    - glob: _contents/llm-engineering/7. Inference Optimzation/sections/**
+    - glob: _contents/llm-engineering/7. Inference Optimization/sections/**
 
   - file: _contents/llm-engineering/8. Security - Hacking & Guardrails/intro
     sections:
