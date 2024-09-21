@@ -11,9 +11,9 @@ parts:
     sections:
     - glob: _contents/llm-engineering/0. Prologue - What is LLM/sections/**
   
-  - file: _contents/llm-engineering/1. Foundation Model + Prompt Engineering/intro
+  - file: _contents/llm-engineering/1. FM_Prompt Engineering/intro
     sections:
-    - glob: _contents/llm-engineering/1. Foundation Model + Prompt Engineering/sections/**
+    - glob: _contents/llm-engineering/1. FM_Prompt Engineering/sections/**
 
   - file: _contents/llm-engineering/2. Vector DB/intro
     sections:
