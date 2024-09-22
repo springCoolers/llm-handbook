@@ -7,55 +7,55 @@ parts:
 - caption: LLM Engineering 실전
   chapters:
   
-  - file: _contents/llm-engineering/0. Prologue - What is LLM/intro
+  - file: _contents/llm-engineering/0. Prologue - What is LLM/0. Prologue - What is LLM
     sections:
     - glob: _contents/llm-engineering/0. Prologue - What is LLM/sections/**
   
-  - file: _contents/llm-engineering/1. FM_Prompt Engineering/intro
+  - file: _contents/llm-engineering/1. FM_Prompt Engineering/1. FM_Prompt Engineering
     sections:
     - glob: _contents/llm-engineering/1. FM_Prompt Engineering/sections/**
 
-  - file: _contents/llm-engineering/2. Vector DB/intro
+  - file: _contents/llm-engineering/2. Vector DB/2. Vector DB
     sections:
     - glob: _contents/llm-engineering/2. Vector DB/sections/**
 
-  - file: _contents/llm-engineering/3. Orchestration, RAG/intro
+  - file: _contents/llm-engineering/3. Orchestration, RAG/3. Orchestration, RAG
     sections: 
     - glob: _contents/llm-engineering/3. Orchestration, RAG/sections/**
 
-  - file: _contents/llm-engineering/4. Advanced Prompt Engineering/intro
+  - file: _contents/llm-engineering/4. Advanced Prompt Engineering/4. Advanced Prompt Engineering
     sections:
     - glob: _contents/llm-engineering/4. Advanced Prompt Engineering/sections/**
 
-  - file: _contents/llm-engineering/5. Advanced Rag/intro
+  - file: _contents/llm-engineering/5. Advanced Rag/5. Advanced Rag
     sections:
     - glob: _contents/llm-engineering/5. Advanced Rag/sections/**
 
-  - file: _contents/llm-engineering/6. Deployment/intro
+  - file: _contents/llm-engineering/6. Deployment/6. Deployment
     sections:
     - glob: _contents/llm-engineering/6. Deployment/sections/**
 
-  - file: _contents/llm-engineering/7. Inference Optimization/intro
+  - file: _contents/llm-engineering/7. Inference Optimization/7. Inference Optimization
     sections:
     - glob: _contents/llm-engineering/7. Inference Optimization/sections/**
 
-  - file: _contents/llm-engineering/8. Security - Hacking & Guardrails/intro
+  - file: _contents/llm-engineering/8. Security - Hacking & Guardrails/8. Security - Hacking & Guardrails
     sections:
     - glob: _contents/llm-engineering/8. Security - Hacking & Guardrails/sections/**
 
-  - file: _contents/llm-engineering/9. Agents and Tools/intro
+  - file: _contents/llm-engineering/9. Agents and Tools/9. Agents and Tools
     sections:
     - glob: _contents/llm-engineering/9. Agents and Tools/sections/**
 
-  - file: _contents/llm-engineering/10. Finetuning For Llms/intro
+  - file: _contents/llm-engineering/10. Finetuning For Llms/10. Finetuning For Llms
     sections:
     - glob: _contents/llm-engineering/10. Finetuning For Llms/sections/**
 
-  - file: _contents/llm-engineering/11. Embedding And Model Combining/intro
+  - file: _contents/llm-engineering/11. Embedding And Model Combining/11. Embedding And Model Combining
     sections:
     - glob: _contents/llm-engineering/11. Embedding And Model Combining/sections/**
 
-  - file: _contents/llm-engineering/12. Extra materials/intro
+  - file: _contents/llm-engineering/12. Extra materials/12. Extra materials
     sections:
     - glob: _contents/llm-engineering/12. Extra materials/sections/**
     
@@ -65,7 +65,7 @@ parts:
     sections:
     - glob: _contents/season_projects/season_4/sections/**
 
-  chapters:
+- chapters:
   - file: _contents/season_projects/season_2/intro
     sections:
     - glob: _contents/season_projects/season_2/sections/**
