@@ -2,8 +2,13 @@
 
 import os
 import requests
+import datetime
 
 def main(input_text):
+    
+    current_time = datetime.datetime.now()
+    print(f"main 실행 시간: {current_time.strftime('%Y-%m-%d %H:%M:%S')}")
+    
     url = "https://api.perplexity.ai/chat/completions"
 
     payload = {
@@ -13,7 +18,7 @@ def main(input_text):
                 "role": "system"
             },
             {
-                "content": f"Describe the content of '{input_text} in LLM'. Write your answer in the following markdown format:\n- Title your document with H1. ex) # {input_text}\n- Write 5 sentence conceptual summary based on your search with H2 title. ex) ## Summary\n{{sentences}}\n- Write a one-line description of the concept and what students need to know about '{input_text} in LLM'. ex) ## Key Concepts\n- {{concept 1}} : {{explaination of concept 1}}\n- {{concept 2}} : {{explaination of concept 2}}\n- Write a table of references at the bottom. ex) |{{URL name}}|{{URL}}|",
+                "content": f"Describe the content of '{input_text} in LLM'. Write your answer in the following markdown format:\n- Title your document with H1. ex) # {input_text}\n- Write one paragraph conceptual summary based on your search with H2 title. ex) ## Summary\n{{sentences}}\n- Write a one-line description of the concept and what students need to know about '{input_text} in LLM'. ex) ## Key Concepts\n- {{concept 1}} : {{explaination of concept 1}}\n- {{concept 2}} : {{explaination of concept 2}}\n- Write a table of references at the bottom. ex) |{{URL name}}|{{URL}}|",
                 "role": "user"
             }
         ],
@@ -30,7 +35,7 @@ def main(input_text):
 
     if response.status_code == 200:
         data = response.json()
-        return response.json()['choices'][0]['message']['content']
+        return data['choices'][0]['message']['content']
     else:
         print(f"API 요청 실패: 상태 코드 {response.status_code}")
         return ""
