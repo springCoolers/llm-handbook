@@ -51,17 +51,17 @@ def traverse_and_generate():
                 md_file_path = os.path.join(dirpath, filename)
                 input_text = os.path.splitext(filename)[0]  # 확장자 제거한 파일명
                 print(f"{md_file_path} 파일을 {input_text} 키워드로 처리 및 생성 중입니다.")
-
-                # 콘텐츠 생성
-                content = main(input_text)
-                print(content)
-                if content:
-                    # 기존 MD 파일을 덮어씁니다.
-                    with open(md_file_path, 'w', encoding='utf-8') as f:
-                        f.write(content)
-                    print(f"{md_file_path} 파일이 업데이트되었습니다.")
-                else:
-                    print(f"{input_text}에 대한 콘텐츠 생성 실패")
+                if "0. Prologue - What is LLM" in input_text:
+                    # 콘텐츠 생성
+                    content = main(input_text)
+                    print(content)
+                    if content:
+                        # 기존 MD 파일을 덮어씁니다.
+                        with open(md_file_path, 'w', encoding='utf-8') as f:
+                            f.write(content)
+                        print(f"{md_file_path} 파일이 업데이트되었습니다.")
+                    else:
+                        print(f"{input_text}에 대한 콘텐츠 생성 실패")
 
 if __name__ == '__main__':
     traverse_and_generate()
