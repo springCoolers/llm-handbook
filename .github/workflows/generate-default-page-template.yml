@@ -27,7 +27,7 @@ jobs:
         run: echo "PERPLEXITY_API_KEY=${PERPLEXITY_API_KEY}" >> $GITHUB_ENV
 
       - name: Run content generation script
-        run: python script/generate-default-page-template.py
+        run: python scripts/generate-default-page-template.py
 
       - name: Commit and push changes
         env:
