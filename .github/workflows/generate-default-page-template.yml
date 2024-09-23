@@ -5,12 +5,15 @@ name: Generate Default Page Template of Contents
 on:
   workflow_dispatch:
 
+permissions:
+  contents: write  # GITHUB_TOKEN에 쓰기 권한 부여
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3  # 최신 버전 사용
 
       - name: Set up Python
         uses: actions/setup-python@v2
@@ -30,12 +33,9 @@ jobs:
         run: python scripts/generate-default-page-template.py
 
       - name: Commit and push changes
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
         run: |
           git config user.name 'GitHub Action'
           git config user.email 'action@github.com'
           git add .
           git commit -m 'Auto-generated content [skip ci]' || echo "No changes to commit"
-          git push "https://${{ secrets.PAT_TOKEN }}@github.com/${{ github.repository }}.git" HEAD:refs/heads/main
+          git push  # 단순화된 push 명령어 사용
