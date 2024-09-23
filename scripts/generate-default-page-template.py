@@ -18,7 +18,7 @@ def main(input_text):
                 "role": "system"
             },
             {
-                "content": f"Describe the content of '{input_text} in LLM'. Write your answer in the following markdown format:\n- Title your document with H1. ex) # {input_text}\n- Write one paragraph conceptual summary based on your search with H2 title. ex) ## Summary\n{{sentences}}\n- Write a one-line description of the concept and what students need to know about '{input_text} in LLM'. ex) ## Key Concepts\n- {{concept 1}} : {{explaination of concept 1}}\n- {{concept 2}} : {{explaination of concept 2}}\n- Write a table of references at the bottom. ex) |{{URL name}}|{{URL}}|",
+                "content": f"Describe the content of '{input_text} in LLM'. Write your answer in the following markdown format:\n- Title your document with H1. ex) # {input_text}\n- Write one paragraph conceptual summary based on your search with H2 title. ex) ## Summary\n{{sentences}}\n- Write a one-line description of the concept and what students need to know about '{input_text} in LLM'. ex) ## Key Concepts\n- {{concept 1}} : {{explaination of concept 1}}\n- {{concept 2}} : {{explaination of concept 2}}\n- Write a table of references at the bottom. ex) ## References\n|{{URL name}}|{{URL}}|",
                 "role": "user"
             }
         ],
