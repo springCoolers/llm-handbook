@@ -65,7 +65,12 @@ parts:
     sections:
     - glob: _contents/season_projects/season_4/sections/**
 
-- chapters:
+  chapters:
+  - file: _contents/season_projects/season_3/intro
+    sections:
+    - glob: _contents/season_projects/season_3/sections/**
+
+  chapters:
   - file: _contents/season_projects/season_2/intro
     sections:
     - glob: _contents/season_projects/season_2/sections/**
