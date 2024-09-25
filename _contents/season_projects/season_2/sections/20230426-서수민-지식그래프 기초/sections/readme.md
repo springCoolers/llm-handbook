@@ -1,3 +1,4 @@
+# 서수민 - 지식그래프 기초
 
 ## 1. 서론 : http://dmqm.korea.ac.kr/activity/seminar/291 발표자료 참고
 Knowledge Enhanced NLP.pdf

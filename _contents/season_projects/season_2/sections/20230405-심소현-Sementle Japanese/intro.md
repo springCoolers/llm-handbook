@@ -1,1 +1,0 @@
-# Sementle Japanese
