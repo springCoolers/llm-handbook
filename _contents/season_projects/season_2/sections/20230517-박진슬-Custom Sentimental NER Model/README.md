@@ -1,4 +1,4 @@
-# Custom Sentimental NER Model
+# 박진슬 - Custom Sentimental NER Model
 
 
 ## 프로젝트 기획

@@ -1,4 +1,4 @@
-# CustomerNER
+# 박진슬 CustomerNER
 
 프로젝트 결과
 

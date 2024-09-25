@@ -1,4 +1,4 @@
-# Paper Reading Assistant 2 
+# 윤용선 Paper Reading Assistant 2 
 
 ## 0. Remind
 

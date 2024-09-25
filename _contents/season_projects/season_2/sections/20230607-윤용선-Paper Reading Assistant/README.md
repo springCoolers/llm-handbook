@@ -1,4 +1,4 @@
-# Paper Reading Assistant [윤용선]
+# 윤용선 Paper Reading Assistant
 
 ## 1. Introduction
 

@@ -1,4 +1,4 @@
-# CausalLM for parameter tuning and classification(feat. ALpaca, Dacon)
+# 손기훈 - LLM for Daicon 
 
 ## Causal LM
 
