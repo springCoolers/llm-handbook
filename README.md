@@ -1,6 +1,11 @@
+# LLM-Engineering Handbook 
+
+여기로 접속하시면 핸드북의 랜딩 페이지가 나옵니다! 거기서 Readme를 확인해 주세요  
+https://springcoolers.github.io/llm-handbook/_contents/intro.html 
 
 
 ## Local에서 빌드해보기
+* 이 내용은 운영진을 위한 안내 내용으로, 일반 유저들은 실행해보실 필요가 없습니다 
 
 로컬 환경에서 Jupyter Book을 테스트 하고 싶다면, 먼저 독립된 환경을 구축하는 것을 권장합니다. 
 [이를 위한 도커 이미지](./docker/Dockerfile)를 제공하고 있습니다. 다음과 같이 먼저 해당 도커 이미지를 빌드해주세요.
