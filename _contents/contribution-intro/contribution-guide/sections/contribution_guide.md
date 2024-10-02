@@ -72,7 +72,7 @@
 를 만듭니다.
 
 3. 다음의 경로의 마크다운 파일을 작성합니다. md 파일 내용에는 자기소개를 쓰면됩니다.
-   `_contents/contribution_intro/contributor_introduction/sections/{자기 이름}.md`
+   `_contents/contribution-intro/contributor-introduction/sections/{자기 이름}.md`
 
 >**파일의 첫번째 h1을 제대로 작성했는지 확인해주세요!!!!!!** 쥬피터 북은 여러분이 작성하신 ‘파일 이름’을 읽어오지 않습니다. 여러분이 작성한 md / ipynb 파일의 ‘첫 번째 헤딩1’을 제목으로 읽어옵니다.
 
