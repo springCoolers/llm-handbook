@@ -1,0 +1,668 @@
+2025-02-18 07:29:35,571 - uvicorn.error - INFO - Started server process [1]
+2025-02-18 07:29:35,572 - uvicorn.error - INFO - Waiting for application startup.
+2025-02-18 07:29:35,572 - uvicorn.error - INFO - Application startup complete.
+2025-02-18 07:29:35,572 - uvicorn.error - INFO - Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2025-02-18 07:29:40,182 - uvicorn.access - INFO - 127.0.0.1:53526 - "GET /docs HTTP/1.1" 200
+2025-02-18 07:30:10,235 - uvicorn.access - INFO - 127.0.0.1:44064 - "GET /docs HTTP/1.1" 200
+2025-02-18 07:30:40,290 - uvicorn.access - INFO - 127.0.0.1:56338 - "GET /docs HTTP/1.1" 200
+2025-02-18 07:31:10,341 - uvicorn.access - INFO - 127.0.0.1:54328 - "GET /docs HTTP/1.1" 200
+2025-02-18 07:31:40,380 - uvicorn.access - INFO - 127.0.0.1:52814 - "GET /docs HTTP/1.1" 200
+2025-02-18 07:32:10,430 - uvicorn.access - INFO - 127.0.0.1:33950 - "GET /docs HTTP/1.1" 200
+2025-02-18 07:32:11,143 - uvicorn.access - INFO - 172.18.0.1:65092 - "POST /process HTTP/1.1" 200
+2025-02-18 07:32:40,488 - uvicorn.access - INFO - 127.0.0.1:39190 - "GET /docs HTTP/1.1" 200
+2025-02-18 07:33:10,537 - uvicorn.access - INFO - 127.0.0.1:55252 - "GET /docs HTTP/1.1" 200
+2025-02-18 07:33:40,584 - uvicorn.access - INFO - 127.0.0.1:41472 - "GET /docs HTTP/1.1" 200
+2025-02-18 07:34:10,633 - uvicorn.access - INFO - 127.0.0.1:56464 - "GET /docs HTTP/1.1" 200
+2025-02-18 07:34:40,669 - uvicorn.access - INFO - 127.0.0.1:37344 - "GET /docs HTTP/1.1" 200
+2025-02-18 07:34:40,799 - uvicorn.error - INFO - Shutting down
+2025-02-18 07:34:40,903 - uvicorn.error - INFO - Waiting for connections to close. (CTRL+C to force quit)
+2025-02-18 07:34:53,341 - uvicorn.error - INFO - Started server process [1]
+2025-02-18 07:34:53,341 - uvicorn.error - INFO - Waiting for application startup.
+2025-02-18 07:34:53,342 - uvicorn.error - INFO - Application startup complete.
+2025-02-18 07:34:53,342 - uvicorn.error - INFO - Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2025-02-18 07:34:57,946 - uvicorn.access - INFO - 127.0.0.1:49886 - "GET /docs HTTP/1.1" 200
+2025-02-18 07:35:27,997 - uvicorn.access - INFO - 127.0.0.1:37396 - "GET /docs HTTP/1.1" 200
+2025-02-18 07:35:58,049 - uvicorn.access - INFO - 127.0.0.1:44546 - "GET /docs HTTP/1.1" 200
+2025-02-18 07:36:28,101 - uvicorn.access - INFO - 127.0.0.1:37086 - "GET /docs HTTP/1.1" 200
+2025-02-18 07:36:58,155 - uvicorn.access - INFO - 127.0.0.1:35756 - "GET /docs HTTP/1.1" 200
+2025-02-18 07:37:28,210 - uvicorn.access - INFO - 127.0.0.1:54012 - "GET /docs HTTP/1.1" 200
+2025-02-18 07:37:58,260 - uvicorn.access - INFO - 127.0.0.1:58990 - "GET /docs HTTP/1.1" 200
+2025-02-18 07:38:28,310 - uvicorn.access - INFO - 127.0.0.1:33816 - "GET /docs HTTP/1.1" 200
+2025-02-18 07:38:58,349 - uvicorn.access - INFO - 127.0.0.1:39890 - "GET /docs HTTP/1.1" 200
+2025-02-18 07:39:04,600 - uvicorn.access - INFO - 172.18.0.1:58118 - "POST /process HTTP/1.1" 200
+2025-02-18 07:39:28,401 - uvicorn.access - INFO - 127.0.0.1:42952 - "GET /docs HTTP/1.1" 200
+2025-02-18 07:39:58,455 - uvicorn.access - INFO - 127.0.0.1:41308 - "GET /docs HTTP/1.1" 200
+2025-02-18 07:40:28,506 - uvicorn.access - INFO - 127.0.0.1:56638 - "GET /docs HTTP/1.1" 200
+2025-02-18 07:40:58,556 - uvicorn.access - INFO - 127.0.0.1:49924 - "GET /docs HTTP/1.1" 200
+2025-02-18 07:41:28,622 - uvicorn.access - INFO - 127.0.0.1:52888 - "GET /docs HTTP/1.1" 200
+2025-02-18 07:41:58,671 - uvicorn.access - INFO - 127.0.0.1:54904 - "GET /docs HTTP/1.1" 200
+2025-02-18 07:42:28,724 - uvicorn.access - INFO - 127.0.0.1:47460 - "GET /docs HTTP/1.1" 200
+2025-02-18 07:42:58,780 - uvicorn.access - INFO - 127.0.0.1:34920 - "GET /docs HTTP/1.1" 200
+2025-02-18 07:43:28,832 - uvicorn.access - INFO - 127.0.0.1:53366 - "GET /docs HTTP/1.1" 200
+2025-02-18 07:43:58,894 - uvicorn.access - INFO - 127.0.0.1:45866 - "GET /docs HTTP/1.1" 200
+2025-02-18 07:44:28,945 - uvicorn.access - INFO - 127.0.0.1:56936 - "GET /docs HTTP/1.1" 200
+2025-02-18 07:44:58,994 - uvicorn.access - INFO - 127.0.0.1:54536 - "GET /docs HTTP/1.1" 200
+2025-02-18 07:45:29,034 - uvicorn.access - INFO - 127.0.0.1:54128 - "GET /docs HTTP/1.1" 200
+2025-02-18 07:45:59,088 - uvicorn.access - INFO - 127.0.0.1:50312 - "GET /docs HTTP/1.1" 200
+2025-02-18 07:46:29,135 - uvicorn.access - INFO - 127.0.0.1:57962 - "GET /docs HTTP/1.1" 200
+2025-02-18 07:46:59,189 - uvicorn.access - INFO - 127.0.0.1:60498 - "GET /docs HTTP/1.1" 200
+2025-02-18 07:47:29,244 - uvicorn.access - INFO - 127.0.0.1:48288 - "GET /docs HTTP/1.1" 200
+2025-02-18 07:47:59,298 - uvicorn.access - INFO - 127.0.0.1:60698 - "GET /docs HTTP/1.1" 200
+2025-02-18 07:48:29,354 - uvicorn.access - INFO - 127.0.0.1:38128 - "GET /docs HTTP/1.1" 200
+2025-02-18 07:48:59,407 - uvicorn.access - INFO - 127.0.0.1:34944 - "GET /docs HTTP/1.1" 200
+2025-02-18 07:49:29,460 - uvicorn.access - INFO - 127.0.0.1:34894 - "GET /docs HTTP/1.1" 200
+2025-02-18 07:49:59,523 - uvicorn.access - INFO - 127.0.0.1:41674 - "GET /docs HTTP/1.1" 200
+2025-02-18 07:50:29,574 - uvicorn.access - INFO - 127.0.0.1:46270 - "GET /docs HTTP/1.1" 200
+2025-02-18 07:50:59,627 - uvicorn.access - INFO - 127.0.0.1:32780 - "GET /docs HTTP/1.1" 200
+2025-02-18 07:51:29,681 - uvicorn.access - INFO - 127.0.0.1:36442 - "GET /docs HTTP/1.1" 200
+2025-02-18 07:51:59,735 - uvicorn.access - INFO - 127.0.0.1:55718 - "GET /docs HTTP/1.1" 200
+2025-02-18 07:52:29,785 - uvicorn.access - INFO - 127.0.0.1:52156 - "GET /docs HTTP/1.1" 200
+2025-02-18 07:52:59,837 - uvicorn.access - INFO - 127.0.0.1:47144 - "GET /docs HTTP/1.1" 200
+2025-02-18 07:53:29,894 - uvicorn.access - INFO - 127.0.0.1:40796 - "GET /docs HTTP/1.1" 200
+2025-02-18 07:53:59,951 - uvicorn.access - INFO - 127.0.0.1:52062 - "GET /docs HTTP/1.1" 200
+2025-02-18 07:54:30,008 - uvicorn.access - INFO - 127.0.0.1:43784 - "GET /docs HTTP/1.1" 200
+2025-02-18 07:55:00,062 - uvicorn.access - INFO - 127.0.0.1:38090 - "GET /docs HTTP/1.1" 200
+2025-02-18 07:55:30,120 - uvicorn.access - INFO - 127.0.0.1:39484 - "GET /docs HTTP/1.1" 200
+2025-02-18 07:56:00,174 - uvicorn.access - INFO - 127.0.0.1:44788 - "GET /docs HTTP/1.1" 200
+2025-02-18 07:56:30,238 - uvicorn.access - INFO - 127.0.0.1:50710 - "GET /docs HTTP/1.1" 200
+2025-02-18 07:57:00,309 - uvicorn.access - INFO - 127.0.0.1:36352 - "GET /docs HTTP/1.1" 200
+2025-02-18 07:57:30,376 - uvicorn.access - INFO - 127.0.0.1:60260 - "GET /docs HTTP/1.1" 200
+2025-02-18 07:58:00,433 - uvicorn.access - INFO - 127.0.0.1:40562 - "GET /docs HTTP/1.1" 200
+2025-02-18 07:58:26,356 - uvicorn.error - INFO - Shutting down
+2025-02-18 07:58:26,460 - uvicorn.error - INFO - Waiting for application shutdown.
+2025-02-18 07:58:26,461 - uvicorn.error - INFO - Application shutdown complete.
+2025-02-18 07:58:26,462 - uvicorn.error - INFO - Finished server process [1]
+2025-02-18 07:58:29,358 - uvicorn.error - INFO - Started server process [1]
+2025-02-18 07:58:29,358 - uvicorn.error - INFO - Waiting for application startup.
+2025-02-18 07:58:29,359 - uvicorn.error - INFO - Application startup complete.
+2025-02-18 07:58:29,359 - uvicorn.error - INFO - Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2025-02-18 07:58:33,965 - uvicorn.access - INFO - 127.0.0.1:48640 - "GET /docs HTTP/1.1" 200
+2025-02-18 07:59:04,026 - uvicorn.access - INFO - 127.0.0.1:58254 - "GET /docs HTTP/1.1" 200
+2025-02-18 07:59:34,078 - uvicorn.access - INFO - 127.0.0.1:51072 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:00:04,128 - uvicorn.access - INFO - 127.0.0.1:53232 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:00:34,181 - uvicorn.access - INFO - 127.0.0.1:46782 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:01:04,237 - uvicorn.access - INFO - 127.0.0.1:47258 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:01:34,287 - uvicorn.access - INFO - 127.0.0.1:58002 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:02:04,337 - uvicorn.access - INFO - 127.0.0.1:39344 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:02:34,387 - uvicorn.access - INFO - 127.0.0.1:37050 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:03:04,438 - uvicorn.access - INFO - 127.0.0.1:54790 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:03:34,484 - uvicorn.access - INFO - 127.0.0.1:52378 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:04:04,542 - uvicorn.access - INFO - 127.0.0.1:40720 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:04:34,595 - uvicorn.access - INFO - 127.0.0.1:53786 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:05:04,652 - uvicorn.access - INFO - 127.0.0.1:46856 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:05:34,708 - uvicorn.access - INFO - 127.0.0.1:48060 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:06:04,765 - uvicorn.access - INFO - 127.0.0.1:38334 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:06:34,816 - uvicorn.access - INFO - 127.0.0.1:56546 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:07:04,867 - uvicorn.access - INFO - 127.0.0.1:58176 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:07:34,913 - uvicorn.access - INFO - 127.0.0.1:38164 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:08:04,974 - uvicorn.access - INFO - 127.0.0.1:55182 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:08:35,022 - uvicorn.access - INFO - 127.0.0.1:36548 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:09:05,071 - uvicorn.access - INFO - 127.0.0.1:47274 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:09:35,118 - uvicorn.access - INFO - 127.0.0.1:50162 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:10:05,172 - uvicorn.access - INFO - 127.0.0.1:48786 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:10:35,228 - uvicorn.access - INFO - 127.0.0.1:49772 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:11:05,279 - uvicorn.access - INFO - 127.0.0.1:37412 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:11:35,329 - uvicorn.access - INFO - 127.0.0.1:34786 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:12:05,383 - uvicorn.access - INFO - 127.0.0.1:52086 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:12:35,440 - uvicorn.access - INFO - 127.0.0.1:51794 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:13:05,489 - uvicorn.access - INFO - 127.0.0.1:47060 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:13:35,540 - uvicorn.access - INFO - 127.0.0.1:50530 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:14:05,593 - uvicorn.access - INFO - 127.0.0.1:49568 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:14:35,645 - uvicorn.access - INFO - 127.0.0.1:38830 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:15:05,699 - uvicorn.access - INFO - 127.0.0.1:40784 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:15:35,750 - uvicorn.access - INFO - 127.0.0.1:58544 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:16:05,799 - uvicorn.access - INFO - 127.0.0.1:33760 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:16:35,851 - uvicorn.access - INFO - 127.0.0.1:53270 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:17:05,900 - uvicorn.access - INFO - 127.0.0.1:42406 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:17:35,946 - uvicorn.access - INFO - 127.0.0.1:33226 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:18:05,997 - uvicorn.access - INFO - 127.0.0.1:52214 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:18:36,041 - uvicorn.access - INFO - 127.0.0.1:58558 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:19:06,094 - uvicorn.access - INFO - 127.0.0.1:44174 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:19:36,144 - uvicorn.access - INFO - 127.0.0.1:38592 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:20:06,194 - uvicorn.access - INFO - 127.0.0.1:51464 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:20:36,254 - uvicorn.access - INFO - 127.0.0.1:51950 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:21:06,303 - uvicorn.access - INFO - 127.0.0.1:49728 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:21:36,358 - uvicorn.access - INFO - 127.0.0.1:35032 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:22:06,412 - uvicorn.access - INFO - 127.0.0.1:43378 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:22:36,462 - uvicorn.access - INFO - 127.0.0.1:33872 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:23:06,514 - uvicorn.access - INFO - 127.0.0.1:39572 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:23:36,563 - uvicorn.access - INFO - 127.0.0.1:40704 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:24:06,612 - uvicorn.access - INFO - 127.0.0.1:59834 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:24:36,668 - uvicorn.access - INFO - 127.0.0.1:44492 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:25:06,724 - uvicorn.access - INFO - 127.0.0.1:43930 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:25:36,773 - uvicorn.access - INFO - 127.0.0.1:60242 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:26:06,831 - uvicorn.access - INFO - 127.0.0.1:49320 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:26:36,880 - uvicorn.access - INFO - 127.0.0.1:50622 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:27:06,936 - uvicorn.access - INFO - 127.0.0.1:51158 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:27:36,987 - uvicorn.access - INFO - 127.0.0.1:42718 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:28:07,046 - uvicorn.access - INFO - 127.0.0.1:58200 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:28:37,107 - uvicorn.access - INFO - 127.0.0.1:56084 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:29:07,158 - uvicorn.access - INFO - 127.0.0.1:37700 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:29:37,211 - uvicorn.access - INFO - 127.0.0.1:48194 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:30:07,270 - uvicorn.access - INFO - 127.0.0.1:38132 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:30:37,324 - uvicorn.access - INFO - 127.0.0.1:47934 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:31:07,389 - uvicorn.access - INFO - 127.0.0.1:46308 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:31:37,440 - uvicorn.access - INFO - 127.0.0.1:52354 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:32:07,491 - uvicorn.access - INFO - 127.0.0.1:36900 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:32:37,544 - uvicorn.access - INFO - 127.0.0.1:34446 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:33:07,587 - uvicorn.access - INFO - 127.0.0.1:45130 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:33:37,638 - uvicorn.access - INFO - 127.0.0.1:35830 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:34:07,690 - uvicorn.access - INFO - 127.0.0.1:35138 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:34:37,741 - uvicorn.access - INFO - 127.0.0.1:35318 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:35:07,795 - uvicorn.access - INFO - 127.0.0.1:59002 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:35:37,845 - uvicorn.access - INFO - 127.0.0.1:43864 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:36:07,882 - uvicorn.access - INFO - 127.0.0.1:39684 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:36:37,931 - uvicorn.access - INFO - 127.0.0.1:42342 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:37:07,971 - uvicorn.access - INFO - 127.0.0.1:34750 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:37:38,019 - uvicorn.access - INFO - 127.0.0.1:59446 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:38:08,074 - uvicorn.access - INFO - 127.0.0.1:39056 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:38:38,123 - uvicorn.access - INFO - 127.0.0.1:48528 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:39:08,175 - uvicorn.access - INFO - 127.0.0.1:57072 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:39:38,229 - uvicorn.access - INFO - 127.0.0.1:54218 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:40:08,277 - uvicorn.access - INFO - 127.0.0.1:54378 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:40:38,335 - uvicorn.access - INFO - 127.0.0.1:37502 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:41:08,377 - uvicorn.access - INFO - 127.0.0.1:46190 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:41:38,429 - uvicorn.access - INFO - 127.0.0.1:59362 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:42:08,477 - uvicorn.access - INFO - 127.0.0.1:58266 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:42:38,526 - uvicorn.access - INFO - 127.0.0.1:48244 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:43:08,578 - uvicorn.access - INFO - 127.0.0.1:37334 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:43:38,622 - uvicorn.access - INFO - 127.0.0.1:45960 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:44:08,667 - uvicorn.access - INFO - 127.0.0.1:57668 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:44:38,712 - uvicorn.access - INFO - 127.0.0.1:35932 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:45:08,748 - uvicorn.access - INFO - 127.0.0.1:45614 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:45:38,801 - uvicorn.access - INFO - 127.0.0.1:34368 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:46:08,856 - uvicorn.access - INFO - 127.0.0.1:56682 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:46:38,906 - uvicorn.access - INFO - 127.0.0.1:44932 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:47:08,949 - uvicorn.access - INFO - 127.0.0.1:43990 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:47:39,004 - uvicorn.access - INFO - 127.0.0.1:49566 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:47:46,218 - uvicorn.error - INFO - Shutting down
+2025-02-18 08:47:46,324 - uvicorn.error - INFO - Waiting for application shutdown.
+2025-02-18 08:47:46,326 - uvicorn.error - INFO - Application shutdown complete.
+2025-02-18 08:47:46,327 - uvicorn.error - INFO - Finished server process [1]
+2025-02-18 08:47:50,247 - uvicorn.error - INFO - Started server process [1]
+2025-02-18 08:47:50,247 - uvicorn.error - INFO - Waiting for application startup.
+2025-02-18 08:47:50,247 - uvicorn.error - INFO - Application startup complete.
+2025-02-18 08:47:50,248 - uvicorn.error - INFO - Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2025-02-18 08:47:54,860 - uvicorn.access - INFO - 127.0.0.1:52758 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:48:24,911 - uvicorn.access - INFO - 127.0.0.1:51230 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:48:54,956 - uvicorn.access - INFO - 127.0.0.1:45284 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:49:25,004 - uvicorn.access - INFO - 127.0.0.1:59720 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:49:55,056 - uvicorn.access - INFO - 127.0.0.1:60452 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:50:25,106 - uvicorn.access - INFO - 127.0.0.1:39012 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:50:55,160 - uvicorn.access - INFO - 127.0.0.1:57204 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:51:25,209 - uvicorn.access - INFO - 127.0.0.1:37452 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:51:55,255 - uvicorn.access - INFO - 127.0.0.1:39896 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:52:25,313 - uvicorn.access - INFO - 127.0.0.1:47828 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:52:28,459 - uvicorn.error - INFO - Shutting down
+2025-02-18 08:52:28,564 - uvicorn.error - INFO - Waiting for connections to close. (CTRL+C to force quit)
+2025-02-18 08:52:41,493 - uvicorn.error - INFO - Started server process [1]
+2025-02-18 08:52:41,494 - uvicorn.error - INFO - Waiting for application startup.
+2025-02-18 08:52:41,494 - uvicorn.error - INFO - Application startup complete.
+2025-02-18 08:52:41,494 - uvicorn.error - INFO - Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2025-02-18 08:52:46,106 - uvicorn.access - INFO - 127.0.0.1:53144 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:53:16,153 - uvicorn.access - INFO - 127.0.0.1:33024 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:53:46,210 - uvicorn.access - INFO - 127.0.0.1:37266 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:54:16,261 - uvicorn.access - INFO - 127.0.0.1:37038 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:54:46,309 - uvicorn.access - INFO - 127.0.0.1:40038 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:54:55,409 - uvicorn.error - INFO - Shutting down
+2025-02-18 08:54:55,513 - uvicorn.error - INFO - Waiting for application shutdown.
+2025-02-18 08:54:55,514 - uvicorn.error - INFO - Application shutdown complete.
+2025-02-18 08:54:55,515 - uvicorn.error - INFO - Finished server process [1]
+2025-02-18 08:54:57,452 - uvicorn.error - INFO - Started server process [1]
+2025-02-18 08:54:57,452 - uvicorn.error - INFO - Waiting for application startup.
+2025-02-18 08:54:57,453 - uvicorn.error - INFO - Application startup complete.
+2025-02-18 08:54:57,453 - uvicorn.error - INFO - Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2025-02-18 08:55:02,059 - uvicorn.access - INFO - 127.0.0.1:41022 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:55:32,107 - uvicorn.access - INFO - 127.0.0.1:36250 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:55:48,409 - uvicorn.access - INFO - 172.18.0.1:57772 - "POST /process HTTP/1.1" 200
+2025-02-18 08:56:02,151 - uvicorn.access - INFO - 127.0.0.1:46444 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:56:32,187 - uvicorn.access - INFO - 127.0.0.1:54570 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:57:02,232 - uvicorn.access - INFO - 127.0.0.1:56006 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:57:32,279 - uvicorn.access - INFO - 127.0.0.1:53700 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:58:02,330 - uvicorn.access - INFO - 127.0.0.1:47518 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:58:32,385 - uvicorn.access - INFO - 127.0.0.1:43178 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:59:02,428 - uvicorn.access - INFO - 127.0.0.1:49030 - "GET /docs HTTP/1.1" 200
+2025-02-18 08:59:32,483 - uvicorn.access - INFO - 127.0.0.1:54614 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:00:02,531 - uvicorn.access - INFO - 127.0.0.1:34148 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:00:31,539 - uvicorn.error - INFO - Shutting down
+2025-02-18 09:00:31,643 - uvicorn.error - INFO - Waiting for application shutdown.
+2025-02-18 09:00:31,644 - uvicorn.error - INFO - Application shutdown complete.
+2025-02-18 09:00:31,645 - uvicorn.error - INFO - Finished server process [1]
+2025-02-18 09:00:34,496 - uvicorn.error - INFO - Started server process [1]
+2025-02-18 09:00:34,497 - uvicorn.error - INFO - Waiting for application startup.
+2025-02-18 09:00:34,497 - uvicorn.error - INFO - Application startup complete.
+2025-02-18 09:00:34,497 - uvicorn.error - INFO - Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2025-02-18 09:00:39,102 - uvicorn.access - INFO - 127.0.0.1:50636 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:01:09,146 - uvicorn.access - INFO - 127.0.0.1:53384 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:01:25,906 - uvicorn.access - INFO - 172.18.0.1:65492 - "POST /process HTTP/1.1" 500
+2025-02-18 09:01:39,194 - uvicorn.access - INFO - 127.0.0.1:60294 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:02:09,248 - uvicorn.access - INFO - 127.0.0.1:50820 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:02:39,295 - uvicorn.access - INFO - 127.0.0.1:36672 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:03:09,344 - uvicorn.access - INFO - 127.0.0.1:56226 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:03:39,394 - uvicorn.access - INFO - 127.0.0.1:44552 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:04:09,436 - uvicorn.access - INFO - 127.0.0.1:53116 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:04:39,487 - uvicorn.access - INFO - 127.0.0.1:58320 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:05:09,536 - uvicorn.access - INFO - 127.0.0.1:51338 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:05:39,586 - uvicorn.access - INFO - 127.0.0.1:47164 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:06:09,638 - uvicorn.access - INFO - 127.0.0.1:33554 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:06:39,691 - uvicorn.access - INFO - 127.0.0.1:34332 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:07:09,734 - uvicorn.access - INFO - 127.0.0.1:41210 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:07:39,783 - uvicorn.access - INFO - 127.0.0.1:53222 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:08:09,834 - uvicorn.access - INFO - 127.0.0.1:37044 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:08:39,884 - uvicorn.access - INFO - 127.0.0.1:54354 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:09:09,933 - uvicorn.access - INFO - 127.0.0.1:44700 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:09:39,982 - uvicorn.access - INFO - 127.0.0.1:60102 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:10:10,030 - uvicorn.access - INFO - 127.0.0.1:48700 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:10:40,076 - uvicorn.access - INFO - 127.0.0.1:33198 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:11:10,126 - uvicorn.access - INFO - 127.0.0.1:39842 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:11:40,176 - uvicorn.access - INFO - 127.0.0.1:54826 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:12:10,234 - uvicorn.access - INFO - 127.0.0.1:43004 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:12:40,288 - uvicorn.access - INFO - 127.0.0.1:36100 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:13:10,335 - uvicorn.access - INFO - 127.0.0.1:53318 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:13:40,379 - uvicorn.access - INFO - 127.0.0.1:34498 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:14:10,429 - uvicorn.access - INFO - 127.0.0.1:47958 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:14:40,483 - uvicorn.access - INFO - 127.0.0.1:51320 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:15:10,528 - uvicorn.access - INFO - 127.0.0.1:44248 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:15:40,577 - uvicorn.access - INFO - 127.0.0.1:47568 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:16:10,631 - uvicorn.access - INFO - 127.0.0.1:57636 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:16:40,679 - uvicorn.access - INFO - 127.0.0.1:44768 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:17:10,737 - uvicorn.access - INFO - 127.0.0.1:34354 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:17:40,790 - uvicorn.access - INFO - 127.0.0.1:33080 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:18:10,840 - uvicorn.access - INFO - 127.0.0.1:45596 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:18:40,895 - uvicorn.access - INFO - 127.0.0.1:46856 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:19:10,946 - uvicorn.access - INFO - 127.0.0.1:46154 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:19:40,995 - uvicorn.access - INFO - 127.0.0.1:49240 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:20:11,044 - uvicorn.access - INFO - 127.0.0.1:33722 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:20:41,103 - uvicorn.access - INFO - 127.0.0.1:41004 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:21:11,154 - uvicorn.access - INFO - 127.0.0.1:56554 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:21:41,193 - uvicorn.access - INFO - 127.0.0.1:49220 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:22:11,241 - uvicorn.access - INFO - 127.0.0.1:49194 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:22:41,287 - uvicorn.access - INFO - 127.0.0.1:45164 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:23:11,341 - uvicorn.access - INFO - 127.0.0.1:47162 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:23:41,386 - uvicorn.access - INFO - 127.0.0.1:55476 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:24:11,439 - uvicorn.access - INFO - 127.0.0.1:34294 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:24:41,472 - uvicorn.access - INFO - 127.0.0.1:37022 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:25:11,521 - uvicorn.access - INFO - 127.0.0.1:40188 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:25:41,575 - uvicorn.access - INFO - 127.0.0.1:48024 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:26:11,620 - uvicorn.access - INFO - 127.0.0.1:37832 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:26:41,668 - uvicorn.access - INFO - 127.0.0.1:48670 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:27:11,721 - uvicorn.access - INFO - 127.0.0.1:36684 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:27:41,771 - uvicorn.access - INFO - 127.0.0.1:52032 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:28:11,822 - uvicorn.access - INFO - 127.0.0.1:39444 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:28:41,871 - uvicorn.access - INFO - 127.0.0.1:42930 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:29:11,918 - uvicorn.access - INFO - 127.0.0.1:36842 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:29:41,970 - uvicorn.access - INFO - 127.0.0.1:32888 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:30:12,015 - uvicorn.access - INFO - 127.0.0.1:33054 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:30:42,069 - uvicorn.access - INFO - 127.0.0.1:52306 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:31:12,123 - uvicorn.access - INFO - 127.0.0.1:58628 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:31:42,177 - uvicorn.access - INFO - 127.0.0.1:43618 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:32:12,237 - uvicorn.access - INFO - 127.0.0.1:50498 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:32:42,290 - uvicorn.access - INFO - 127.0.0.1:36462 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:33:12,346 - uvicorn.access - INFO - 127.0.0.1:49006 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:33:42,388 - uvicorn.access - INFO - 127.0.0.1:48814 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:34:12,444 - uvicorn.access - INFO - 127.0.0.1:33452 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:34:42,499 - uvicorn.access - INFO - 127.0.0.1:55566 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:35:12,538 - uvicorn.access - INFO - 127.0.0.1:55402 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:35:42,590 - uvicorn.access - INFO - 127.0.0.1:56138 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:36:12,643 - uvicorn.access - INFO - 127.0.0.1:60114 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:36:42,694 - uvicorn.access - INFO - 127.0.0.1:53772 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:37:12,746 - uvicorn.access - INFO - 127.0.0.1:37114 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:37:42,796 - uvicorn.access - INFO - 127.0.0.1:40380 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:38:12,847 - uvicorn.access - INFO - 127.0.0.1:52322 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:38:42,899 - uvicorn.access - INFO - 127.0.0.1:35736 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:39:12,951 - uvicorn.access - INFO - 127.0.0.1:60584 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:39:43,002 - uvicorn.access - INFO - 127.0.0.1:48042 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:40:13,057 - uvicorn.access - INFO - 127.0.0.1:51860 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:40:43,109 - uvicorn.access - INFO - 127.0.0.1:55954 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:41:13,160 - uvicorn.access - INFO - 127.0.0.1:47536 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:41:43,209 - uvicorn.access - INFO - 127.0.0.1:60984 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:42:13,276 - uvicorn.access - INFO - 127.0.0.1:39878 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:42:43,323 - uvicorn.access - INFO - 127.0.0.1:41074 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:43:13,377 - uvicorn.access - INFO - 127.0.0.1:50376 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:43:43,425 - uvicorn.access - INFO - 127.0.0.1:36612 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:44:13,479 - uvicorn.access - INFO - 127.0.0.1:34360 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:44:43,525 - uvicorn.access - INFO - 127.0.0.1:37370 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:45:13,578 - uvicorn.access - INFO - 127.0.0.1:42966 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:45:43,643 - uvicorn.access - INFO - 127.0.0.1:48338 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:46:13,699 - uvicorn.access - INFO - 127.0.0.1:48816 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:46:43,753 - uvicorn.access - INFO - 127.0.0.1:36276 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:47:13,811 - uvicorn.access - INFO - 127.0.0.1:45054 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:47:43,862 - uvicorn.access - INFO - 127.0.0.1:36872 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:48:13,921 - uvicorn.access - INFO - 127.0.0.1:59722 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:48:43,972 - uvicorn.access - INFO - 127.0.0.1:59920 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:49:14,024 - uvicorn.access - INFO - 127.0.0.1:41200 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:49:44,076 - uvicorn.access - INFO - 127.0.0.1:35662 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:50:14,138 - uvicorn.access - INFO - 127.0.0.1:50270 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:50:44,196 - uvicorn.access - INFO - 127.0.0.1:52318 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:51:14,241 - uvicorn.access - INFO - 127.0.0.1:40610 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:51:44,295 - uvicorn.access - INFO - 127.0.0.1:36250 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:52:14,352 - uvicorn.access - INFO - 127.0.0.1:57574 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:52:44,402 - uvicorn.access - INFO - 127.0.0.1:56976 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:53:14,460 - uvicorn.access - INFO - 127.0.0.1:49270 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:53:44,515 - uvicorn.access - INFO - 127.0.0.1:35830 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:54:14,573 - uvicorn.access - INFO - 127.0.0.1:51382 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:54:44,622 - uvicorn.access - INFO - 127.0.0.1:52724 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:55:14,673 - uvicorn.access - INFO - 127.0.0.1:60594 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:55:44,728 - uvicorn.access - INFO - 127.0.0.1:56998 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:56:14,794 - uvicorn.access - INFO - 127.0.0.1:42650 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:56:44,852 - uvicorn.access - INFO - 127.0.0.1:58264 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:57:14,923 - uvicorn.access - INFO - 127.0.0.1:55346 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:57:44,970 - uvicorn.access - INFO - 127.0.0.1:38464 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:58:15,021 - uvicorn.access - INFO - 127.0.0.1:46572 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:58:45,071 - uvicorn.access - INFO - 127.0.0.1:56094 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:59:15,121 - uvicorn.access - INFO - 127.0.0.1:38486 - "GET /docs HTTP/1.1" 200
+2025-02-18 09:59:45,179 - uvicorn.access - INFO - 127.0.0.1:42178 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:00:15,227 - uvicorn.access - INFO - 127.0.0.1:53482 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:00:45,274 - uvicorn.access - INFO - 127.0.0.1:33036 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:01:15,339 - uvicorn.access - INFO - 127.0.0.1:54388 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:01:45,391 - uvicorn.access - INFO - 127.0.0.1:37982 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:02:15,434 - uvicorn.access - INFO - 127.0.0.1:41080 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:02:45,482 - uvicorn.access - INFO - 127.0.0.1:37838 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:03:15,536 - uvicorn.access - INFO - 127.0.0.1:45132 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:03:45,585 - uvicorn.access - INFO - 127.0.0.1:54856 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:04:15,635 - uvicorn.access - INFO - 127.0.0.1:50098 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:04:45,689 - uvicorn.access - INFO - 127.0.0.1:52832 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:05:15,742 - uvicorn.access - INFO - 127.0.0.1:47662 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:05:45,794 - uvicorn.access - INFO - 127.0.0.1:53756 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:06:15,843 - uvicorn.access - INFO - 127.0.0.1:52764 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:06:45,902 - uvicorn.access - INFO - 127.0.0.1:39130 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:07:15,940 - uvicorn.access - INFO - 127.0.0.1:40324 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:07:45,979 - uvicorn.access - INFO - 127.0.0.1:53452 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:08:16,022 - uvicorn.access - INFO - 127.0.0.1:55204 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:08:46,058 - uvicorn.access - INFO - 127.0.0.1:36700 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:09:16,109 - uvicorn.access - INFO - 127.0.0.1:47192 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:09:46,159 - uvicorn.access - INFO - 127.0.0.1:35730 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:10:16,213 - uvicorn.access - INFO - 127.0.0.1:36128 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:10:46,267 - uvicorn.access - INFO - 127.0.0.1:59980 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:11:16,325 - uvicorn.access - INFO - 127.0.0.1:59992 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:11:46,375 - uvicorn.access - INFO - 127.0.0.1:41036 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:12:16,425 - uvicorn.access - INFO - 127.0.0.1:53214 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:12:46,474 - uvicorn.access - INFO - 127.0.0.1:44060 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:13:16,529 - uvicorn.access - INFO - 127.0.0.1:53172 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:13:46,576 - uvicorn.access - INFO - 127.0.0.1:35248 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:14:16,627 - uvicorn.access - INFO - 127.0.0.1:54058 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:14:46,677 - uvicorn.access - INFO - 127.0.0.1:43942 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:15:16,727 - uvicorn.access - INFO - 127.0.0.1:55250 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:15:46,782 - uvicorn.access - INFO - 127.0.0.1:47998 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:16:16,835 - uvicorn.access - INFO - 127.0.0.1:52514 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:16:46,883 - uvicorn.access - INFO - 127.0.0.1:35434 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:17:16,943 - uvicorn.access - INFO - 127.0.0.1:41870 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:17:46,996 - uvicorn.access - INFO - 127.0.0.1:44810 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:18:17,053 - uvicorn.access - INFO - 127.0.0.1:59382 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:18:47,101 - uvicorn.access - INFO - 127.0.0.1:58194 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:19:17,154 - uvicorn.access - INFO - 127.0.0.1:33426 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:19:47,208 - uvicorn.access - INFO - 127.0.0.1:47776 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:20:17,258 - uvicorn.access - INFO - 127.0.0.1:46276 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:20:47,310 - uvicorn.access - INFO - 127.0.0.1:59758 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:21:17,357 - uvicorn.access - INFO - 127.0.0.1:49362 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:21:47,404 - uvicorn.access - INFO - 127.0.0.1:50616 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:22:17,454 - uvicorn.access - INFO - 127.0.0.1:43888 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:22:47,507 - uvicorn.access - INFO - 127.0.0.1:56124 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:23:17,560 - uvicorn.access - INFO - 127.0.0.1:41020 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:23:47,610 - uvicorn.access - INFO - 127.0.0.1:39524 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:24:17,662 - uvicorn.access - INFO - 127.0.0.1:34460 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:24:47,711 - uvicorn.access - INFO - 127.0.0.1:35932 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:25:17,761 - uvicorn.access - INFO - 127.0.0.1:51836 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:25:47,810 - uvicorn.access - INFO - 127.0.0.1:58600 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:26:17,854 - uvicorn.access - INFO - 127.0.0.1:57612 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:26:47,896 - uvicorn.access - INFO - 127.0.0.1:39264 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:27:17,935 - uvicorn.access - INFO - 127.0.0.1:59122 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:27:47,965 - uvicorn.access - INFO - 127.0.0.1:54034 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:28:18,002 - uvicorn.access - INFO - 127.0.0.1:53778 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:28:48,042 - uvicorn.access - INFO - 127.0.0.1:57266 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:29:18,091 - uvicorn.access - INFO - 127.0.0.1:35928 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:29:48,145 - uvicorn.access - INFO - 127.0.0.1:45692 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:30:18,190 - uvicorn.access - INFO - 127.0.0.1:53232 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:30:48,241 - uvicorn.access - INFO - 127.0.0.1:58138 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:31:18,293 - uvicorn.access - INFO - 127.0.0.1:57236 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:31:48,343 - uvicorn.access - INFO - 127.0.0.1:50606 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:32:18,401 - uvicorn.access - INFO - 127.0.0.1:33440 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:32:48,457 - uvicorn.access - INFO - 127.0.0.1:47660 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:33:18,512 - uvicorn.access - INFO - 127.0.0.1:42508 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:33:48,566 - uvicorn.access - INFO - 127.0.0.1:57426 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:34:18,617 - uvicorn.access - INFO - 127.0.0.1:51596 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:34:48,672 - uvicorn.access - INFO - 127.0.0.1:55608 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:35:18,729 - uvicorn.access - INFO - 127.0.0.1:34582 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:35:48,786 - uvicorn.access - INFO - 127.0.0.1:54460 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:36:18,838 - uvicorn.access - INFO - 127.0.0.1:37696 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:36:48,890 - uvicorn.access - INFO - 127.0.0.1:58502 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:37:18,944 - uvicorn.access - INFO - 127.0.0.1:39542 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:37:48,993 - uvicorn.access - INFO - 127.0.0.1:43644 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:38:19,038 - uvicorn.access - INFO - 127.0.0.1:47608 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:38:49,083 - uvicorn.access - INFO - 127.0.0.1:53402 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:39:19,133 - uvicorn.access - INFO - 127.0.0.1:54456 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:39:49,193 - uvicorn.access - INFO - 127.0.0.1:43314 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:40:19,242 - uvicorn.access - INFO - 127.0.0.1:38102 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:40:49,291 - uvicorn.access - INFO - 127.0.0.1:35192 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:41:19,348 - uvicorn.access - INFO - 127.0.0.1:32964 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:41:49,403 - uvicorn.access - INFO - 127.0.0.1:39302 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:41:58,915 - uvicorn.access - INFO - 172.18.0.1:56986 - "POST /process HTTP/1.1" 500
+2025-02-18 10:42:19,456 - uvicorn.access - INFO - 127.0.0.1:56356 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:42:49,510 - uvicorn.access - INFO - 127.0.0.1:55998 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:43:19,557 - uvicorn.access - INFO - 127.0.0.1:39966 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:43:49,599 - uvicorn.access - INFO - 127.0.0.1:57496 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:44:08,522 - uvicorn.error - INFO - Shutting down
+2025-02-18 10:44:08,625 - uvicorn.error - INFO - Waiting for application shutdown.
+2025-02-18 10:44:08,627 - uvicorn.error - INFO - Application shutdown complete.
+2025-02-18 10:44:08,628 - uvicorn.error - INFO - Finished server process [1]
+2025-02-18 10:44:11,511 - uvicorn.error - INFO - Started server process [1]
+2025-02-18 10:44:11,512 - uvicorn.error - INFO - Waiting for application startup.
+2025-02-18 10:44:11,512 - uvicorn.error - INFO - Application startup complete.
+2025-02-18 10:44:11,513 - uvicorn.error - INFO - Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2025-02-18 10:44:16,113 - uvicorn.access - INFO - 127.0.0.1:53842 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:44:46,163 - uvicorn.access - INFO - 127.0.0.1:60544 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:44:50,497 - uvicorn.access - INFO - 172.18.0.1:57572 - "POST /process HTTP/1.1" 500
+2025-02-18 10:45:16,215 - uvicorn.access - INFO - 127.0.0.1:51068 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:45:46,269 - uvicorn.access - INFO - 127.0.0.1:45438 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:46:16,327 - uvicorn.access - INFO - 127.0.0.1:50620 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:46:46,379 - uvicorn.access - INFO - 127.0.0.1:48082 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:47:16,423 - uvicorn.access - INFO - 127.0.0.1:37988 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:47:24,948 - uvicorn.error - INFO - Shutting down
+2025-02-18 10:47:25,049 - uvicorn.error - INFO - Waiting for application shutdown.
+2025-02-18 10:47:25,050 - uvicorn.error - INFO - Application shutdown complete.
+2025-02-18 10:47:25,052 - uvicorn.error - INFO - Finished server process [1]
+2025-02-18 10:47:27,097 - uvicorn.error - INFO - Started server process [1]
+2025-02-18 10:47:27,097 - uvicorn.error - INFO - Waiting for application startup.
+2025-02-18 10:47:27,098 - uvicorn.error - INFO - Application startup complete.
+2025-02-18 10:47:27,098 - uvicorn.error - INFO - Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2025-02-18 10:47:31,691 - uvicorn.access - INFO - 127.0.0.1:34194 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:48:01,737 - uvicorn.access - INFO - 127.0.0.1:40980 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:48:31,854 - uvicorn.access - INFO - 127.0.0.1:36398 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:48:43,263 - uvicorn.access - INFO - 172.18.0.1:64332 - "POST /process HTTP/1.1" 200
+2025-02-18 10:49:01,905 - uvicorn.access - INFO - 127.0.0.1:41118 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:49:31,958 - uvicorn.access - INFO - 127.0.0.1:47020 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:50:02,025 - uvicorn.access - INFO - 127.0.0.1:55166 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:50:32,075 - uvicorn.access - INFO - 127.0.0.1:56772 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:51:02,128 - uvicorn.access - INFO - 127.0.0.1:44724 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:51:32,176 - uvicorn.access - INFO - 127.0.0.1:58284 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:52:02,225 - uvicorn.access - INFO - 127.0.0.1:49062 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:52:32,268 - uvicorn.access - INFO - 127.0.0.1:41648 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:53:02,324 - uvicorn.access - INFO - 127.0.0.1:55892 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:53:32,364 - uvicorn.access - INFO - 127.0.0.1:55254 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:54:02,415 - uvicorn.access - INFO - 127.0.0.1:57292 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:54:32,470 - uvicorn.access - INFO - 127.0.0.1:39864 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:55:02,523 - uvicorn.access - INFO - 127.0.0.1:55726 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:55:32,570 - uvicorn.access - INFO - 127.0.0.1:51824 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:56:02,615 - uvicorn.access - INFO - 127.0.0.1:53212 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:56:32,671 - uvicorn.access - INFO - 127.0.0.1:37188 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:57:02,727 - uvicorn.access - INFO - 127.0.0.1:53794 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:57:15,776 - uvicorn.error - INFO - Shutting down
+2025-02-18 10:57:15,879 - uvicorn.error - INFO - Waiting for application shutdown.
+2025-02-18 10:57:15,880 - uvicorn.error - INFO - Application shutdown complete.
+2025-02-18 10:57:15,882 - uvicorn.error - INFO - Finished server process [1]
+2025-02-18 10:57:18,474 - uvicorn.error - INFO - Started server process [1]
+2025-02-18 10:57:18,475 - uvicorn.error - INFO - Waiting for application startup.
+2025-02-18 10:57:18,475 - uvicorn.error - INFO - Application startup complete.
+2025-02-18 10:57:18,475 - uvicorn.error - INFO - Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2025-02-18 10:57:23,086 - uvicorn.access - INFO - 127.0.0.1:50490 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:57:53,135 - uvicorn.access - INFO - 127.0.0.1:48404 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:58:00,901 - uvicorn.access - INFO - 172.18.0.1:64748 - "POST /process HTTP/1.1" 200
+2025-02-18 10:58:23,174 - uvicorn.access - INFO - 127.0.0.1:52490 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:58:53,226 - uvicorn.access - INFO - 127.0.0.1:44130 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:59:23,274 - uvicorn.access - INFO - 127.0.0.1:37000 - "GET /docs HTTP/1.1" 200
+2025-02-18 10:59:53,331 - uvicorn.access - INFO - 127.0.0.1:40976 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:00:23,186 - uvicorn.error - INFO - Shutting down
+2025-02-18 11:00:23,296 - uvicorn.error - INFO - Waiting for application shutdown.
+2025-02-18 11:00:23,303 - uvicorn.error - INFO - Application shutdown complete.
+2025-02-18 11:00:23,304 - uvicorn.error - INFO - Finished server process [1]
+2025-02-18 11:00:27,849 - uvicorn.error - INFO - Started server process [1]
+2025-02-18 11:00:27,849 - uvicorn.error - INFO - Waiting for application startup.
+2025-02-18 11:00:27,850 - uvicorn.error - INFO - Application startup complete.
+2025-02-18 11:00:27,850 - uvicorn.error - INFO - Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2025-02-18 11:00:32,316 - uvicorn.access - INFO - 127.0.0.1:33776 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:01:02,357 - uvicorn.access - INFO - 127.0.0.1:40194 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:01:26,121 - uvicorn.access - INFO - 172.18.0.1:56700 - "POST /process HTTP/1.1" 200
+2025-02-18 11:01:32,409 - uvicorn.access - INFO - 127.0.0.1:56884 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:02:01,821 - uvicorn.error - INFO - Shutting down
+2025-02-18 11:02:01,927 - uvicorn.error - INFO - Waiting for application shutdown.
+2025-02-18 11:02:01,929 - uvicorn.error - INFO - Application shutdown complete.
+2025-02-18 11:02:01,929 - uvicorn.error - INFO - Finished server process [1]
+2025-02-18 11:02:04,587 - uvicorn.error - INFO - Started server process [1]
+2025-02-18 11:02:04,588 - uvicorn.error - INFO - Waiting for application startup.
+2025-02-18 11:02:04,588 - uvicorn.error - INFO - Application startup complete.
+2025-02-18 11:02:04,588 - uvicorn.error - INFO - Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2025-02-18 11:02:09,187 - uvicorn.access - INFO - 127.0.0.1:34568 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:02:39,235 - uvicorn.access - INFO - 127.0.0.1:58840 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:03:09,284 - uvicorn.access - INFO - 127.0.0.1:39670 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:03:39,337 - uvicorn.access - INFO - 127.0.0.1:60688 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:04:09,393 - uvicorn.access - INFO - 127.0.0.1:48964 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:04:39,444 - uvicorn.access - INFO - 127.0.0.1:46976 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:05:09,503 - uvicorn.access - INFO - 127.0.0.1:36868 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:05:39,552 - uvicorn.access - INFO - 127.0.0.1:51218 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:05:46,321 - uvicorn.access - INFO - 172.18.0.1:59614 - "POST /process HTTP/1.1" 200
+2025-02-18 11:06:09,602 - uvicorn.access - INFO - 127.0.0.1:43116 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:06:39,657 - uvicorn.access - INFO - 127.0.0.1:35758 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:07:09,710 - uvicorn.access - INFO - 127.0.0.1:53648 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:07:39,763 - uvicorn.access - INFO - 127.0.0.1:50012 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:08:09,806 - uvicorn.access - INFO - 127.0.0.1:48836 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:08:39,856 - uvicorn.access - INFO - 127.0.0.1:47128 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:09:09,909 - uvicorn.access - INFO - 127.0.0.1:45694 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:09:39,961 - uvicorn.access - INFO - 127.0.0.1:46256 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:10:10,005 - uvicorn.access - INFO - 127.0.0.1:34172 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:10:40,061 - uvicorn.access - INFO - 127.0.0.1:60670 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:11:10,115 - uvicorn.access - INFO - 127.0.0.1:43434 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:11:40,159 - uvicorn.access - INFO - 127.0.0.1:43448 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:12:10,221 - uvicorn.access - INFO - 127.0.0.1:58702 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:12:40,282 - uvicorn.access - INFO - 127.0.0.1:52942 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:13:10,336 - uvicorn.access - INFO - 127.0.0.1:37326 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:13:40,390 - uvicorn.access - INFO - 127.0.0.1:40812 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:14:10,442 - uvicorn.access - INFO - 127.0.0.1:60724 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:14:40,491 - uvicorn.access - INFO - 127.0.0.1:56988 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:15:10,536 - uvicorn.access - INFO - 127.0.0.1:35176 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:15:40,604 - uvicorn.access - INFO - 127.0.0.1:38454 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:16:10,648 - uvicorn.access - INFO - 127.0.0.1:37928 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:16:40,697 - uvicorn.access - INFO - 127.0.0.1:47832 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:17:10,745 - uvicorn.access - INFO - 127.0.0.1:48848 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:17:40,802 - uvicorn.access - INFO - 127.0.0.1:37000 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:18:10,855 - uvicorn.access - INFO - 127.0.0.1:34084 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:18:40,902 - uvicorn.access - INFO - 127.0.0.1:46466 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:19:10,953 - uvicorn.access - INFO - 127.0.0.1:52270 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:19:41,013 - uvicorn.access - INFO - 127.0.0.1:55702 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:20:11,054 - uvicorn.access - INFO - 127.0.0.1:37560 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:20:41,110 - uvicorn.access - INFO - 127.0.0.1:51342 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:21:11,173 - uvicorn.access - INFO - 127.0.0.1:39346 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:21:41,237 - uvicorn.access - INFO - 127.0.0.1:42142 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:22:11,287 - uvicorn.access - INFO - 127.0.0.1:54760 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:22:41,324 - uvicorn.access - INFO - 127.0.0.1:48726 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:23:11,377 - uvicorn.access - INFO - 127.0.0.1:37868 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:23:41,436 - uvicorn.access - INFO - 127.0.0.1:60864 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:24:11,490 - uvicorn.access - INFO - 127.0.0.1:59614 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:24:41,540 - uvicorn.access - INFO - 127.0.0.1:34416 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:25:11,590 - uvicorn.access - INFO - 127.0.0.1:40612 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:25:41,638 - uvicorn.access - INFO - 127.0.0.1:41412 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:26:11,690 - uvicorn.access - INFO - 127.0.0.1:52726 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:26:41,744 - uvicorn.access - INFO - 127.0.0.1:38988 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:27:11,794 - uvicorn.access - INFO - 127.0.0.1:42870 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:27:41,844 - uvicorn.access - INFO - 127.0.0.1:50912 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:28:11,890 - uvicorn.access - INFO - 127.0.0.1:33270 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:28:41,924 - uvicorn.access - INFO - 127.0.0.1:38964 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:29:11,979 - uvicorn.access - INFO - 127.0.0.1:60720 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:29:42,036 - uvicorn.access - INFO - 127.0.0.1:57466 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:30:12,094 - uvicorn.access - INFO - 127.0.0.1:49660 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:30:42,133 - uvicorn.access - INFO - 127.0.0.1:41132 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:31:12,198 - uvicorn.access - INFO - 127.0.0.1:48406 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:31:42,254 - uvicorn.access - INFO - 127.0.0.1:48284 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:32:12,309 - uvicorn.access - INFO - 127.0.0.1:37056 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:32:42,364 - uvicorn.access - INFO - 127.0.0.1:41082 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:33:12,404 - uvicorn.access - INFO - 127.0.0.1:53392 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:33:42,459 - uvicorn.access - INFO - 127.0.0.1:58124 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:34:12,512 - uvicorn.access - INFO - 127.0.0.1:57920 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:34:42,572 - uvicorn.access - INFO - 127.0.0.1:56526 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:35:12,619 - uvicorn.access - INFO - 127.0.0.1:48058 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:35:42,669 - uvicorn.access - INFO - 127.0.0.1:46216 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:36:12,721 - uvicorn.access - INFO - 127.0.0.1:36902 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:36:42,774 - uvicorn.access - INFO - 127.0.0.1:46780 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:37:12,827 - uvicorn.access - INFO - 127.0.0.1:43358 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:37:42,883 - uvicorn.access - INFO - 127.0.0.1:51556 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:38:12,920 - uvicorn.access - INFO - 127.0.0.1:45694 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:38:42,971 - uvicorn.access - INFO - 127.0.0.1:38292 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:39:13,025 - uvicorn.access - INFO - 127.0.0.1:39694 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:39:43,080 - uvicorn.access - INFO - 127.0.0.1:52946 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:40:13,135 - uvicorn.access - INFO - 127.0.0.1:40168 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:40:43,188 - uvicorn.access - INFO - 127.0.0.1:47180 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:41:13,244 - uvicorn.access - INFO - 127.0.0.1:41790 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:41:43,296 - uvicorn.access - INFO - 127.0.0.1:56014 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:42:13,357 - uvicorn.access - INFO - 127.0.0.1:37676 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:42:43,404 - uvicorn.access - INFO - 127.0.0.1:36914 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:43:13,456 - uvicorn.access - INFO - 127.0.0.1:36346 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:43:43,516 - uvicorn.access - INFO - 127.0.0.1:39750 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:44:13,574 - uvicorn.access - INFO - 127.0.0.1:59816 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:44:43,626 - uvicorn.access - INFO - 127.0.0.1:43516 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:45:13,680 - uvicorn.access - INFO - 127.0.0.1:35254 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:45:43,733 - uvicorn.access - INFO - 127.0.0.1:59358 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:46:13,787 - uvicorn.access - INFO - 127.0.0.1:50264 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:46:43,842 - uvicorn.access - INFO - 127.0.0.1:58602 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:47:13,896 - uvicorn.access - INFO - 127.0.0.1:38852 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:47:43,950 - uvicorn.access - INFO - 127.0.0.1:47402 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:48:14,007 - uvicorn.access - INFO - 127.0.0.1:39358 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:48:44,063 - uvicorn.access - INFO - 127.0.0.1:44912 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:49:14,119 - uvicorn.access - INFO - 127.0.0.1:41356 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:49:44,173 - uvicorn.access - INFO - 127.0.0.1:43570 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:50:14,235 - uvicorn.access - INFO - 127.0.0.1:58504 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:50:44,291 - uvicorn.access - INFO - 127.0.0.1:54148 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:51:14,338 - uvicorn.access - INFO - 127.0.0.1:58278 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:51:44,391 - uvicorn.access - INFO - 127.0.0.1:52894 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:52:14,447 - uvicorn.access - INFO - 127.0.0.1:39674 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:52:44,500 - uvicorn.access - INFO - 127.0.0.1:53374 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:53:14,556 - uvicorn.access - INFO - 127.0.0.1:44480 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:53:44,601 - uvicorn.access - INFO - 127.0.0.1:56500 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:54:14,650 - uvicorn.access - INFO - 127.0.0.1:41946 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:54:44,704 - uvicorn.access - INFO - 127.0.0.1:45662 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:55:14,753 - uvicorn.access - INFO - 127.0.0.1:42006 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:55:44,802 - uvicorn.access - INFO - 127.0.0.1:43008 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:56:14,844 - uvicorn.access - INFO - 127.0.0.1:33278 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:56:44,874 - uvicorn.access - INFO - 127.0.0.1:36648 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:57:14,924 - uvicorn.access - INFO - 127.0.0.1:35088 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:57:44,979 - uvicorn.access - INFO - 127.0.0.1:45030 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:58:15,031 - uvicorn.access - INFO - 127.0.0.1:50338 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:58:45,086 - uvicorn.access - INFO - 127.0.0.1:34692 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:59:15,145 - uvicorn.access - INFO - 127.0.0.1:40378 - "GET /docs HTTP/1.1" 200
+2025-02-18 11:59:45,197 - uvicorn.access - INFO - 127.0.0.1:38520 - "GET /docs HTTP/1.1" 200
+2025-02-18 12:00:15,251 - uvicorn.access - INFO - 127.0.0.1:50346 - "GET /docs HTTP/1.1" 200
+2025-02-18 12:00:45,310 - uvicorn.access - INFO - 127.0.0.1:59018 - "GET /docs HTTP/1.1" 200
+2025-02-18 12:01:15,370 - uvicorn.access - INFO - 127.0.0.1:43032 - "GET /docs HTTP/1.1" 200
+2025-02-18 12:01:45,427 - uvicorn.access - INFO - 127.0.0.1:37036 - "GET /docs HTTP/1.1" 200
+2025-02-18 12:02:15,462 - uvicorn.access - INFO - 127.0.0.1:53810 - "GET /docs HTTP/1.1" 200
+2025-02-18 12:02:45,505 - uvicorn.access - INFO - 127.0.0.1:38920 - "GET /docs HTTP/1.1" 200
+2025-02-18 12:03:15,544 - uvicorn.access - INFO - 127.0.0.1:57636 - "GET /docs HTTP/1.1" 200
+2025-02-18 12:03:45,596 - uvicorn.access - INFO - 127.0.0.1:43122 - "GET /docs HTTP/1.1" 200
+2025-02-18 12:04:15,646 - uvicorn.access - INFO - 127.0.0.1:53224 - "GET /docs HTTP/1.1" 200
+2025-02-18 12:04:45,707 - uvicorn.access - INFO - 127.0.0.1:44490 - "GET /docs HTTP/1.1" 200
+2025-02-18 12:05:15,764 - uvicorn.access - INFO - 127.0.0.1:33072 - "GET /docs HTTP/1.1" 200
+2025-02-18 12:05:45,829 - uvicorn.access - INFO - 127.0.0.1:58412 - "GET /docs HTTP/1.1" 200
+2025-02-18 12:06:15,887 - uvicorn.access - INFO - 127.0.0.1:50170 - "GET /docs HTTP/1.1" 200
+2025-02-18 12:06:45,946 - uvicorn.access - INFO - 127.0.0.1:48948 - "GET /docs HTTP/1.1" 200
+2025-02-18 12:07:16,000 - uvicorn.access - INFO - 127.0.0.1:56266 - "GET /docs HTTP/1.1" 200
+2025-02-18 12:07:46,049 - uvicorn.access - INFO - 127.0.0.1:57084 - "GET /docs HTTP/1.1" 200
+2025-02-18 12:08:16,101 - uvicorn.access - INFO - 127.0.0.1:59586 - "GET /docs HTTP/1.1" 200
+2025-02-18 12:08:46,142 - uvicorn.access - INFO - 127.0.0.1:51000 - "GET /docs HTTP/1.1" 200
+2025-02-18 12:09:16,189 - uvicorn.access - INFO - 127.0.0.1:45720 - "GET /docs HTTP/1.1" 200
+2025-02-18 12:09:46,241 - uvicorn.access - INFO - 127.0.0.1:35696 - "GET /docs HTTP/1.1" 200
+2025-02-18 12:10:16,298 - uvicorn.access - INFO - 127.0.0.1:35446 - "GET /docs HTTP/1.1" 200
+2025-02-18 12:10:46,349 - uvicorn.access - INFO - 127.0.0.1:33602 - "GET /docs HTTP/1.1" 200
+2025-02-18 12:11:16,406 - uvicorn.access - INFO - 127.0.0.1:49092 - "GET /docs HTTP/1.1" 200
+2025-02-18 12:11:46,457 - uvicorn.access - INFO - 127.0.0.1:49918 - "GET /docs HTTP/1.1" 200
+2025-02-18 12:12:16,496 - uvicorn.access - INFO - 127.0.0.1:54646 - "GET /docs HTTP/1.1" 200
+2025-02-18 12:12:46,550 - uvicorn.access - INFO - 127.0.0.1:55426 - "GET /docs HTTP/1.1" 200
+2025-02-18 12:13:16,601 - uvicorn.access - INFO - 127.0.0.1:38160 - "GET /docs HTTP/1.1" 200
+2025-02-18 12:13:46,652 - uvicorn.access - INFO - 127.0.0.1:43052 - "GET /docs HTTP/1.1" 200
