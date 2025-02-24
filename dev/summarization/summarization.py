@@ -37,8 +37,8 @@ RESULTS_DIR.mkdir(exist_ok=True)
 SUMMARY_PROMPT = """You are an AI language model specialized in summarizing texts while preserving key information. Your task is to generate a structured summary.
 
 **Input:**
-Title: {제목}
-Content: {본문}
+Title: {title}
+Content: {content}
 
 **Instructions:**
 - The summary must retain essential details without losing meaning.
@@ -48,41 +48,41 @@ Content: {본문}
 - Ensure the summary is concise but complete.
 
 **Output Format (Markdown):**
-### {제목}
+### {title}
 
-**Summary:** {요약된 본문}"""
+**Summary:** {summary}"""
 
 # Default prompt for category classification
 CATEGORY_PROMPT = """You are an AI model that categorizes content into predefined categories. Your task is to classify the given text into **one** of the following categories:
 
-1. **논문 (Research Paper)** - Academic papers, studies, or research findings.
-2. **모델 (Model)** - AI/ML models, architectures, or improvements.
-3. **도구 (Tool)** - AI-related software, libraries, or frameworks.
-4. **업데이트&트렌드 (Updates & Trends)** - News, developments, and AI/ML trends.
+1. **Research Paper** - Academic papers, studies, or research findings.
+2. **Model** - AI/ML models, architectures, or improvements.
+3. **Tool** - AI-related software, libraries, or frameworks.
+4. **Updates & Trends** - News, developments, and AI/ML trends.
 
 **Input:**
-Title: {제목}
-Content: {본문}
+Title: {title}
+Content: {content}
 
 **Instructions:**
 - Assign exactly **one** category from the list.
-- Choose **논문** if the content discusses a research study or academic findings.
-- Choose **모델** if the content discusses AI model development or architectures.
-- Choose **도구** if the content introduces AI/ML tools or software.
-- Choose **업데이트&트렌드** if the content reports industry trends or news.
+- Choose **Research Paper** if the content discusses a research study or academic findings.
+- Choose **Model** if the content discusses AI model development or architectures.
+- Choose **Tool** if the content introduces AI/ML tools or software.
+- Choose **Updates & Trends** if the content reports industry trends or news.
 
 **Output Format (Markdown):**
-### {제목}
+### {title}
 
-**Category:** {분류}
+**Category:** {category}
 """
 
 # Default prompt for keyword extraction
 KEYWORDS_PROMPT = """You are an AI model trained to extract distinct and relevant keywords from a given text. Your task is to generate **3 to 5 unique keywords** that best represent the content.
 
 **Input:**
-Title: {제목}
-Content: {본문}
+Title: {title}
+Content: {content}
 
 **Instructions:**   
 - Identify 3 to 5 **distinct** keywords summarizing the content.
@@ -91,9 +91,9 @@ Content: {본문}
 - Do not include redundant or overlapping keywords.
 
 **Output Format (Markdown):**
-### {제목}
+### {title}
 
-**Keywords:** {키워드1}, {키워드2}, {키워드3}, {키워드4}, {키워드5}
+**Keywords:** {keyword1}, {keyword2}, {keyword3}, {keyword4}, {keyword5}
 """
 
 async def call_openai(prompt, title, content, max_retries=3):
@@ -121,8 +121,8 @@ async def call_openai(prompt, title, content, max_retries=3):
 
 async def process_row(row, index, results):
     try:
-        title = str(row["제목"])
-        content = str(row["본문"])
+        title = str(row["title"])
+        content = str(row["content"])
         
         logger.info(f"Processing row {index} - Title: {title[:50]}")
         
@@ -135,7 +135,7 @@ async def process_row(row, index, results):
             )
         except asyncio.TimeoutError:
             logger.error(f"Timeout generating summary for row {index}")
-            summary = "요약 생성 중 시간 초과. 다시 시도해주세요."
+            summary = "Summary generation timeout. Please try again."
 
         try:
             logger.info(f"Row {index}: Starting category classification")
@@ -145,7 +145,7 @@ async def process_row(row, index, results):
             )
         except asyncio.TimeoutError:
             logger.error(f"Timeout generating category for row {index}")
-            category = "분류 생성 중 시간 초과. 다시 시도해주세요."
+            category = "Classification timeout. Please try again."
 
         try:
             logger.info(f"Row {index}: Starting keyword extraction")
@@ -155,22 +155,22 @@ async def process_row(row, index, results):
             )
         except asyncio.TimeoutError:
             logger.error(f"Timeout generating keywords for row {index}")
-            keywords = "키워드 생성 중 시간 초과. 다시 시도해주세요."
+            keywords = "Keyword extraction timeout. Please try again."
         
         # Store results
         results[index] = {
-            "요약문": summary,
-            "분류": category,
-            "키워드": keywords
+            "summary": summary,
+            "classification": category,
+            "keyword": keywords
         }
         logger.info(f"Row {index}: Completed processing")
         
     except Exception as e:
         logger.error(f"Error processing row {index}: {str(e)}")
         results[index] = {
-            "요약문": f"처리 중 오류 발생: {str(e)}",
-            "분류": f"처리 중 오류 발생: {str(e)}",
-            "키워드": f"처리 중 오류 발생: {str(e)}"
+            "summary": f"Processing error: {str(e)}",
+            "classification": f"Processing error: {str(e)}",
+            "keyword": f"Processing error: {str(e)}"
         }
 
 app = FastAPI()
@@ -179,9 +179,9 @@ app = FastAPI()
 async def process_file(file: UploadFile = File(...)):
     logger.info(f"Received file: {file.filename}")
     
-    if not file.filename.endswith((".xlsx", ".xls")):
+    if not file.filename.lower().endswith(".csv"):
         logger.error(f"Invalid file type: {file.filename}")
-        raise HTTPException(status_code=400, detail="Invalid file type. Please upload an Excel file.")
+        raise HTTPException(status_code=400, detail="Invalid file type. Please upload a CSV file.")
     
     try:
         # Read the file in chunks
@@ -195,22 +195,25 @@ async def process_file(file: UploadFile = File(...)):
             if chunks_read % 10 == 0:  # Log every 10 chunks
                 logger.info(f"Read {chunks_read * chunk_size / 1024:.1f}KB of data")
             
-        logger.info("Loading Excel file into pandas")
-        df = pd.read_excel(io.BytesIO(contents), sheet_name="트렌드 (영상)")
-        logger.info(f"Loaded Excel file with {len(df)} rows")
+        logger.info("Loading CSV file into pandas")
+        # 모든 컬럼을 문자열로 읽기
+        df = pd.read_csv(io.BytesIO(contents), dtype=str)
+        logger.info(f"Loaded CSV file with {len(df)} rows")
         
     except Exception as e:
         logger.error(f"File reading error: {str(e)}")
-        raise HTTPException(status_code=500, detail=f"Error reading Excel file: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Error reading CSV file: {str(e)}")
     
-    if "제목" not in df.columns or "본문" not in df.columns:
-        logger.error("Required columns not found in Excel file")
-        raise HTTPException(status_code=400, detail="Excel file must contain '제목' and '본문' columns.")
+    required_columns = ["title", "content"]
+    missing_columns = [col for col in required_columns if col not in df.columns]
+    if missing_columns:
+        logger.error(f"Required columns not found in CSV file: {missing_columns}")
+        raise HTTPException(status_code=400, detail=f"CSV file must contain the following columns: {', '.join(required_columns)}")
     
-    # Initialize empty columns for our new data
-    df["요약문"] = ""
-    df["분류"] = ""
-    df["키워드"] = ""
+    # Initialize empty columns for our new data if they don't exist
+    for col in ["summary", "classification", "keyword"]:
+        if col not in df.columns:
+            df[col] = ""
     
     try:
         # Process all rows concurrently
@@ -222,9 +225,9 @@ async def process_file(file: UploadFile = File(...)):
         # Update DataFrame with results
         logger.info("Updating DataFrame with results")
         for index, result in results.items():
-            df.at[index, "요약문"] = result["요약문"]
-            df.at[index, "분류"] = result["분류"]
-            df.at[index, "키워드"] = result["키워드"]
+            df.at[index, "summary"] = result["summary"]
+            df.at[index, "classification"] = result["classification"]
+            df.at[index, "keyword"] = result["keyword"]
         
         # Convert DataFrame to JSON
         logger.info("Preparing JSON response")

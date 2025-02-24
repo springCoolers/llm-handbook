@@ -9,7 +9,7 @@ services:
     environment:
       - OPENAI_API_KEY=${OPENAI_API_KEY}
     env_file:
-      - ../../dev/.env
+      - .env
     restart: always
     volumes:
       - ./logs:/app/logs  # 로그 저장을 위한 볼륨
