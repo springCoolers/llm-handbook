@@ -10,11 +10,16 @@ import json
 from datetime import datetime
 from pathlib import Path
 
-# Configure logging
+# Configure logging - console only, no file logging
 logging.basicConfig(
     level=logging.INFO,
-    format='%(asctime)s - %(levelname)s - %(message)s'
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    force=True  # Override any existing logging configuration
 )
+# Ensure no handlers are writing to files
+for handler in logging.root.handlers[:]:  # Make a copy of the list
+    if not isinstance(handler, logging.StreamHandler) or isinstance(handler, logging.FileHandler):
+        logging.root.removeHandler(handler)
 logger = logging.getLogger(__name__)
 
 # Initialize OpenAI client with default configuration
