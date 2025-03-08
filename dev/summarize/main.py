@@ -90,7 +90,7 @@ def generate_summary(source: str) -> str:
             if match:
                 video_id = match.group(1)
             else:
-                return "잘못된 YouTube URL입니다."
+                return "Wrong Youtube URL format"
             srt = YouTubeTranscriptApi.get_transcript(video_id, languages=['en'])
             context = "\n".join(item["text"] for item in srt)
         else:
