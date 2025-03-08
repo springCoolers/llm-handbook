@@ -1,12 +1,15 @@
 import os
-import asyncio
+import re
 from dotenv import load_dotenv
+from pydantic import BaseModel, Field
+
+from youtube_transcript_api import YouTubeTranscriptApi
 
 from langchain.schema.runnable import RunnablePassthrough
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_community.document_loaders import WebBaseLoader
 from langchain_openai import ChatOpenAI
-from langchain_core.output_parsers import StrOutputParser
+from langchain_core.output_parsers import JsonOutputParser
 
 load_dotenv()
 os.environ['OPENAI_API_KEY'] = os.getenv("OPENAI_API_KEY")
@@ -25,9 +28,13 @@ user_message = """### Context
 Please answer in Korean but category should be in English.
 **Let's think about it step-by-step!**
 
-summary:
-keywords:
-category:"""
+### Format: 
+{format_instruction}"""
+
+class summarize(BaseModel):
+    summary: str = Field(description="Briefly abstractive summarize the main content of the text in 1024 tokens.")
+    keywords: list = Field(description="Please extract 5 of the most important keywords from the text (RAG, LLM, MoE, CoT, etc.)")
+    category: str = Field(description="Please classification category of the text (paper, model, tool, update & trend)")
 
 prompt = ChatPromptTemplate.from_messages(
     [
@@ -36,7 +43,6 @@ prompt = ChatPromptTemplate.from_messages(
     ]
 )
 
-
 llm = ChatOpenAI(
     model_name="gpt-4o-mini",
     temperature=0.,
@@ -44,29 +50,63 @@ llm = ChatOpenAI(
     streaming=True
 )
 
-parser = StrOutputParser()
+parser = JsonOutputParser(pydantic_object=summarize)
 
 chain = (
     {
         'context': RunnablePassthrough(),
     }
-    | prompt
+    | prompt.partial(format_instruction=parser.get_format_instructions())
     | llm
     | parser
 )
 
-async def process(context):
-    async for chunk in chain.astream({"context": context}):
-        print(chunk, end="", flush=True)
+def is_valid_url(url):
+    regex = re.compile(
+        r'^(?:http|ftp)s?://'
+        r'(?:(?:[A-Z0-9](?:[A-Z0-9-]{0,61}[A-Z0-9])?\.)+'
+        r'(?:[A-Z]{2,6}\.?|[A-Z0-9-]{2,}\.?)|'
+        r'localhost|'
+        r'\d{1,3}(?:\.\d{1,3}){3})'
+        r'(?::\d+)?'
+        r'(?:/?|[/?]\S+)$', re.IGNORECASE)
+    
+    return re.match(regex, url) is not None
 
-async def main():
-    url = input("Enter the URL of the article you want to summarize: ")
+def is_youtube_url(url):
+    regex = re.compile(
+        r'^(?:https?://)?'
+        r'(?:www\.)?'
+        r'(?:m\.)?'
+        r'(?:youtube\.com/watch\?v=|youtu\.be/)'
+        r'[\w-]+', re.IGNORECASE
+    )
+    return re.match(regex, url) is not None
 
-    loader = WebBaseLoader(url)
-    context = loader.load()
+def generate_summary(source: str) -> str:
+    if is_valid_url(source):
+        if is_youtube_url(source):
+            match = re.search(r'(?:v=|youtu\.be/)([\w-]+)', source)
+            if match:
+                video_id = match.group(1)
+            else:
+                return "잘못된 YouTube URL입니다."
+            srt = YouTubeTranscriptApi.get_transcript(video_id, languages=['en'])
+            context = "\n".join(item["text"] for item in srt)
+        else:
+            loader = WebBaseLoader(source)
+            documents = loader.load()
+            if isinstance(documents, list):
+                context = "\n".join(doc.page_content for doc in documents)
+            else:
+                context = documents
+    else:
+        context = source
 
-    await process(context)
+    result = chain.invoke({"context": context})
 
+    return result
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    source = input("Enter URL or text: ")
+    print(generate_summary(source))
