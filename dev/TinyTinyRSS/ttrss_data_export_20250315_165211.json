@@ -1,0 +1,695 @@
+{
+  "export_date": "2025-03-15T16:52:11.501382",
+  "total_feeds": 2,
+  "total_entries": 39,
+  "categories": {
+    "Unknown": [
+      {
+        "id": 2,
+        "title": "DEV Community",
+        "feed_url": "https://dev.to/feed",
+        "site_url": "https://dev.to",
+        "last_updated": "1970-01-01T00:00:00",
+        "category": {
+          "id": null,
+          "name": "Unknown"
+        },
+        "entries_count": 12,
+        "entries": [
+          {
+            "id": 33,
+            "title": "New AI Tool Lets You Create Art by Mixing and Matching Parts from Multiple Images",
+            "link": "https://dev.to/mikeyoung44/new-ai-tool-lets-you-create-art-by-mixing-and-matching-parts-from-multiple-images-18ne",
+            "content": "*This is a Plain English Papers summary of a research paper called New AI Tool Lets You Create Art by Mixing and Matching Parts from Multiple Images. If you like these kinds of analysis, you should join AImodels.fyi or follow us on Twitter.*\n\n  \n  \n  Overview\n\n- \n**Piece it Together** presents a new method for AI art generation based on parts of existing images\n\n- Uses IP-Priors (Image-Prompted Priors) to blend pieces from multiple reference images\n\n- Creates coherent, high-quality concepts while preserving reference image qualities\n\n- Enables precise control through text prompts and image parts selection\n\n- Outperforms existing methods in user studies and technical evaluations\n\n- Builds on diffusion models while addressing limitations of previous approaches\n\n  \n  \n  Plain English Explanation\n\nImagine you're designing a new toy and want to combine the wheels from one toy, the body shape from another, and the color pattern from a third. Traditionally, you'd have to describe all these elements in words, hoping the AI understands exactly what you want. The problem is th...\n\nClick here to read the full summary of this paper",
+            "author": "Mike Young",
+            "updated": "2025-03-15T07:20:01",
+            "date_entered": "2025-03-15T07:46:00",
+            "marked": false,
+            "published": false,
+            "unread": false,
+            "score": 0,
+            "tags": [
+              "ai",
+              "datascience",
+              "machinelearning",
+              "programming"
+            ]
+          },
+          {
+            "id": 34,
+            "title": "AI System Makes Breakthrough in Understanding Images and Text Like Humans Do",
+            "link": "https://dev.to/mikeyoung44/ai-system-makes-breakthrough-in-understanding-images-and-text-like-humans-do-4kam",
+            "content": "*This is a Plain English Papers summary of a research paper called AI System Makes Breakthrough in Understanding Images and Text Like Humans Do. If you like these kinds of analysis, you should join AImodels.fyi or follow us on Twitter.*\n\n  \n  \n  Overview\n\n- R1-Onevision is a multimodal AI system that integrates vision and language\n\n- Uses a cross-modal reasoning pipeline to standardize reasoning across modalities\n\n- Introduces \"Language-As-Attention\" (LAA) to convert linguistic reasoning into visual attention\n\n- Achieves state-of-the-art performance on diverse multimodal reasoning tasks\n\n- Demonstrates strong generalization to unseen reasoning tasks and domains\n\n  \n  \n  Plain English Explanation\n\nR1-Onevision tackles a fundamental problem in AI: how to make machines think about text and images in the same way humans do. Current multimodal AI systems often handle text and...\n\nClick here to read the full summary of this paper",
+            "author": "Mike Young",
+            "updated": "2025-03-15T07:19:22",
+            "date_entered": "2025-03-15T07:46:00",
+            "marked": false,
+            "published": false,
+            "unread": false,
+            "score": 0,
+            "tags": [
+              "ai",
+              "datascience",
+              "machinelearning",
+              "programming"
+            ]
+          },
+          {
+            "id": 39,
+            "title": "New AI Model Combines Best of Diffusion and Autoregressive Language Models for Flexible Text Generation",
+            "link": "https://dev.to/mikeyoung44/new-ai-model-combines-best-of-diffusion-and-autoregressive-language-models-for-flexible-text-372m",
+            "content": "*This is a Plain English Papers summary of a research paper called New AI Model Combines Best of Diffusion and Autoregressive Language Models for Flexible Text Generation. If you like these kinds of analysis, you should join AImodels.fyi or follow us on Twitter.*\n\n  \n  \n  Overview\n\n- Block diffusion language models combine strengths of autoregressive and diffusion approaches\n\n- Supports flexible-length text generation unlike traditional diffusion models\n\n- Improves efficiency with KV caching and parallel token sampling\n\n- Introduces data-driven noise schedules to minimize variance\n\n- Sets new state-of-the-art performance among diffusion language models\n\n- Enables generation of arbitrary-length sequences\n\n  \n  \n  Plain English Explanation\n\nLanguage models come in different flavors. The most common ones today are autoregressive models, which generate text one word at a time, like someone building a sentence piece by piece. These are the models behind most chatbots and text generators we use daily.\n\nThen there are ...\n\nClick here to read the full summary of this paper",
+            "author": "Mike Young",
+            "updated": "2025-03-15T07:16:16",
+            "date_entered": "2025-03-15T07:46:00",
+            "marked": false,
+            "published": false,
+            "unread": false,
+            "score": 0,
+            "tags": [
+              "ai",
+              "datascience",
+              "machinelearning",
+              "programming"
+            ]
+          },
+          {
+            "id": 28,
+            "title": "🚀 Understanding Package Name, Categories & Tags in Google Play Console: A Complete Guide",
+            "link": "https://dev.to/kamleshj/understanding-package-name-categories-tags-in-google-play-console-a-complete-guide-46j1",
+            "content": "When publishing an app on the Google Play Store, understanding the package name, categories, and tags is crucial. These elements help in uniquely identifying your app, improving discoverability, and ensuring a seamless Play Store experience.\n\nIn this guide, we'll explore:\n\n ✔️ What is a Package Name and why is it important?\n\n ✔️ How to select the right category and tags for your app?\n\n ✔️ Step-by-step guide to setting them up in Google Play Console\n\nLet's dive in! 🚀\n\n🎯 What is a Package Name?\n\nJust like every house has a unique address, every Android app has a unique package name. This ensures no two apps on the Play Store have the same identity.\n\nA package name is an application ID assigned to an Android app when it is developed. It is essential for distinguishing the app from others on the Google Play Store and within a device's system.\n\n📌 Important: Once an app is published on the Play Store, the package name cannot be changed.\n\n📌 Format of a Package Name\n\nA package name follows a reverse domain naming convention. The general format is:\n\ncom.companyname.appname\n\n🔹 com → Top-level domain (can be .org, .net, etc.)\n\n 🔹 companyname → Your company or organization's name\n\n 🔹 appname → The specific app identifier\n\n📌 Real-World Examples\n\nWhatsApp → com.whatsapp\n\nFacebook → com.facebook.katana\n\nInstagram → com.instagram.android\n\n👉 Example for a company: If your company is mycompany.com, and your app is TravelGuide, the package name could be: \n\ncom.mycompany.travelguide\n\n🔥 Importance of a Package Name\n\n✅ 1. Uniqueness\n\nEvery app must have a unique package name, preventing conflicts during installation.\n\n✅ 2. Play Store Identification\n\nWhen an app is uploaded to the Google Play Console, its package name acts as a permanent identifier.\n\n 🔗 Example: Play Store link for WhatsApp →\n\n https://play.google.com/store/apps/details?id=com.whatsapp\n\n✅ 3. App Updates & Version Control\n\n🔄 Android checks the package name to determine whether an update should replace an existing app.\n\n💡 iOS Equivalent: Unlike Google Play, Apple's App Store uses a bundle identifier instead of a package name.\n\n🚫 Can You Change a Package Name?\n\nNo! Once an app is published, the package name cannot be changed.\n\nIf you need a new package name, you must upload it as a new app, which means losing:\n\n ✔️ Downloads\n\n ✔️ Reviews\n\n ✔️ Rankings\n\n📌 Best Practice for Large Projects\n\nFor multi-module apps, developers use structured sub-packages:\n\ncom.mycompany.travelguide.ui → (For UI components)\n\ncom.mycompany.travelguide.db → (For database-related code)\n\ncom.mycompany.travelguide.utils → (For utility functions)\n\n📌 Understanding Categories & Tags in Google Play Console\n\n📍 What is a Category?\n\nA category defines the primary type of your app. It helps users find apps based on their interests. Google provides 30+ predefined categories for apps on the Play Store.\n\n📍 What are Tags?\n\nTags are keywords that help users discover your app.\n\n📌 Difference:\n\n ✔️ Categories → Defines the main type of your app\n\n ✔️ Tags → Help with searchability\n\n📌 Example:\n\n For a multiplayer racing game with vintage cars, relevant tags could be:\n\n ✅ \"Racing\"\n\n ✅ \"Car racing\"\n\n🚫 It should not have irrelevant tags like \"Stunt driving\", as it doesn't match the app's content.\n\n🔥 How Tags Affect App Ranking & Visibility\n\nThere are two main ways an app can be discovered in the Play Store:\n\n ✔️ Search (when users type keywords in the search bar)\n\n ✔️ Explore/Browse (when users scroll through categories)\n\n🔎 Example:\n\nA user searching for \"kids games\" or \"puzzle\" will see apps with relevant tags displayed in the search results.\n\n📌 Choosing the wrong tags may:\n\n ❌ Make your app show up in the wrong category\n\n ❌ Reduce visibility compared to competitors\n\n🛠️ How to Add Tags in Google Play Console?\n\nAdding tags is simple! Follow these steps:\n\n1️⃣ Open Play Console\n\n2️⃣ Select your app\n\n3️⃣ On the left menu, go to Grow > Store presence > Store settings\n\n4️⃣ Under App Category, select:\n\n  ✅ Application type\n\n  ✅ Category\n\n5️⃣ Click Manage tags to start adding relevant tags\n\n6️⃣ Choose from Suggested tags or search for Other tags\n\n7️⃣ Click Save 🎯\n\n✅ Conclusion\n\n📌 Package Name: A unique app identifier that cannot be changed after publishing.\n\n 📌 Categories: Helps users find apps based on their interests.\n\n 📌 Tags: Improve search visibility and ranking on Google Play.\n\n🚀 By carefully choosing the right package name, category, and tags, you can ensure your app reaches the right audience and performs better in search rankings!\n\n💬 Got any questions? Drop them in the comments! 😊\n\n📢 Follow for More Google Play Console Tips!\n\n👉 If you found this guide helpful, share it and follow me for more app publishing insights! 🚀",
+            "author": "Kamlesh Jumrani",
+            "updated": "2025-03-15T07:39:00",
+            "date_entered": "2025-03-15T07:46:00",
+            "marked": false,
+            "published": false,
+            "unread": false,
+            "score": 0,
+            "tags": [
+              "android",
+              "google",
+              "googleplay",
+              "googleplayconsole"
+            ]
+          },
+          {
+            "id": 29,
+            "title": "How to be Test Driven with Spark: Chapter 5: Leverage spark in a container",
+            "link": "https://dev.to/nda_27/how-to-be-test-driven-with-spark-chapter-5-leverage-spark-in-a-container-1p74",
+            "content": "This goal of this tutorial is to provide a way to easily be test driven with spark on your local setup without using cloud resources.\n\nThis is a series of tutorials and the initial chapters can be found in:\n\n- Chapter 0 and 1\n\n- Chapter 2\n\n- Chapter 3\n\n- Chapter 4\n\nIn chapter 3, it was demonstrated that the current testing approach rely on *Java* being available on the developer setup. As mentioned, this is not ideal as there is limited control and unexpected behavior can happen. A good testing practice is to have reproducible and idempotent tests, this means:\n\n- Launching the tests an infinite number of times should always have the same results\n\n- A test should leave a clean plate after it has run, there should be no side effect to a test running (no files written, no change of environment variables, no database with remaining data etc)\n\nThe reasons why it's so important, is because otherwise you will spend most of your time relaunching the tests due to false positive, you would never be sure if you actually broke something or if the test is randomly failing. At the end, you will not trust the tests anymore and skip some of them, which defeats the purpose.\n\n  \n  \n  Why using a container?\n\nIf you are unfamiliar with the concept of containers and docker images, I suggest you have a look at docker. It will be leveraged here to start the *Spark* server for the tests; it's important to mention there are other opensource alternatives like podman or nerdctl to allow containerization.\n\nDocker will be used thereafter as it has become the defacto standards for most companies, and it's available in the *Github* ci runner. It will be assumed that you have enough knowledge about the technology to use it.\n\n  \n  \n  Container with spark connect\n\nThere is a small subtlety that needs to be understood. Previously, the *Java Virtual Machine (JVM)* was used to communicate with the python spark implementation (through the spark_session), it was using the java binary to create a swarm of workers that were handling the data processing. At the end, all the results were collected and communicated to the spark_session which was exposing it in the python code.\n\nIf you start a container with this, the spark_session will never be able to find the *JVM* inside the container as it's a binary. The container you want to create needs a way to communicate outside with the spark_session through the network. Luckily, *Spark* connect is providing a solution and the documentation is a must known. This is the chosen approach to containerize the *Spark* server and the worker creation.\n\n*Spark* is already providing a docker image that you will leverage. If you don't have docker available on your setup, you will need to install it, see the official documentation.\n\nLet's uninstall openjdk to make sure spark_session will use the new setup, it will require elevation of privileges:\n\n```\napt-get autoremove openjdk-8-jre\n\n```\n\nYou can now relaunch the tests, it's expected that they fail with the following error:\n\n```\nERROR tests/test_minimal_transfo.py::test_minimal_transfo - pyspark.errors.exceptions.base.PySparkRuntimeError: [JAVA_GATEWAY_EXITED] Java gateway process exited before sending its port number.\nERROR tests/test_minimal_transfo.py::test_transfo_w_synthetic_data - pyspark.errors.exceptions.base.PySparkRuntimeError: [JAVA_GATEWAY_EXITED] Java gateway process exited before sending its port number.\n\n```\n\n  \n  \n  Start the container\n\nYou will need to start the container with spark connect, you can launch\n\n```\ndocker run <span class=\"nt\">-p</span> 8081:8081 <span class=\"nt\">-e</span> <span class=\"nv\">SPARK_NO_DAEMONIZE</span><span class=\"o\">=</span>True <span class=\"nt\">--name</span> spark_connect apache/spark /opt/spark/sbin/start-connect-server.sh org.apache.spark.deploy.master.Master <span class=\"nt\">--packages</span> org.apache.spark:spark-connect_2.12:3.5.2,io.delta:delta-core_2.12:2.3.0 <span class=\"nt\">--conf</span> spark.driver.extraJavaOptions<span class=\"o\">=</span><span class=\"s1\">'-Divy.cache.dir=/tmp -Divy.home=/tmp'</span> <span class=\"nt\">--conf</span> spark.connect.grpc.binding.port<span class=\"o\">=</span>8081\n\n```\n\nIt will print a lot in the terminal and at the end you should have:\n\n```\n24/12/27 14:04:27 INFO SparkConnectServer: Spark Connect server started at: 0:0:0:0:0:0:0:0%0:8081\n\n```\n\nThis shows that the *Spark* server is up and running.\n\nEach argument in the above command has a meaning and its importance:\n\n- \ndocker run is the docker command to start a container\n\n- \n-p 8081:8081 is an arguments to docker run that enables to use port 8081 to communicate with the created container\n\n- \n-e SPARK_NO_DAEMONIZE=True is an environment variable that is passed to the container creation, it's necessary to use it for the server to be created as a foreground process\n\n- \n--name spark_connect allows to name the created container\n\n- \napache/spark is the docker image that is used, if you never used it, it will be downloaded from *Docker Hub*\n\nThe rest of the command is what is called an entrypoint, it's the command that will be executed inside the container. In here it contains multiple elements:\n\n- \n/opt/spark/sbin/start-connect-server.sh is the binary of the spark server\n\n- \norg.apache.spark.deploy.master.Master is an argument to the binary, in here the binary is asked to deploy a Master server, the same binary can be used to deploy a Worker\n\n- \n--packages org.apache.spark:spark-connect_2.12:3.5.2,io.delta:delta-core_2.12:2.3.0 is an optional argument to pass specific versions of spark, and delta dependencies\n\n- \n--conf spark.driver.extraJavaOptions='-Divy.cache.dir=/tmp -Divy.home=/tmp' is extra argument to ask the server to write to /tmp inside the container, it's not a mandatory argument\n\n- \n--conf spark.connect.grpc.binding.port=8081 is an extra argument to start the server on the port 8081 on the localhost of the container\n\nThe last argument is where the magic happens, the server is started on port 8081, and docker is exposing the port of this container to the port of the docker host. Meaning, a spark server is now available on http://localhost:8081\n\n  \n  \n  Use the container\n\nKeep the previous terminal opened to keep the server running and open a new terminal. Now run:\n\n```\npytest <span class=\"nt\">-k</span> test_transfo_w_synthetic_data <span class=\"nt\">-s</span>\n\n```\n\nThe same error should appear, indeed the spark_session needs to be adapted to connect to the server you have just created. In test/conftest.py:\n\n```\n<span class=\"nd\">@pytest.fixture</span><span class=\"p\">(</span><span class=\"n\">scope</span><span class=\"o\">=</span><span class=\"sh\">\"</span><span class=\"s\">session</span><span class=\"sh\">\"</span><span class=\"p\">)</span>\n<span class=\"k\">def</span> <span class=\"nf\">spark_session</span><span class=\"p\">()</span> <span class=\"o\">-></span> <span class=\"n\">Generator</span><span class=\"p\">[</span><span class=\"n\">SparkSession</span><span class=\"p\">,</span> <span class=\"n\">Any</span><span class=\"p\">,</span> <span class=\"n\">Any</span><span class=\"p\">]:</span>\n    <span class=\"nf\">yield </span><span class=\"p\">(</span>\n        <span class=\"n\">SparkSession</span><span class=\"p\">.</span><span class=\"n\">builder</span><span class=\"p\">.</span><span class=\"nf\">remote</span><span class=\"p\">(</span><span class=\"sh\">\"</span><span class=\"s\">sc://localhost:8081</span><span class=\"sh\">\"</span><span class=\"p\">)</span>  <span class=\"c1\"># type: ignore\n</span>        <span class=\"p\">.</span><span class=\"nf\">appName</span><span class=\"p\">(</span><span class=\"sh\">\"</span><span class=\"s\">Testing PySpark Example</span><span class=\"sh\">\"</span><span class=\"p\">)</span>\n        <span class=\"p\">.</span><span class=\"nf\">getOrCreate</span><span class=\"p\">()</span>\n    <span class=\"p\">)</span>\n\n```\n\nBasically, it indicates the *Spark* connect server *url* to the *Spark* session.\n\nAnd you need to add an extra dependency, which is mandatory to communicate with the spark connect server. It's worth pointing to the usage of extras in uv:\n\n```\nuv add pyspark <span class=\"nt\">--extra</span> connect\n\n```\n\nAs this project is in *Python* 3.12, another error will appear related to distutils as it was removed from the latest python version, yet some dependencies still requires it. You will have to add:\n\n```\nuv add setuptools\n\n```\n\nNow you can run:\n\n```\npytest <span class=\"nt\">-k</span> test_minimal_transfo <span class=\"nt\">-s</span>\n\n```\n\nAnd it should run successfully, you should also see logs in the spark server in the docker run terminal.\n\n  \n  \n  Improve the container usage\n\nAs mentioned at the beginning of this chapter, the tests need to leave a clean plate. In the previous approach, a container is still running eventhough the tests are done, it's not ideal.\n\nTo improve this, you will leverage testcontainers which empower you with easy docker creation and removal at the test level.\n\n```\nuv add testcontainers <span class=\"nt\">--dev</span>\n\n```\n\nNow, the docker can be started at the session fixture level, in tests/conftest.py, you can add an extra fixture:\n\n```\n<span class=\"kn\">from</span> <span class=\"n\">testcontainers.core.container</span> <span class=\"kn\">import</span> <span class=\"n\">DockerContainer</span>\n<span class=\"kn\">from</span> <span class=\"n\">testcontainers.core.waiting_utils</span> <span class=\"kn\">import</span> <span class=\"n\">wait_for_logs</span>\n\n<span class=\"nd\">@pytest.fixture</span><span class=\"p\">(</span><span class=\"n\">scope</span><span class=\"o\">=</span><span class=\"sh\">\"</span><span class=\"s\">session</span><span class=\"sh\">\"</span><span class=\"p\">)</span>\n<span class=\"k\">def</span> <span class=\"nf\">spark_connect_start</span><span class=\"p\">():</span>\n    <span class=\"n\">kwargs</span> <span class=\"o\">=</span> <span class=\"p\">{</span>\n        <span class=\"sh\">\"</span><span class=\"s\">entrypoint</span><span class=\"sh\">\"</span><span class=\"p\">:</span> <span class=\"sh\">\"</span><span class=\"s\">/opt/spark/sbin/start-connect-server.sh org.apache.spark.deploy.master.Master --packages org.apache.spark:spark-connect_2.12:3.5.2,io.delta:delta-core_2.12:2.3.0 --conf spark.driver.extraJavaOptions=</span><span class=\"sh\">'</span><span class=\"s\">-Divy.cache.dir=/tmp -Divy.home=/tmp</span><span class=\"sh\">'</span><span class=\"s\"> --conf spark.connect.grpc.binding.port=8081</span><span class=\"sh\">\"</span><span class=\"p\">,</span>\n    <span class=\"p\">}</span>\n    <span class=\"nf\">with </span><span class=\"p\">(</span>\n        <span class=\"nc\">DockerContainer</span><span class=\"p\">(</span>\n            <span class=\"sh\">\"</span><span class=\"s\">apache/spark</span><span class=\"sh\">\"</span><span class=\"p\">,</span>\n        <span class=\"p\">)</span>\n        <span class=\"p\">.</span><span class=\"nf\">with_bind_ports</span><span class=\"p\">(</span><span class=\"mi\">8081</span><span class=\"p\">,</span> <span class=\"mi\">8081</span><span class=\"p\">)</span>\n        <span class=\"p\">.</span><span class=\"nf\">with_env</span><span class=\"p\">(</span><span class=\"sh\">\"</span><span class=\"s\">SPARK_NO_DAEMONIZE</span><span class=\"sh\">\"</span><span class=\"p\">,</span> <span class=\"sh\">\"</span><span class=\"s\">True</span><span class=\"sh\">\"</span><span class=\"p\">)</span>\n        <span class=\"p\">.</span><span class=\"nf\">with_kwargs</span><span class=\"p\">(</span><span class=\"o\">**</span><span class=\"n\">kwargs</span><span class=\"p\">)</span> <span class=\"k\">as</span> <span class=\"n\">container</span>\n    <span class=\"p\">):</span>\n        <span class=\"n\">_</span> <span class=\"o\">=</span> <span class=\"nf\">wait_for_logs</span><span class=\"p\">(</span>\n            <span class=\"n\">container</span><span class=\"p\">,</span> <span class=\"sh\">\"</span><span class=\"s\">SparkConnectServer: Spark Connect server started at</span><span class=\"sh\">\"</span>\n        <span class=\"p\">)</span>\n        <span class=\"k\">yield</span> <span class=\"n\">container</span>\n\n```\n\nThis will create a container with the previously described argument, the great thing with fixtures is that will kill the container at the end of the test execution. There is an extra step with:\n\n```\n        <span class=\"n\">_</span> <span class=\"o\">=</span> <span class=\"nf\">wait_for_logs</span><span class=\"p\">(</span>\n            <span class=\"n\">container</span><span class=\"p\">,</span> <span class=\"sh\">\"</span><span class=\"s\">SparkConnectServer: Spark Connect server started at</span><span class=\"sh\">\"</span>\n        <span class=\"p\">)</span>\n\n```\n\nThis enforces to yield the container only when the SparkConnectServer: Spark Connect server started at appeared in the container logs. It's necessary to wait for the server to be ready until it can be called.\n\nThe value that is yielded is the container which also contains the server url, you need to reuse in the spark_session fixture:\n\n```\n<span class=\"nd\">@pytest.fixture</span><span class=\"p\">(</span><span class=\"n\">scope</span><span class=\"o\">=</span><span class=\"sh\">\"</span><span class=\"s\">session</span><span class=\"sh\">\"</span><span class=\"p\">)</span>\n<span class=\"k\">def</span> <span class=\"nf\">spark_session</span><span class=\"p\">(</span><span class=\"n\">spark_connect_start</span><span class=\"p\">:</span> <span class=\"n\">DockerContainer</span><span class=\"p\">)</span> <span class=\"o\">-></span> <span class=\"n\">Generator</span><span class=\"p\">[</span><span class=\"n\">SparkSession</span><span class=\"p\">,</span> <span class=\"n\">Any</span><span class=\"p\">,</span> <span class=\"n\">Any</span><span class=\"p\">]:</span>\n    <span class=\"n\">ip</span> <span class=\"o\">=</span> <span class=\"n\">spark_connect_start</span><span class=\"p\">.</span><span class=\"nf\">get_container_host_ip</span><span class=\"p\">()</span>\n    <span class=\"nf\">yield </span><span class=\"p\">(</span>\n        <span class=\"n\">SparkSession</span><span class=\"p\">.</span><span class=\"n\">builder</span><span class=\"p\">.</span><span class=\"nf\">remote</span><span class=\"p\">(</span><span class=\"sa\">f</span><span class=\"sh\">\"</span><span class=\"s\">sc://</span><span class=\"si\">{</span><span class=\"n\">ip</span><span class=\"si\">}</span><span class=\"s\">:8081</span><span class=\"sh\">\"</span><span class=\"p\">)</span>  <span class=\"c1\"># type: ignore\n</span>        <span class=\"p\">.</span><span class=\"nf\">appName</span><span class=\"p\">(</span><span class=\"sh\">\"</span><span class=\"s\">Testing PySpark Example</span><span class=\"sh\">\"</span><span class=\"p\">)</span>\n        <span class=\"p\">.</span><span class=\"nf\">getOrCreate</span><span class=\"p\">()</span>\n    <span class=\"p\">)</span>\n\n```\n\nYou can now stop the container you started before\n\n```\ndocker stop spark_connect\n\n```\n\nAnd run the tests:\n\n```\npytest\n\n```\n\nYou will notice all the tests are passing, and at the end of the test session there is no running containers.\n\nThe following command will show what remaining containers are still running. The spark container should not appear.\n\n```\ndocker ps <span class=\"nt\">-a</span> \n\n```\n\n  \n  \n  Conclusion\n\nYou are now able to run local tests using spark and you can quickly iterate on your codebase and implement new features. You are no more depending on spark server to be launched for you on the cloud and waiting for it to process the data for you.\n\nThe feedback loop is quicker, you are no more giving money to cloud provider for testing purposes and you provide an easy setup for developers to iterate on your project.\n\nThey can launch pytest and will be transparent; this also means less documentation for you to write to describe the expected developer setup.\n\nYou can find the original materials in spark_tdd. This repository exposes what's the expected repository layout at the end of each chapter in each branch:\n\n- Chapter 0\n\n- Chapter 1\n\n- Chapter 2\n\n- Chapter 3\n\n- Chapter 4\n\n- Chapter 5\n\n  \n  \n  What's next\n\nSeveral ideas come to mind on how to improve our very small codebase\n\n- Leverage devcontainer to improve ci and local development\n\n- Templatize the repository for easier reusage with the help of ffizer\n\n- Explore ibis to handle multiple transformation backends transparently",
+            "author": "Nicoda-27",
+            "updated": "2025-03-15T07:33:58",
+            "date_entered": "2025-03-15T07:46:00",
+            "marked": false,
+            "published": false,
+            "unread": false,
+            "score": 0,
+            "tags": [
+              "pyspark",
+              "python",
+              "testcontainer"
+            ]
+          },
+          {
+            "id": 30,
+            "title": "@Bean annotation example in spring boot",
+            "link": "https://dev.to/realnamehidden1_61/bean-annotation-example-in-spring-boot-26ba",
+            "content": "Directory Structure\n\n**pom.xml**\n\n```\n<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project xmlns=\"http://maven.apache.org/POM/4.0.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n xsi:schemaLocation=\"http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd\">\n <modelVersion>4.0.0</modelVersion>\n <parent>\n  <groupId>org.springframework.boot</groupId>\n  <artifactId>spring-boot-starter-parent</artifactId>\n  <version>3.4.3</version>\n  <relativePath/> \n </parent>\n <groupId>com.example</groupId>\n <artifactId>BeanExample</artifactId>\n <version>0.0.1-SNAPSHOT</version>\n <name>BeanExample</name>\n <description>Demo project for Spring Boot</description>\n <url/>\n <licenses>\n  <license/>\n </licenses>\n <developers>\n  <developer/>\n </developers>\n <scm>\n  <connection/>\n  <developerConnection/>\n  <tag/>\n  <url/>\n </scm>\n <properties>\n  <java.version>17</java.version>\n </properties>\n <dependencies>\n  <dependency>\n   <groupId>org.springframework.boot</groupId>\n   <artifactId>spring-boot-starter-web</artifactId>\n  </dependency>\n\n  <dependency>\n   <groupId>org.springframework.boot</groupId>\n   <artifactId>spring-boot-starter-test</artifactId>\n   <scope>test</scope>\n  </dependency>\n </dependencies>\n\n <build>\n  <plugins>\n   <plugin>\n    <groupId>org.springframework.boot</groupId>\n    <artifactId>spring-boot-maven-plugin</artifactId>\n   </plugin>\n  </plugins>\n </build>\n\n</project>\n\n```\n\n📌 @bean Annotation Example in Spring Boot\n\nThe @bean annotation in Spring Boot is used to define a bean manually inside a @Configuration class. It tells Spring to manage an instance of the object and inject it wherever needed.\n\n**🔹 Example 1: Basic @bean Usage**\n\n✔ Scenario: You want to create and manage a HelloService bean manually instead of using @Component.\n\n🚀 Implementation\n\nStep 1: Create a Service Class\n\n```\npublic class HelloService {\n    public String sayHello() {\n        return \"Hello, Spring Boot!\";\n    }\n}\n\n```\n\nStep 2: Define Bean in a @Configuration Class\n\n```\nimport org.springframework.context.annotation.Bean;\nimport org.springframework.context.annotation.Configuration;\n\n@Configuration\npublic class AppConfig {\n\n    @Bean\n    public HelloService helloService() {\n        return new HelloService();\n    }\n}\n\n```\n\nStep 3: Use the Bean in a Controller\n\n```\nimport org.springframework.web.bind.annotation.GetMapping;\nimport org.springframework.web.bind.annotation.RequestMapping;\nimport org.springframework.web.bind.annotation.RestController;\n\n@RestController\n@RequestMapping(\"/hello\")\npublic class HelloController {\n\n    private final HelloService helloService;\n\n    public HelloController(HelloService helloService) {\n        this.helloService = helloService;\n    }\n\n    @GetMapping\n    public String sayHello() {\n        return helloService.sayHello();\n    }\n}\n\n```\n\n🌟 Expected Output\n\n```\nGET /hello  --> Response: \"Hello, Spring Boot!\"\n\n```\n\n🛠 When to Use @bean?\n\n✅ When you need fine-grained control over bean creation.\n\n✅ When the class does not use @Component, @Service, or @Repository.\n\n✅ When you want to configure third-party libraries (e.g., RestTemplate, DataSource).",
+            "author": "realNameHidden",
+            "updated": "2025-03-15T07:32:04",
+            "date_entered": "2025-03-15T07:46:00",
+            "marked": false,
+            "published": false,
+            "unread": false,
+            "score": 0,
+            "tags": [
+              "annotations",
+              "spring",
+              "springboot"
+            ]
+          },
+          {
+            "id": 31,
+            "title": "AI Retrievers Can Be Tricked into Finding Dangerous Content, Study Shows",
+            "link": "https://dev.to/mikeyoung44/ai-retrievers-can-be-tricked-into-finding-dangerous-content-study-shows-5fbd",
+            "content": "*This is a Plain English Papers summary of a research paper called AI Retrievers Can Be Tricked into Finding Dangerous Content, Study Shows. If you like these kinds of analysis, you should join AImodels.fyi or follow us on Twitter.*\n\n  \n  \n  Overview\n\n- Researchers find **instruction-tuned retrievers** can be manipulated to find harmful content\n\n- These AI systems designed to follow instructions can be tricked into retrieving dangerous information\n\n- Experiments showed retrievers produce harmful results for 87-100% of queries in various categories\n\n- Even models meant to be \"safe\" provided harmful content when prompted creatively\n\n- Results reveal serious safety gaps in current retrieval systems used with AI assistants\n\n  \n  \n  Plain English Explanation\n\nWhen you ask an AI assistant like ChatGPT for information, it often uses a special tool called a \"retriever\" to search for relevant information. These retrievers are trained to follow instructions and find helpful content. But what happens if someone wants to get dangerous info...\n\nClick here to read the full summary of this paper",
+            "author": "Mike Young",
+            "updated": "2025-03-15T07:21:15",
+            "date_entered": "2025-03-15T07:46:00",
+            "marked": false,
+            "published": false,
+            "unread": false,
+            "score": 0,
+            "tags": [
+              "ai",
+              "datascience",
+              "machinelearning",
+              "programming"
+            ]
+          },
+          {
+            "id": 32,
+            "title": "Whisper Speech Models Shrink 75% Without Losing Accuracy in Groundbreaking Quantization Study",
+            "link": "https://dev.to/mikeyoung44/whisper-speech-models-shrink-75-without-losing-accuracy-in-groundbreaking-quantization-study-390f",
+            "content": "*This is a Plain English Papers summary of a research paper called Whisper Speech Models Shrink 75% Without Losing Accuracy in Groundbreaking Quantization Study. If you like these kinds of analysis, you should join AImodels.fyi or follow us on Twitter.*\n\n  \n  \n  Overview\n\n- Researchers analyzed different **quantization methods** for OpenAI's Whisper speech recognition models\n\n- 8-bit and 4-bit quantization techniques were tested across multiple Whisper model sizes\n\n- Post-training quantization (PTQ) and quantization-aware training (QAT) approaches were compared\n\n- Findings show model size reduction up to 75% with minimal accuracy loss\n\n- Different quantization techniques work better for different model sizes\n\n- Trade-offs between model size, performance, and quantization complexity were identified\n\n  \n  \n  Plain English Explanation\n\nSpeech recognition technology has advanced dramatically in recent years. OpenAI's Whisper models have emerged as some of the best available tools for converting spoken language to text...\n\nClick here to read the full summary of this paper",
+            "author": "Mike Young",
+            "updated": "2025-03-15T07:20:38",
+            "date_entered": "2025-03-15T07:46:00",
+            "marked": false,
+            "published": false,
+            "unread": false,
+            "score": 0,
+            "tags": [
+              "ai",
+              "datascience",
+              "machinelearning",
+              "programming"
+            ]
+          },
+          {
+            "id": 35,
+            "title": "AI Vision Models Fail to Spot Basic Image Changes, Study Finds",
+            "link": "https://dev.to/mikeyoung44/ai-vision-models-fail-to-spot-basic-image-changes-study-finds-3gd1",
+            "content": "*This is a Plain English Papers summary of a research paper called AI Vision Models Fail to Spot Basic Image Changes, Study Finds. If you like these kinds of analysis, you should join AImodels.fyi or follow us on Twitter.*\n\n  \n  \n  Overview\n\n- Vision-Language Models (VLMs) struggle to recognize simple image transformations\n\n- Study tested VLMs including CLIP, BLIP, LLaVA, and GPT-4V against image alterations\n\n- Models fail to identify basic changes like rotations, flips, and color shifts \n\n- Performance varies across transformations with worst results on inverted images\n\n- Findings suggest significant gaps in VLMs' visual understanding capabilities\n\n  \n  \n  Plain English Explanation\n\nVision-Language Models are AI systems that can \"see\" images and \"talk\" about them. They're the technology behind tools that can generate captions for your photos or answer questions about what's in a picture. These models have shown impressive abilities in many tasks, but this ...\n\nClick here to read the full summary of this paper",
+            "author": "Mike Young",
+            "updated": "2025-03-15T07:18:44",
+            "date_entered": "2025-03-15T07:46:00",
+            "marked": false,
+            "published": false,
+            "unread": false,
+            "score": 0,
+            "tags": [
+              "ai",
+              "datascience",
+              "machinelearning",
+              "programming"
+            ]
+          },
+          {
+            "id": 36,
+            "title": "Simpler, Faster AI: Transformer Models Can Work Without Normalization Layers, Study Shows",
+            "link": "https://dev.to/mikeyoung44/simpler-faster-ai-transformer-models-can-work-without-normalization-layers-study-shows-3kk5",
+            "content": "*This is a Plain English Papers summary of a research paper called Simpler, Faster AI: Transformer Models Can Work Without Normalization Layers, Study Shows. If you like these kinds of analysis, you should join AImodels.fyi or follow us on Twitter.*\n\n  \n  \n  Overview\n\n- Transformer models typically rely on normalization layers for stability\n\n- This paper shows transformers can work without these layers when properly initialized\n\n- ResNets can already operate without normalization\n\n- The key is controlling output variance through careful initialization\n\n- Removing normalization simplifies models and may improve efficiency\n\n  \n  \n  Plain English Explanation\n\nWhen engineers build transformer models, they typically include special layers called \"normalization layers\" that keep the numbers flowing through the system in check. These layers act like a...\n\nClick here to read the full summary of this paper",
+            "author": "Mike Young",
+            "updated": "2025-03-15T07:18:08",
+            "date_entered": "2025-03-15T07:46:00",
+            "marked": false,
+            "published": false,
+            "unread": false,
+            "score": 0,
+            "tags": [
+              "ai",
+              "datascience",
+              "machinelearning",
+              "programming"
+            ]
+          },
+          {
+            "id": 37,
+            "title": "AI Image Generators Fail Basic Taxonomy Test, New Benchmark Shows",
+            "link": "https://dev.to/mikeyoung44/ai-image-generators-fail-basic-taxonomy-test-new-benchmark-shows-20m1",
+            "content": "*This is a Plain English Papers summary of a research paper called AI Image Generators Fail Basic Taxonomy Test, New Benchmark Shows. If you like these kinds of analysis, you should join AImodels.fyi or follow us on Twitter.*\n\n  \n  \n  Overview\n\n- New benchmark called TIGERBENCH evaluates image generators using taxonomic concepts\n\n- Tests if models can generate proper visual representations of WordNet synsets\n\n- Includes 1,000 concepts organized by categories like animals, food, and objects\n\n- Evaluates models on concept understanding, not just photo realism\n\n- Results show current generators struggle with synset-specific images\n\n- Stable Diffusion XL, Midjourney, and DALL-E 3 tested with prompt engineering variations\n\n  \n  \n  Plain English Explanation\n\nWhen you ask an AI to create an image of a \"cat,\" you probably expect a typical house cat. But in computational linguistics, a \"cat\" could be labeled as \"cat.n.01\" - a specific taxonomic category with precise meaning. This paper introduces TIGERBENCH, a new way to test if AI im...\n\nClick here to read the full summary of this paper",
+            "author": "Mike Young",
+            "updated": "2025-03-15T07:17:31",
+            "date_entered": "2025-03-15T07:46:00",
+            "marked": false,
+            "published": false,
+            "unread": false,
+            "score": 0,
+            "tags": [
+              "ai",
+              "datascience",
+              "machinelearning",
+              "programming"
+            ]
+          },
+          {
+            "id": 38,
+            "title": "Study Reveals Major Safety Gaps in AI Chatbots Used by Children, Calls for Urgent Protection Measures",
+            "link": "https://dev.to/mikeyoung44/study-reveals-major-safety-gaps-in-ai-chatbots-used-by-children-calls-for-urgent-protection-266p",
+            "content": "*This is a Plain English Papers summary of a research paper called Study Reveals Major Safety Gaps in AI Chatbots Used by Children, Calls for Urgent Protection Measures. If you like these kinds of analysis, you should join AImodels.fyi or follow us on Twitter.*\n\n  \n  \n  Overview\n\n- LLMs are increasingly accessed by children through schools, parents, and peers\n\n- Current AI safety research doesn't adequately address child-specific risks\n\n- Paper presents a real-world case study of LLM chatbot use in a middle school\n\n- Introduces **MinorBench** - a benchmark to evaluate LLM safety for minors\n\n- Tests six popular LLMs with different safety prompts\n\n- Reveals significant variations in how LLMs handle potentially harmful requests from children\n\n- Recommends concrete steps for building better child-safety mechanisms\n\n  \n  \n  Plain English Explanation\n\nKids are using AI chatbots more than we might realize. They're accessing them at school, through their parents' devices, or hearing about them from friends. But here's the problem: the safety measures for these AI systems weren't really designed with children in mind.\n\nThis res...\n\nClick here to read the full summary of this paper",
+            "author": "Mike Young",
+            "updated": "2025-03-15T07:16:54",
+            "date_entered": "2025-03-15T07:46:00",
+            "marked": false,
+            "published": false,
+            "unread": false,
+            "score": 0,
+            "tags": [
+              "ai",
+              "datascience",
+              "machinelearning",
+              "programming"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "title": "Machine Learning ML & Generative AI News",
+        "feed_url": "https://www.reddit.com/r/machinelearningnews/.rss",
+        "site_url": "https://www.reddit.com/r/machinelearningnews/",
+        "last_updated": "2025-03-15T07:38:49",
+        "category": {
+          "id": null,
+          "name": "Unknown"
+        },
+        "entries_count": 27,
+        "entries": [
+          {
+            "id": 7,
+            "title": "HPC-AI Tech Releases Open-Sora 2.0: An Open-Source SOTA-Level Video Generation Model Trained for Just $200K",
+            "link": "https://www.reddit.com/r/machinelearningnews/comments/1jbnkr3/hpcai_tech_releases_opensora_20_an_opensource/",
+            "content": "HPC-AI Tech researchers introduce Open-Sora 2.0, a commercial-level AI video generation model that achieves state-of-the-art performance while significantly reducing training costs. This model was developed with an investment of only $200,000, making it five to ten times more cost-efficient than competing models such as MovieGen and Step-Video-T2V. Open-Sora 2.0 is designed to democratize AI video generation by making high-performance technology accessible to a wider audience. Unlike previous high-cost models, this approach integrates multiple efficiency-driven innovations, including improved data curation, an advanced autoencoder, a novel hybrid transformer framework, and highly optimized training methodologies.\n\n \n\nThe research team implemented a hierarchical data filtering system that refines video datasets into progressively higher-quality subsets, ensuring optimal training efficiency. A significant breakthrough was the introduction of the Video DC-AE autoencoder, which improves video compression while reducing the number of tokens required for representation. The model’s architecture incorporates full attention mechanisms, multi-stream processing, and a hybrid diffusion transformer approach to enhance video quality and motion accuracy. Training efficiency was maximized through a three-stage pipeline: text-to-video learning on low-resolution data, image-to-video adaptation for improved motion dynamics, and high-resolution fine-tuning. This structured approach allows the model to understand complex motion patterns and spatial consistency while maintaining computational efficiency.......\n\n \n\nRead full article here: https://www.marktechpost.com/2025/03/14/hpc-ai-tech-releases-open-sora-2-0-an-open-source-sota-level-video-generation-model-trained-for-just-200k/\n\n \n\nPaper: https://arxiv.org/abs/2503.09642v1\n\n \n\nGitHub Page: https://github.com/hpcaitech/Open-Sora?tab=readme-ov-file\n\n \n\nhttps://preview.redd.it/ocv0dyo4bsoe1.png?width=2813&format=png&auto=webp&s=474a5ecdfe80c5fc625dbce68de9b0d492f79d0e\n\n    submitted by    /u/ai-lover  \n [link]   [comments]",
+            "author": "/u/ai-lover",
+            "updated": "2025-03-15T04:53:06",
+            "date_entered": "2025-03-15T05:52:00",
+            "marked": false,
+            "published": false,
+            "unread": false,
+            "score": 0,
+            "tags": [
+              "machinelearningnews"
+            ]
+          },
+          {
+            "id": 4,
+            "title": "Patronus AI Introduces the Industry’s First Multimodal LLM-as-a-Judge (MLLM-as-a-Judge): Designed to Evaluate and Optimize AI Systems that Convert Image Inputs into Text Outputs",
+            "link": "https://www.reddit.com/r/machinelearningnews/comments/1jbmmzg/patronus_ai_introduces_the_industrys_first/",
+            "content": "Patronus AI has introduced the industry’s first Multimodal LLM-as-a-Judge (MLLM-as-a-Judge), designed to evaluate and optimize AI systems that convert image inputs into text outputs. This tool utilizes Google’s Gemini model, selected for its balanced judgment approach and consistent scoring distribution, distinguishing it from alternatives like OpenAI’s GPT-4V, which has shown higher levels of egocentricity. The MLLM-as-a-Judge aligns with Patronus AI’s commitment to advancing scalable oversight of AI systems, providing developers with the means to assess and enhance the performance of their multimodal applications.\n\n \n\nA practical application of the MLLM-as-a-Judge is its implementation by Etsy, a prominent e-commerce platform specializing in handmade and vintage products. Etsy’s AI team employs generative AI to automatically generate captions for product images uploaded by sellers, streamlining the listing process. However, they encountered quality issues with their multimodal AI systems, as the autogenerated captions often contained errors and unexpected outputs. To address this, Etsy integrated Judge-Image, a component of the MLLM-as-a-Judge, to evaluate and optimize their image captioning system. This integration allowed Etsy to reduce caption hallucinations, thereby improving the accuracy of product descriptions and enhancing the overall user experience.......\n\n \n\nRead full article here: https://www.marktechpost.com/2025/03/14/patronus-ai-introduces-the-industrys-first-multimodal-llm-as-a-judge-mllm-as-a-judge-designed-to-evaluate-and-optimize-ai-systems-that-convert-image-inputs-into-text-outputs/\n\n \n\nTechnical details: https://www.patronus.ai/blog/announcing-the-first-multimodal-llm-as-a-judge\n\n    submitted by    /u/ai-lover  \n [link]   [comments]",
+            "author": "/u/ai-lover",
+            "updated": "2025-03-15T03:56:39",
+            "date_entered": "2025-03-15T05:52:00",
+            "marked": false,
+            "published": false,
+            "unread": false,
+            "score": 0,
+            "tags": [
+              "machinelearningnews"
+            ]
+          },
+          {
+            "id": 6,
+            "title": "Allen Institute for AI (AI2) Releases OLMo 32B: A Fully Open Model to Beat GPT 3.5 and GPT-4o mini on a Suite of Multi-Skill Benchmarks",
+            "link": "https://www.reddit.com/r/machinelearningnews/comments/1jbgtbm/allen_institute_for_ai_ai2_releases_olmo_32b_a/",
+            "content": "This model distinguishes itself as the first fully open model to surpass GPT-3.5 Turbo and GPT-4o mini across a suite of widely recognized, multi-skill academic benchmarks. By making all data, code, weights, and training details freely available, AI2 promotes a culture of openness and collaboration, enabling researchers worldwide to build upon this work.\n\n \n\nOLMo 2 32B’s architecture comprises 32 billion parameters, reflecting a significant scaling from its predecessors. The training process was meticulously structured in two primary phases: pretraining and mid-training. During pretraining, the model was exposed to approximately 3.9 trillion tokens from diverse sources, including DCLM, Dolma, Starcoder, and Proof Pile II, ensuring a comprehensive understanding of language patterns. The mid-training phase utilized the Dolmino dataset, which consists of 843 billion tokens curated for quality, encompassing educational, mathematical, and academic content. This phased approach ensured that OLMo 2 32B developed a robust and nuanced grasp of language......\n\n \n\nRead full article: https://www.marktechpost.com/2025/03/14/allen-institute-for-ai-ai2-releases-olmo-32b-a-fully-open-model-to-beat-gpt-3-5-and-gpt-4o-mini-on-a-suite-of-multi-skill-benchmarks/\n\n \n\nModel on Hugging Face: https://huggingface.co/allenai/OLMo-2-0325-32B-Instruct\n\n \n\nDemo: https://playground.allenai.org/\n\n \n\nPaper: https://arxiv.org/abs/2501.00656\n\n \n\n📋 Download the Open Source AI Magazine/Report 2025 here: https://pxl.to/yv08dj\n\n \n\nhttps://preview.redd.it/32uxokm9jqoe1.png?width=1704&format=png&auto=webp&s=f754b43297cec9f20ba78fe345a42f8b3a13e79d\n\n    submitted by    /u/ai-lover  \n [link]   [comments]",
+            "author": "/u/ai-lover",
+            "updated": "2025-03-14T22:55:18",
+            "date_entered": "2025-03-15T05:52:00",
+            "marked": false,
+            "published": false,
+            "unread": false,
+            "score": 0,
+            "tags": [
+              "machinelearningnews"
+            ]
+          },
+          {
+            "id": 3,
+            "title": "This AI Paper Introduces BD3-LMs: A Hybrid Approach Combining Autoregressive and Diffusion Models for Scalable and Efficient Text Generation",
+            "link": "https://www.reddit.com/r/machinelearningnews/comments/1jbem1d/this_ai_paper_introduces_bd3lms_a_hybrid_approach/",
+            "content": "Cornell Tech and Stanford University researchers introduced **Block Discrete Denoising Diffusion Language Models (BD3-LMs)** to overcome these limitations. This new class of models interpolates between autoregressive and diffusion models by employing a structured approach that supports variable-length generation while maintaining inference efficiency. BD3-LMs use key-value caching and parallel token sampling to reduce computational overhead. The model is designed with specialized training algorithms that minimize gradient variance through customized noise schedules, optimizing performance across diverse language modeling benchmarks.\n\n \n\nBD3-LMs operate by structuring text generation into blocks rather than individual tokens. Unlike traditional autoregressive models, which predict the next token sequentially, BD3-LMs generate a block of tokens simultaneously, significantly improving efficiency. A diffusion-based denoising process within each block ensures high-quality text generation while preserving coherence. The model architecture integrates transformers with a block-causal attention mechanism, allowing each block to condition on previously generated blocks. This approach enhances both contextual relevance and fluency. The training process includes a vectorized implementation that enables parallel computations, reducing training time and resource consumption. Researchers introduced data-driven noise schedules that stabilize training and improve gradient estimation to address the high variance issue in diffusion models.......\n\n \n\nRead full article: https://www.marktechpost.com/2025/03/14/this-ai-paper-introduces-bd3-lms-a-hybrid-approach-combining-autoregressive-and-diffusion-models-for-scalable-and-efficient-text-generation/\n\n \n\nPaper: https://arxiv.org/abs/2503.09573\n\n \n\nGitHub Page: https://github.com/kuleshov-group/bd3lms\n\n \n\nProject: https://m-arriola.com/bd3lms/\n\n \n\nhttps://i.redd.it/d8g3ugnt1qoe1.gif\n\n    submitted by    /u/ai-lover  \n [link]   [comments]",
+            "author": "/u/ai-lover",
+            "updated": "2025-03-14T21:17:20",
+            "date_entered": "2025-03-15T05:52:00",
+            "marked": false,
+            "published": false,
+            "unread": false,
+            "score": 0,
+            "tags": [
+              "machinelearningnews"
+            ]
+          },
+          {
+            "id": 1,
+            "title": "Thrilled to launch our issue of Open-Source AI Magazine! Featuring exclusive interviews with industry leaders like Robert Nishihara Anita Lacea Amr Awadallah Leonard Tang Animesh Singh Yam Marcovitz, Hamza Tahir from LinkedIn, insights from xAI, and more. Dive into breakthrough stories....",
+            "link": "https://www.reddit.com/r/machinelearningnews/comments/1jal0q8/thrilled_to_launch_our_issue_of_opensource_ai/",
+            "content": "submitted by    /u/ai-lover  \n [link]   [comments]",
+            "author": "/u/ai-lover",
+            "updated": "2025-03-13T19:53:04",
+            "date_entered": "2025-03-15T05:52:00",
+            "marked": false,
+            "published": false,
+            "unread": false,
+            "score": 0,
+            "tags": [
+              "machinelearningnews"
+            ]
+          },
+          {
+            "id": 2,
+            "title": "List of Implementations/Tutorials/AI Coding Projects (Colab Notebooks Included)",
+            "link": "https://www.reddit.com/r/machinelearningnews/comments/1j7hmii/list_of_implementationstutorialsai_coding/",
+            "content": "✅ Building an Interactive Bilingual (Arabic and English) Chat Interface with Open Source Meraj-Mini by Arcee AI: Leveraging GPU Acceleration, PyTorch, Transformers, Accelerate, BitsAndBytes, and Gradio [Colab Notebook Included]\n\n \n\n✅ A Step by Step Guide to Build an Interactive Health Data Monitoring Tool Using Hugging Face Transformers and Open Source Model Bio_ClinicalBERT [Colab Notebook Included]\n\n \n\n✅ Implementing Text-to-Speech TTS with BARK Using Hugging Face’s Transformers library in a Google Colab environment [Colab Notebook Included]\n\n \n\n✅ A Coding Implementation of Web Scraping with Firecrawl and AI-Powered Summarization Using Google Gemini [Colab Notebook Included]\n\n \n\n✅ A Step by Step Guide to Build a Trend Finder Tool with Python: Web Scraping, NLP (Sentiment Analysis & Topic Modeling), and Word Cloud Visualization [Colab Notebook Included]\n\n \n\n✅ **A Coding Guide to Sentiment Analysis of Customer Reviews Using IBM’s Open Source AI Model Granite-3B and Hugging Face Transformers** [Colab Notebook Included]\n\n \n\n✅ **Starter Guide For Running Large Language Models LLMs** [Colab Notebook Included]\n\n \n\n✅ **Creating a Medical Question-Answering Chatbot Using Open-Source BioMistral LLM, LangChain, Chroma’s Vector Storage, and RAG: A Step-by-Step Guide** [Colab Notebook Included]\n\n \n\n✅ **A Step by Step Guide to Deploy Streamlit App Using Cloudflared, BeautifulSoup, Pandas, Plotly for Real-Time Cryptocurrency Web Scraping and Visualization** [Colab Notebook Included]\n\n \n\n✅ **Creating an AI Agent-Based System with LangGraph: Adding Persistence and Streaming (Step by Step Guide)**\n\n \n\n✅ **Step by Step Guide to Build an AI Research Assistant with Hugging Face SmolAgents: Automating Web Search and Article Summarization Using LLM-Powered Autonomous Agents** [Colab Notebook Included]\n\n \n\n✅ **Building a Collaborative AI Workflow: Multi-Agent Summarization with CrewAI, crewai-tools, and Hugging Face Transformers** [Colab Notebook Included]\n\n \n\n✅ **Creating an AI-Powered Tutor Using Vector Database and Groq for Retrieval-Augmented Generation (RAG): Step by Step Guid**e [Colab Notebook Included]\n\n \n\n✅ **FinData Explorer: A Step-by-Step Tutorial Using BeautifulSoup, yfinance, matplotlib, ipywidgets, and fpdf for Financial Data Extraction, Interactive Visualization, and Dynamic PDF Report Generation** [Colab Notebook Included]\n\n \n\n✅ **Building an Interactive Weather Data Scraper in Google Colab: A Code Guide to Extract, Display, and Download Live Forecast Data Using Python, BeautifulSoup, Requests, Pandas, and Ipywidgets** [Colab Notebook Included]\n\n \n\n✅ **Steps to Build an Interactive Text-to-Image Generation Application using Gradio and Hugging Face’s Diffusers** [Colab Notebook Included]\n\n \n\n✅ **Building a Legal AI Chatbot: A Step-by-Step Guide Using bigscience/T0pp LLM, Open-Source NLP Models, Streamlit, PyTorch, and Hugging Face Transformers** [Colab Notebook Included]\n\n \n\n✅ **Recommended open-source AI alignment framework: Parlant — Control LLM agent behavior in customer-facing interactions** (Promoted)\n\n \n\n✅ **Fine-Tuning NVIDIA NV-Embed-v1 on Amazon Polarity Dataset Using LoRA and PEFT: A Memory-Efficient Approach with Transformers and Hugging Face** [Colab Notebook Included]\n\n \n\n✅ **A Stepwise Python Code Implementation to Create Interactive Photorealistic Faces with NVIDIA StyleGAN2‑ADA** [Colab Notebook Included]\n\n \n\n✅ **A Step-by-Step Guide to Setting Up a Custom BPE Tokenizer with Tiktoken for Advanced NLP Applications in Python** [Colab Notebook Included]\n\n \n\n✅ **Step by Step Guide on How to Build an AI News Summarizer Using Streamlit, Groq and Tavily**\n\n \n\n✅ **A Step-by-Step Tutorial on Robustly Validating and Structuring User, Product, and Order Data with Pydantic in Python** [Colab Notebook Included]\n\n \n\n✅ **Tutorial to Fine-Tuning Mistral 7B with QLoRA Using Axolotl for Efficient LLM Training** [Colab Notebook Included]\n\n \n\n✅ **Fine-Tuning of Llama-2 7B Chat for Python Code Generation: Using QLoRA, SFTTrainer, and Gradient Checkpointing on the Alpaca-14k Dataset** [Colab Notebook Included]\n\n \n\n✅ **A Coding Guide to Sentiment Analysis of Customer Reviews Using IBM’s Open Source AI Model Granite-3B and Hugging Face Transformers** [Colab Notebook Included]\n\n \n\n✅ **Starter Guide For Running Large Language Models LLMs** [Colab Notebook Included]\n\n \n\n✅ **Creating a Medical Question-Answering Chatbot Using Open-Source BioMistral LLM, LangChain, Chroma’s Vector Storage, and RAG: A Step-by-Step Guide** [Colab Notebook Included]\n\n \n\n✅ **A Step by Step Guide to Deploy Streamlit App Using Cloudflared, BeautifulSoup, Pandas, Plotly for Real-Time Cryptocurrency Web Scraping and Visualization** [Colab Notebook Included]\n\n \n\n✅ **Creating an AI Agent-Based System with LangGraph: Adding Persistence and Streaming (Step by Step Guide)**\n\n \n\n✅ **Step by Step Guide to Build an AI Research Assistant with Hugging Face SmolAgents: Automating Web Search and Article Summarization Using LLM-Powered Autonomous Agents** [Colab Notebook Included]\n\n \n\n✅ **Building a Collaborative AI Workflow: Multi-Agent Summarization with CrewAI, crewai-tools, and Hugging Face Transformers** [Colab Notebook Included]\n\n \n\n✅ **Creating an AI-Powered Tutor Using Vector Database and Groq for Retrieval-Augmented Generation (RAG): Step by Step Guid**e [Colab Notebook Included]\n\n \n\n✅ **FinData Explorer: A Step-by-Step Tutorial Using BeautifulSoup, yfinance, matplotlib, ipywidgets, and fpdf for Financial Data Extraction, Interactive Visualization, and Dynamic PDF Report Generation** [Colab Notebook Included]\n\n \n\n✅ **Building an Interactive Weather Data Scraper in Google Colab: A Code Guide to Extract, Display, and Download Live Forecast Data Using Python, BeautifulSoup, Requests, Pandas, and Ipywidgets** [Colab Notebook Included]\n\n \n\n✅ **Steps to Build an Interactive Text-to-Image Generation Application using Gradio and Hugging Face’s Diffusers** [Colab Notebook Included]\n\n \n\n✅ **Building a Legal AI Chatbot: A Step-by-Step Guide Using bigscience/T0pp LLM, Open-Source NLP Models, Streamlit, PyTorch, and Hugging Face Transformers** [Colab Notebook Included]\n\n \n\n✅ **Recommended open-source AI alignment framework: Parlant — Control LLM agent behavior in customer-facing interactions** (Promoted)\n\n \n\n✅ **Fine-Tuning NVIDIA NV-Embed-v1 on Amazon Polarity Dataset Using LoRA and PEFT: A Memory-Efficient Approach with Transformers and Hugging Face** [Colab Notebook Included]\n\n \n\n✅ **A Stepwise Python Code Implementation to Create Interactive Photorealistic Faces with NVIDIA StyleGAN2‑ADA** [Colab Notebook Included]\n\n \n\n✅ **A Step-by-Step Guide to Setting Up a Custom BPE Tokenizer with Tiktoken for Advanced NLP Applications in Python** [Colab Notebook Included]\n\n \n\n✅ **Step by Step Guide on How to Build an AI News Summarizer Using Streamlit, Groq and Tavily**\n\n \n\n✅ **A Step-by-Step Tutorial on Robustly Validating and Structuring User, Product, and Order Data with Pydantic in Python** [Colab Notebook Included]\n\n \n\n✅ **Tutorial to Fine-Tuning Mistral 7B with QLoRA Using Axolotl for Efficient LLM Training** [Colab Notebook Included]\n\n \n\n✅ **Fine-Tuning of Llama-2 7B Chat for Python Code Generation: Using QLoRA, SFTTrainer, and Gradient Checkpointing on the Alpaca-14k Dataset** [Colab Notebook Included]\n\n    submitted by    /u/ai-lover  \n [link]   [comments]",
+            "author": "/u/ai-lover",
+            "updated": "2025-03-09T21:03:28",
+            "date_entered": "2025-03-15T05:52:00",
+            "marked": false,
+            "published": false,
+            "unread": false,
+            "score": 0,
+            "tags": [
+              "machinelearningnews"
+            ]
+          },
+          {
+            "id": 5,
+            "title": "Optimizing Test-Time Compute for LLMs: A Meta-Reinforcement Learning Approach with Cumulative Regret Minimization",
+            "link": "https://www.reddit.com/r/machinelearningnews/comments/1jbcsdg/optimizing_testtime_compute_for_llms_a/",
+            "content": "Researchers from Carnegie Mellon University & Hugging Face investigate optimizing test-time compute for LLMs by refining how models allocate computational resources during reasoning. Instead of relying solely on outcome-reward RL, they introduce a fine-tuning approach that balances exploration and exploitation, ensuring steady progress toward correct answers. Their method incorporates a dense reward bonus to quantify progress, improving efficiency. Evaluations on mathematical benchmarks demonstrate that this approach significantly outperforms existing methods, enhancing both accuracy and token efficiency. Their findings also suggest that optimizing for progress minimizes computational regret while improving solution discovery without sacrificing accuracy.\n\n \n\nThe problem of optimizing test-time compute is framed as a meta reinforcement learning (meta RL) challenge. The goal is to maximize an LLM’s performance within a given test-time token budget by balancing exploration and exploitation. Instead of solely optimizing for outcomes, the proposed Meta Reinforcement Fine-Tuning (MRT) approach minimizes cumulative regret by rewarding progress across sequential episodes. This budget-agnostic strategy allows LLMs to make steady progress regardless of training constraints. By incorporating a reward bonus based on incremental improvements, MRT ensures efficient test-time compute usage, enhancing adaptability and response accuracy within deployment constraints......\n\n \n\nRead full article: https://www.marktechpost.com/2025/03/14/optimizing-test-time-compute-for-llms-a-meta-reinforcement-learning-approach-with-cumulative-regret-minimization/\n\n \n\nPaper: https://arxiv.org/abs/2503.07572\n\n \n\nCode: https://github.com/CMU-AIRe/MRT\n\n    submitted by    /u/ai-lover  \n [link]   [comments]",
+            "author": "/u/ai-lover",
+            "updated": "2025-03-14T19:59:06",
+            "date_entered": "2025-03-15T05:52:00",
+            "marked": false,
+            "published": false,
+            "unread": false,
+            "score": 0,
+            "tags": [
+              "machinelearningnews"
+            ]
+          },
+          {
+            "id": 8,
+            "title": "MMR1-Math-v0-7B Model and MMR1-Math-RL-Data-v0 Dataset Released: New State of the Art Benchmark in Efficient Multimodal Mathematical Reasoning with Minimal Data",
+            "link": "https://www.reddit.com/r/machinelearningnews/comments/1jauecl/mmr1mathv07b_model_and_mmr1mathrldatav0_dataset/",
+            "content": "Researchers at Nanyang Technological University (NTU) introduced the MMR1-Math-v0-7B model and the specialized MMR1-Math-RL-Data-v0 dataset to address the above critical challenges. This pioneering model is tailored explicitly for mathematical reasoning within multimodal tasks, showcasing notable efficiency and state-of-the-art performance. MMR1-Math-v0-7B stands apart from previous multimodal models due to its ability to achieve leading performance using a remarkably minimal training dataset, thus redefining benchmarks within this domain.\n\n \n\nThe model has been fine-tuned using just 6,000 meticulously curated data samples from publicly accessible datasets. The researchers applied a balanced data selection strategy, emphasizing uniformity in terms of both problem difficulty and mathematical reasoning diversity. By systematically filtering out overly simplistic problems, NTU researchers ensured that the training dataset comprised problems that effectively challenged and enhanced the model’s reasoning capabilities.....\n\n \n\nRead full article: https://www.marktechpost.com/2025/03/13/mmr1-math-v0-7b-model-and-mmr1-math-rl-data-v0-dataset-released-new-state-of-the-art-benchmark-in-efficient-multimodal-mathematical-reasoning-with-minimal-data/\n\n \n\nGithub Page: https://github.com/LengSicong/MMR1\n\n \n\nHF Page: https://huggingface.co/MMR1\n\n \n\nhttps://preview.redd.it/ijkymkstnkoe1.jpg?width=1866&format=pjpg&auto=webp&s=310f9cfb77e5fe98bdb6dea56ddb8e985988bf47\n\n    submitted by    /u/ai-lover  \n [link]   [comments]",
+            "author": "/u/ai-lover",
+            "updated": "2025-03-14T03:10:00",
+            "date_entered": "2025-03-15T05:52:00",
+            "marked": false,
+            "published": false,
+            "unread": false,
+            "score": 0,
+            "tags": [
+              "machinelearningnews"
+            ]
+          },
+          {
+            "id": 9,
+            "title": "A Coding Guide to Build a Multimodal Image Captioning App Using Salesforce BLIP Model, Streamlit, Ngrok, and Hugging Face [COLAB NOTEBOOK INCLUDED]",
+            "link": "https://www.reddit.com/r/machinelearningnews/comments/1jauvzd/a_coding_guide_to_build_a_multimodal_image/",
+            "content": "In this tutorial, we’ll learn how to build an interactive multimodal image-captioning application using Google’s Colab platform, Salesforce’s powerful BLIP model, and Streamlit for an intuitive web interface. Multimodal models, which combine image and text processing capabilities, have become increasingly important in AI applications, enabling tasks like image captioning, visual question answering, and more. This step-by-step guide ensures a smooth setup, clearly addresses common pitfalls, and demonstrates how to integrate and deploy advanced AI solutions, even without extensive experience....\n\n \n\nFull Tutorial: https://www.marktechpost.com/2025/03/13/a-coding-guide-to-build-a-multimodal-image-captioning-app-using-salesforce-blip-model-streamlit-ngrok-and-hugging-face/\n\n \n\nColab Notebook: https://colab.research.google.com/drive/1LVllU9SlWf_TqEe1_d6Y-0jka6OwYMHp?authuser=1\n\n \n\nhttps://i.redd.it/qpx0h8ukskoe1.gif\n\n    submitted by    /u/ai-lover  \n [link]   [comments]",
+            "author": "/u/ai-lover",
+            "updated": "2025-03-14T03:36:52",
+            "date_entered": "2025-03-15T05:52:00",
+            "marked": false,
+            "published": false,
+            "unread": false,
+            "score": 0,
+            "tags": [
+              "machinelearningnews"
+            ]
+          },
+          {
+            "id": 10,
+            "title": "Simular Releases Agent S2: An Open, Modular, and Scalable AI Framework for Computer Use Agents",
+            "link": "https://www.reddit.com/r/machinelearningnews/comments/1jaiuhe/simular_releases_agent_s2_an_open_modular_and/",
+            "content": "Simular has introduced Agent S2, an open, modular, and scalable framework designed to assist with computer use agents. Agent S2 builds upon the foundation laid by its predecessor, offering a refined approach to automating tasks on computers and smartphones. By integrating a modular design with both general-purpose and specialized models, the framework can be adapted to a variety of digital environments. Its design is inspired by the human brain’s natural modularity, where different regions work together harmoniously to handle complex tasks, thereby fostering a system that is both flexible and robust.\n\n \n\nEvaluations on real-world benchmarks indicate that Agent S2 performs reliably in both computer and smartphone environments. On the OSWorld benchmark—which tests the execution of multi-step computer tasks—Agent S2 achieved a success rate of 34.5% on a 50-step evaluation, reflecting a modest yet consistent improvement over earlier models. Similarly, on the AndroidWorld benchmark, the framework reached a 50% success rate in executing smartphone tasks. These results underscore the practical benefits of a system that can plan ahead and adapt to dynamic conditions, ensuring that tasks are completed with improved accuracy and minimal manual intervention.......\n\n \n\nRead full article: https://www.marktechpost.com/2025/03/13/simular-releases-agent-s2-an-open-modular-and-scalable-ai-framework-for-computer-use-agents/\n\n \n\nGitHub Page: https://github.com/simular-ai/agent-s\n\n \n\nhttps://preview.redd.it/sykrwrkg1ioe1.png?width=1680&format=png&auto=webp&s=e44d5db3387c2dc18166dd8cdeea717e5c68c359\n\n    submitted by    /u/ai-lover  \n [link]   [comments]",
+            "author": "/u/ai-lover",
+            "updated": "2025-03-13T18:22:16",
+            "date_entered": "2025-03-15T05:52:00",
+            "marked": false,
+            "published": false,
+            "unread": false,
+            "score": 0,
+            "tags": [
+              "machinelearningnews"
+            ]
+          },
+          {
+            "id": 11,
+            "title": "Synthetic data for AI training—worth it or just hype?",
+            "link": "https://www.reddit.com/r/machinelearningnews/comments/1jaaimj/synthetic_data_for_ai_trainingworth_it_or_just/",
+            "content": "I keep hearing about synthetic data being the future of AI training, but does it actually replace real-world data effectively? If you’ve used synthetic data in your projects, did it improve your model’s performance, or did you run into weird issues? Would love to hear some success (or failure) stories!\n\n    submitted by    /u/Majestic-Fig3921  \n [link]   [comments]",
+            "author": "/u/Majestic-Fig3921",
+            "updated": "2025-03-13T12:12:51",
+            "date_entered": "2025-03-15T05:52:00",
+            "marked": false,
+            "published": false,
+            "unread": false,
+            "score": 0,
+            "tags": [
+              "machinelearningnews"
+            ]
+          },
+          {
+            "id": 12,
+            "title": "Alibaba Researchers Introduce R1-Omni: An Application of Reinforcement Learning with Verifiable Reward (RLVR) to an Omni-Multimodal Large Language Model",
+            "link": "https://www.reddit.com/r/machinelearningnews/comments/1ja4001/alibaba_researchers_introduce_r1omni_an/",
+            "content": "Alibaba Researchers present R1-Omni, an application of Reinforcement Learning with Verifiable Reward (RLVR) to an omni-multimodal large language model tailored for emotion recognition. R1-Omni builds on the established HumanOmni framework and applies RLVR to fine-tune the model for handling both video and audio data. The method begins with a cold start phase, where the model is pre-trained using a combined dataset from Explainable Multimodal Emotion Reasoning (EMER) and a manually annotated dataset. This initial training helps the model learn basic reasoning skills before being refined with RLVR. By integrating a rule-based reward mechanism into the training process, R1-Omni is optimized not only for accurate emotion prediction but also for generating clear and interpretable explanations that describe how visual and auditory information interact.\n\n \n\nAt the core of R1-Omni’s design is the integration of Reinforcement Learning with Verifiable Rewards (RLVR) and Group Relative Policy Optimization (GRPO). RLVR replaces the need for subjective human feedback with a verifiable reward function that assesses the model’s output against objective criteria. The reward system is straightforward: if the model’s emotion prediction matches the ground truth, it receives a reward of 1; otherwise, it receives 0. Additionally, a format reward ensures that the output adheres to a specified structure, where the reasoning process is clearly separated from the final prediction by designated tags.......\n\n \n\nRead full article: https://www.marktechpost.com/2025/03/12/alibaba-researchers-introduce-r1-omni-an-application-of-reinforcement-learning-with-verifiable-reward-rlvr-to-an-omni-multimodal-large-language-model/\n\n \n\nPaper: https://arxiv.org/abs/2503.05379\n\n \n\nGitHub Page: https://github.com/HumanMLLM/R1-Omni\n\n \n\nhttps://preview.redd.it/apwkz061xdoe1.png?width=1744&format=png&auto=webp&s=4c6287ae45fab81686d25fa556441fa1767d11ee\n\n    submitted by    /u/ai-lover  \n [link]   [comments]",
+            "author": "/u/ai-lover",
+            "updated": "2025-03-13T04:29:06",
+            "date_entered": "2025-03-15T05:52:00",
+            "marked": false,
+            "published": false,
+            "unread": false,
+            "score": 0,
+            "tags": [
+              "machinelearningnews"
+            ]
+          },
+          {
+            "id": 13,
+            "title": "Building an Interactive Bilingual (Arabic and English) Chat Interface with Open Source Meraj-Mini by Arcee AI: Leveraging GPU Acceleration, PyTorch, Transformers, Accelerate, BitsAndBytes, and Gradio. [💻 COLAB NOTEBOOK INCLUDED]",
+            "link": "https://www.reddit.com/r/machinelearningnews/comments/1j9w4nq/building_an_interactive_bilingual_arabic_and/",
+            "content": "💻 COLAB NOTEBOOK INCLUDED]\" title=\"Building an Interactive Bilingual (Arabic and English) Chat Interface with Open Source Meraj-Mini by Arcee AI: Leveraging GPU Acceleration, PyTorch, Transformers, Accelerate, BitsAndBytes, and Gradio. [💻 COLAB NOTEBOOK INCLUDED]\" />   \n\nIn this tutorial, we implement a Bilingual Chat Assistant powered by Arcee’s Meraj-Mini model, which is deployed seamlessly on Google Colab using T4 GPU. This tutorial showcases the capabilities of open-source language models while providing a practical, hands-on experience in deploying state-of-the-art AI solutions within the constraints of free cloud resources. We’ll utilise a powerful stack of tools including:\n\n \n\n➡️ Arcee’s Meraj-Mini model\n\n \n\n➡️ Transformers library for model loading and tokenization\n\n \n\n➡️ Accelerate and bitsandbytes for efficient quantization\n\n \n\n➡️ PyTorch for deep learning computations\n\n \n\n➡️ Gradio for creating an interactive web interface\n\n \n\nFirst we enable GPU acceleration by querying the GPU’s name and total memory using the nvidia-smi command. It then installs and updates key Python libraries—such as transformers, accelerate, bitsandbytes, and gradio—to support machine learning tasks and deploy interactive applications.......\n\n \n\nFull Tutorial: https://www.marktechpost.com/2025/03/12/building-an-interactive-bilingual-arabic-and-english-chat-interface-with-open-source-meraj-mini-by-arcee-ai-leveraging-gpu-acceleration-pytorch-transformers-accelerate-bitsandbytes-and-gradio/\n\n \n\nColab Notebook: https://colab.research.google.com/drive/1dw2TEsmNhWtRb-O2WumG2RGSVtfXdpPP\n\n \n\nhttps://i.redd.it/y250afg40coe1.gif\n\n    submitted by    /u/ai-lover  \n [link]   [comments]",
+            "author": "/u/ai-lover",
+            "updated": "2025-03-12T22:02:52",
+            "date_entered": "2025-03-15T05:52:00",
+            "marked": false,
+            "published": false,
+            "unread": false,
+            "score": 0,
+            "tags": [
+              "machinelearningnews"
+            ]
+          },
+          {
+            "id": 14,
+            "title": "Google AI Releases Gemma 3: Lightweight Multimodal Open Models for Efficient and On‑Device AI",
+            "link": "https://www.reddit.com/r/machinelearningnews/comments/1j9gfee/google_ai_releases_gemma_3_lightweight_multimodal/",
+            "content": "Google DeepMind has introduced Gemma 3—a family of open models designed to address these challenges. Developed with technology similar to that used for Gemini 2.0, Gemma 3 is intended to run efficiently on a single GPU or TPU. The models are available in various sizes—1B, 4B, 12B, and 27B—with options for both pre‑trained and instruction‑tuned variants. This range allows users to select the model that best fits their hardware and specific application needs, making it easier for a wider community to incorporate AI into their projects.\n\n \n\nEarly evaluations of Gemma 3 indicate that the models perform reliably within their size class. In one set of tests, the 27B variant achieved a score of 1338 on a relevant leaderboard, indicating its capacity to deliver consistent and high‐quality responses without requiring extensive hardware resources. Benchmarks also show that the models are effective at handling both text and visual data, thanks in part to a vision encoder that manages high-resolution images with an adaptive approach......\n\n \n\nRead full article: https://www.marktechpost.com/2025/03/12/google-ai-releases-gemma-3-lightweight-multimodal-open-models-for-efficient-and-on%e2%80%91device-ai/\n\n \n\nModels on Hugging Face: https://huggingface.co/collections/google/gemma-3-release-67c6c6f89c4f76621268bb6d\n\n \n\nTechnical details: https://blog.google/technology/developers/gemma-3/?linkId=13397566\n\n \n\nhttps://preview.redd.it/gfb3vh5jd8oe1.png?width=1883&format=png&auto=webp&s=84b85a3e38abd5d63c86bacff374c738b1285662\n\n    submitted by    /u/ai-lover  \n [link]   [comments]",
+            "author": "/u/ai-lover",
+            "updated": "2025-03-12T09:51:07",
+            "date_entered": "2025-03-15T05:52:00",
+            "marked": false,
+            "published": false,
+            "unread": false,
+            "score": 0,
+            "tags": [
+              "machinelearningnews"
+            ]
+          },
+          {
+            "id": 15,
+            "title": "Hugging Face Releases OlympicCoder: A Series of Open Reasoning AI Models that can Solve Olympiad-Level Programming Problems",
+            "link": "https://www.reddit.com/r/machinelearningnews/comments/1j9cbon/hugging_face_releases_olympiccoder_a_series_of/",
+            "content": "Hugging Face has recently introduced OlympicCoder, a series of models specifically designed to tackle the demands of olympiad-level programming challenges. This series consists of two fine-tuned models—OlympicCoder-7B and OlympicCoder-32B—that have been refined using a carefully curated dataset known as CodeForces-CoTs, which contains nearly 100,000 high-quality chain-of-thought samples. Notably, these models outperform closed-source frontier models like Claude 3.7 Sonnet on IOI problems, demonstrating that open-source models can compete with, and even exceed, the performance of larger proprietary systems. By integrating detailed explanations and multiple correct solutions into the training data, the OlympicCoder models are well-equipped to address the nuances of coding tasks that involve complex reasoning and problem-solving.......\n\n \n\nRead our full take on this: https://www.marktechpost.com/2025/03/11/hugging-face-releases-olympiccoder-a-series-of-open-reasoning-ai-models-that-can-solve-olympiad-level-programming-problems/\n\n \n\n7B Model: https://huggingface.co/open-r1/OlympicCoder-7B\n\n \n\n32B Model: https://huggingface.co/open-r1/OlympicCoder-32B\n\n \n\nTechnical details: https://huggingface.co/blog/open-r1/update-3\n\n \n\nhttps://preview.redd.it/a0l2usxv37oe1.png?width=1846&format=png&auto=webp&s=5cfd1984cb39cc88b96325b5cca1a7adad5bfe8d\n\n    submitted by    /u/ai-lover  \n [link]   [comments]",
+            "author": "/u/ai-lover",
+            "updated": "2025-03-12T05:35:02",
+            "date_entered": "2025-03-15T05:52:00",
+            "marked": false,
+            "published": false,
+            "unread": false,
+            "score": 0,
+            "tags": [
+              "machinelearningnews"
+            ]
+          },
+          {
+            "id": 16,
+            "title": "Reka AI Open Sourced Reka Flash 3: A 21B General-Purpose Reasoning Model that was Trained from Scratch",
+            "link": "https://www.reddit.com/r/machinelearningnews/comments/1j972tw/reka_ai_open_sourced_reka_flash_3_a_21b/",
+            "content": "Reka AI has introduced Reka Flash 3—a reasoning model built from the ground up with 21 billion parameters. Designed for general conversation, coding support, instruction following, and even function calling, this model is crafted to serve as a practical foundation for a wide variety of applications. The training process incorporates a mix of publicly accessible and synthetic datasets, followed by careful instruction tuning and reinforcement learning using REINFORCE Leave One-Out (RLOO) methods. This deliberate approach aims to strike a balance between capability and efficiency, positioning Reka Flash 3 as a sensible choice among its peers .\n\n \n\nFrom a technical standpoint, Reka Flash 3 offers several features that make it both versatile and resource-efficient. One notable aspect is its ability to handle a context length of up to 32k tokens, which facilitates the processing of lengthy documents and complex tasks without undue strain. The model also incorporates a “budget forcing” mechanism through designated  tags. This feature enables users to limit the model’s thinking process to a set number of steps, thereby ensuring consistent performance without excessive computational overhead. Moreover, Reka Flash 3 is well-suited for on-device deployments, offering a full precision size of 39GB (fp16) that can be further compressed to 11GB via 4-bit quantization. Such flexibility allows for smoother, local deployments when compared to larger, more resource-intensive models....\n\n \n\nRead full article: https://www.marktechpost.com/2025/03/11/reka-ai-open-sourced-reka-flash-3-a-21b-general-purpose-reasoning-model-that-was-trained-from-scratch/\n\n \n\nModel on Hugging Face: https://huggingface.co/RekaAI/reka-flash-3\n\n \n\nTechnical details: https://www.reka.ai/news/introducing-reka-flash\n\n \n\nhttps://preview.redd.it/dfiysfg0s5oe1.jpg?width=1939&format=pjpg&auto=webp&s=2b38a1c8355219399bc5182b82051b1c5a5c8ffb\n\n    submitted by    /u/ai-lover  \n [link]   [comments]",
+            "author": "/u/ai-lover",
+            "updated": "2025-03-12T01:06:41",
+            "date_entered": "2025-03-15T05:52:00",
+            "marked": false,
+            "published": false,
+            "unread": false,
+            "score": 0,
+            "tags": [
+              "machinelearningnews"
+            ]
+          },
+          {
+            "id": 17,
+            "title": "A Step by Step Guide to Build an Interactive Health Data Monitoring Tool Using Hugging Face Transformers and Open Source Model Bio_ClinicalBERT (Colab Notebook Included)",
+            "link": "https://www.reddit.com/r/machinelearningnews/comments/1j9ctom/a_step_by_step_guide_to_build_an_interactive/",
+            "content": "In this tutorial, we will learn how to build an interactive health data monitoring tool using Hugging Face’s transformer models, Google Colab, and ipywidgets. We walk you through setting up your Colab environment, loading a clinical model (like Bio_ClinicalBERT), and creating a user-friendly interface that accepts health data input and returns interpretable disease predictions. This step-by-step guide highlights the capabilities of advanced NLP models in healthcare and makes these powerful tools accessible, even for those new to machine learning and interactive programming......\n\n \n\nRead full Tutorial: https://www.marktechpost.com/2025/03/11/a-step-by-step-guide-to-build-an-interactive-health-data-monitoring-tool-using-hugging-face-transformers-and-open-source-model-bio_clinicalbert/\n\n \n\nColab Notebook: https://colab.research.google.com/drive/1Ay6DNWsssCikUj_Td2J0qBsGQDsfuOet\n\n \n\nhttps://i.redd.it/h0k5v77e87oe1.gif\n\n    submitted by    /u/ai-lover  \n [link]   [comments]",
+            "author": "/u/ai-lover",
+            "updated": "2025-03-12T06:00:22",
+            "date_entered": "2025-03-15T05:52:00",
+            "marked": false,
+            "published": false,
+            "unread": false,
+            "score": 0,
+            "tags": [
+              "machinelearningnews"
+            ]
+          },
+          {
+            "id": 18,
+            "title": "Step by Step Guide: Implementing Text-to-Speech TTS with BARK Using Hugging Face’s Transformers library in a Google Colab environment [Colab Notebook Included]",
+            "link": "https://www.reddit.com/r/machinelearningnews/comments/1j91ueg/step_by_step_guide_implementing_texttospeech_tts/",
+            "content": "Text-to-Speech (TTS) technology has evolved dramatically in recent years, from robotic-sounding voices to highly natural speech synthesis. BARK is an impressive open-source TTS model developed by Suno that can generate remarkably human-like speech in multiple languages, complete with non-verbal sounds like laughing, sighing, and crying.\n\n \n\nIn this tutorial, we’ll implement BARK using Hugging Face’s Transformers library in a Google Colab environment......\n\n \n\nFull Tutorial: https://www.marktechpost.com/2025/03/11/implementing-text-to-speech-tts-with-bark-using-hugging-faces-transformers-library-in-a-google-colab-environment/\n\n \n\nColab Notebook: https://colab.research.google.com/drive/15hriiDYlp2aiOgnKTZpkqliMnNK6bFpI#scrollTo=rPo8ac0anvFM\n\n \n\nhttps://i.redd.it/ys49tcqim4oe1.gif\n\n    submitted by    /u/ai-lover  \n [link]   [comments]",
+            "author": "/u/ai-lover",
+            "updated": "2025-03-11T21:14:15",
+            "date_entered": "2025-03-15T05:52:00",
+            "marked": false,
+            "published": false,
+            "unread": false,
+            "score": 0,
+            "tags": [
+              "machinelearningnews"
+            ]
+          },
+          {
+            "id": 19,
+            "title": "Salesforce AI Releases Text2Data: A Training Framework for Low-Resource Data Generation",
+            "link": "https://www.reddit.com/r/machinelearningnews/comments/1j7s4bt/salesforce_ai_releases_text2data_a_training/",
+            "content": "In this paper, researchers from Salesforce AI Research present Text2Data which introduces a diffusion-based framework that enhances text-to-data controllability in low-resource scenarios through a two-stage approach. First, it masters data distribution using unlabeled data via an unsupervised diffusion model, avoiding the semantic ambiguity common in semi-supervised methods. Second, it implements controllable fine-tuning on text-labeled data without expanding the training dataset. Instead, Text2Data employs a constraint optimization-based learning objective that prevents catastrophic forgetting by keeping model parameters close to their pre-fine-tuning state. This unique framework effectively utilizes both labeled and unlabeled data to maintain fine-grained data distribution while achieving superior controllability. Theoretical validation supports the optimization constraint selection and generalization bounds, with comprehensive experiments across three modalities demonstrating Text2Data’s superior generation quality and controllability compared to baseline methods......\n\n \n\nRead full article: https://www.marktechpost.com/2025/03/09/salesforce-ai-releases-text2data-a-training-framework-for-low-resource-data-generation/\n\n \n\nPaper: https://arxiv.org/abs/2402.10941\n\n \n\nGithub Page: https://github.com/SalesforceAIResearch/text2data\n\n \n\nhttps://preview.redd.it/6wlo3jj60tne1.png?width=2022&format=png&auto=webp&s=26dfeddfb0803173652c935a176fb4beaf8624ce\n\n    submitted by    /u/ai-lover  \n [link]   [comments]",
+            "author": "/u/ai-lover",
+            "updated": "2025-03-10T06:09:20",
+            "date_entered": "2025-03-15T05:52:00",
+            "marked": false,
+            "published": false,
+            "unread": false,
+            "score": 0,
+            "tags": [
+              "machinelearningnews"
+            ]
+          },
+          {
+            "id": 20,
+            "title": "A Coding Implementation of Web Scraping with Firecrawl and AI-Powered Summarization Using Google Gemini (Colab Notebook Included)",
+            "link": "https://www.reddit.com/r/machinelearningnews/comments/1j7sgtm/a_coding_implementation_of_web_scraping_with/",
+            "content": "The rapid growth of web content presents a challenge for efficiently extracting and summarizing relevant information. In this tutorial, we demonstrate how to leverage Firecrawl for web scraping and process the extracted data using AI models like Google Gemini. By integrating these tools in Google Colab, we create an end-to-end workflow that scrapes web pages, retrieves meaningful content, and generates concise summaries using state-of-the-art language models. Whether you want to automate research, extract insights from articles, or build AI-powered applications, this tutorial provides a robust and adaptable solution.....\n\n \n\nFull Tutorial: https://www.marktechpost.com/2025/03/09/a-coding-implementation-of-web-scraping-with-firecrawl-and-ai-powered-summarization-using-google-gemini/\n\n \n\nColab Notebook: https://colab.research.google.com/drive/1kp_CJqll_DBlsglr61bWsvHrofnTVp5Q\n\n \n\nhttps://i.redd.it/1558st8k4tne1.gif\n\n    submitted by    /u/ai-lover  \n [link]   [comments]",
+            "author": "/u/ai-lover",
+            "updated": "2025-03-10T06:34:06",
+            "date_entered": "2025-03-15T05:52:00",
+            "marked": false,
+            "published": false,
+            "unread": false,
+            "score": 0,
+            "tags": [
+              "machinelearningnews"
+            ]
+          },
+          {
+            "id": 21,
+            "title": "Google AI Introduces Differentiable Logic Cellular Automata (DiffLogic CA): A Differentiable Logic Approach to Neural Cellular Automata",
+            "link": "https://www.reddit.com/r/machinelearningnews/comments/1j7glp6/google_ai_introduces_differentiable_logic/",
+            "content": "Google researchers introduced Differentiable Logic Cellular Automata (DiffLogic CA), which applies differentiable logic gates to cellular automata. This method successfully replicates the rules of Conway’s Game of Life and generates patterns through learned discrete dynamics. The approach merges Neural Cellular Automata (NCA), which can learn arbitrary behaviors but lack discrete state constraints, with Differentiable Logic Gate Networks, which enable combinatorial logic discovery but have not been tested in recurrent settings. This integration paves the way for learnable, local, and discrete computing, potentially advancing programmable matter. The study explores whether Differentiable Logic CA can learn and generate complex patterns akin to traditional NCAs.\n\n \n\nNCA integrates classical cellular automata with deep learning, enabling self-organization through learnable update rules. Unlike traditional methods, NCA uses gradient descent to discover dynamic interactions while preserving locality and parallelism. A 2D grid of cells evolves via perception (using Sobel filters) and update stages (through neural networks). Differentiable Logic Gate Networks (DLGNs) extend this by replacing neurons with logic gates, allowing discrete operations to be learned via continuous relaxations. DiffLogic CA further integrates these concepts, employing binary-state cells with logic gate-based perception and update mechanisms, forming an adaptable computational system akin to programmable matter architectures like CAM-8........\n\n \n\nRead full article: https://www.marktechpost.com/2025/03/09/google-ai-introduces-differentiable-logic-cellular-automata-difflogic-ca-a-differentiable-logic-approach-to-neural-cellular-automata/\n\n \n\nTechnical details: https://google-research.github.io/self-organising-systems/difflogic-ca/?hn\n\n \n\nhttps://preview.redd.it/ng575l3t2qne1.png?width=1372&format=png&auto=webp&s=c542d9ba66aca22099bd01c2862a39809002b2e3\n\n    submitted by    /u/ai-lover  \n [link]   [comments]",
+            "author": "/u/ai-lover",
+            "updated": "2025-03-09T20:18:43",
+            "date_entered": "2025-03-15T05:52:00",
+            "marked": false,
+            "published": false,
+            "unread": false,
+            "score": 0,
+            "tags": [
+              "machinelearningnews"
+            ]
+          },
+          {
+            "id": 22,
+            "title": "A Step by Step Guide to Build a Trend Finder Tool with Python: Web Scraping, NLP (Sentiment Analysis & Topic Modeling), and Word Cloud Visualization (Colab Notebook Included)",
+            "link": "https://www.reddit.com/r/machinelearningnews/comments/1j7h363/a_step_by_step_guide_to_build_a_trend_finder_tool/",
+            "content": "Monitoring and extracting trends from web content has become essential for market research, content creation, or staying ahead in your field. In this tutorial, we provide a practical guide to building your trend-finding tool using Python. Without needing external APIs or complex setups, you’ll learn how to scrape publicly accessible websites, apply powerful NLP (Natural Language Processing) techniques like sentiment analysis and topic modeling, and visualize emerging trends using dynamic word clouds.....\n\n \n\nFull Tutorial: https://www.marktechpost.com/2025/03/09/a-step-by-step-guide-to-build-a-trend-finder-tool-with-python-web-scraping-nlp-sentiment-analysis-topic-modeling-and-word-cloud-visualization/\n\n \n\nColab Notebook: https://colab.research.google.com/drive/1TUhO6xHxyR7QyHyv_msDGLKZmDh_igZ7\n\n \n\nhttps://i.redd.it/7mprk62k6qne1.gif\n\n    submitted by    /u/ai-lover  \n [link]   [comments]",
+            "author": "/u/ai-lover",
+            "updated": "2025-03-09T20:39:58",
+            "date_entered": "2025-03-15T05:52:00",
+            "marked": false,
+            "published": false,
+            "unread": false,
+            "score": 0,
+            "tags": [
+              "machinelearningnews"
+            ]
+          },
+          {
+            "id": 23,
+            "title": "Meet Manus: A New AI Agent from China with Deep Research + Operator + Computer Use + Lovable + Memory",
+            "link": "https://www.reddit.com/r/machinelearningnews/comments/1j72ij2/meet_manus_a_new_ai_agent_from_china_with_deep/",
+            "content": "Meet Manus: a super trending chineese AI agent designed to revolutionize productivity. Manus combines deep research capabilities with the autonomy to operate digital tools, making it much more than a conventional assistant. It is engineered to think deeply, execute complex tasks on your computer, and even maintain a personalized memory of your interactions. The agent is as engaging as it is effective, with an intuitive interface that invites users to delegate tasks confidently. Manus transforms research and operational planning into a streamlined process—whether it’s developing a comprehensive travel itinerary, analyzing intricate financial data, or generating insightful reports. With Manus, your ideas are not only understood but also turned into tangible actions.\n\n \n\n• Advanced browser control that effectively handles CAPTCHAs\n\n \n\n• Capabilities for file creation and editing\n\n \n\n• Ability to deploy complete websites directly from prompts\n\n \n\n• Deep research with well-organized reports....\n\n \n\nRead full article here: https://www.marktechpost.com/2025/03/08/meet-manus-a-new-ai-agent-from-china-with-deep-research-operator-computer-use-lovable-memory/\n\n \n\nTry the tool here: https://manus.im/\n\n \n\nhttps://reddit.com/link/1j72ij2/video/n28597qcamne1/player\n\n    submitted by    /u/ai-lover  \n [link]   [comments]",
+            "author": "/u/ai-lover",
+            "updated": "2025-03-09T07:33:59",
+            "date_entered": "2025-03-15T05:52:00",
+            "marked": false,
+            "published": false,
+            "unread": false,
+            "score": 0,
+            "tags": [
+              "machinelearningnews"
+            ]
+          },
+          {
+            "id": 24,
+            "title": "Microsoft and Ubiquant Researchers Introduce Logic-RL: A Rule-based Reinforcement Learning Framework that Acquires R1-like Reasoning Patterns through Training on Logic Puzzles",
+            "link": "https://www.reddit.com/r/machinelearningnews/comments/1j71u1o/microsoft_and_ubiquant_researchers_introduce/",
+            "content": "Researchers from Microsoft Research Asia, Ubiquant, and Independent have proposed Logic-RL, a rule-based RL framework that acquires reasoning patterns similar to DeepSeek-R1 through training on logic puzzles. It adopts the REINFORCE++ algorithm and reward designs from DeepSeek-R1 for post-training. As training progresses, the model naturally allocates more computational steps to reasoning, expanding from generating hundreds to thousands of tokens, which enables deeper exploration and refinement of thought processes. Using only 5K generated logic puzzles, their 7B model shows cross-domain generalization, improving by 125% on AIME and 38% on AMC against the base model. This suggests that RL-trained reasoning develops abstract problem-solving patterns rather than domain-specific matching.\n\n \n\nThe researchers face challenges with Qwen2.5-Math-7B’s tendency to generate Python code blocks that conflict with formatting requirements. Testing both Qwen2.5-7B-Base and Qwen2.5-7B-Instruct reveals nearly identical training metrics during RL training, including validation accuracy, response length growth curves, and reward curves. The implementation shows dramatic improvements in reasoning capabilities, with output length increasing from an initial average of 500 tokens to approximately 2000 tokens after just 1000 RL training steps. This enables the emergence of more complex behaviors, such as reflection and exploration of alternative solutions, and these behaviors significantly enhance the model’s ability to handle complex tasks and are closely aligned with the results reported in DeepSeek-R1......\n\n \n\nRead full article: https://www.marktechpost.com/2025/03/08/microsoft-and-ubiquant-researchers-introduce-logic-rl-a-rule-based-reinforcement-learning-framework-that-acquires-r1-like-reasoning-patterns-through-training-on-logic-puzzles/\n\n \n\nPaper: https://arxiv.org/abs/2502.14768\n\n \n\nhttps://preview.redd.it/b3he1v212mne1.png?width=1570&format=png&auto=webp&s=831c34ee3c4150e4f926976ec033ac20913ffbb8\n\n    submitted by    /u/ai-lover  \n [link]   [comments]",
+            "author": "/u/ai-lover",
+            "updated": "2025-03-09T06:47:13",
+            "date_entered": "2025-03-15T05:52:00",
+            "marked": false,
+            "published": false,
+            "unread": false,
+            "score": 0,
+            "tags": [
+              "machinelearningnews"
+            ]
+          },
+          {
+            "id": 25,
+            "title": "Tufa Labs Introduced LADDER: A Recursive Learning Framework Enabling Large Language Models to Self-Improve without Human Intervention",
+            "link": "https://www.reddit.com/r/machinelearningnews/comments/1j6po20/tufa_labs_introduced_ladder_a_recursive_learning/",
+            "content": "Researchers from Tufa Labs introduced LADDER (Learning through Autonomous Difficulty-Driven Example Recursion) to overcome these limitations. This framework enables LLMs to self-improve by recursively generating and solving progressively simpler variants of complex problems. Unlike prior methods that depend on human intervention or curated datasets, LADDER leverages the model’s capabilities to create a natural difficulty gradient, allowing for structured self-learning. The research team developed and tested LADDER on mathematical integration tasks, demonstrating its effectiveness in enhancing model performance. By applying LADDER, the researchers enabled a 3-billion-parameter Llama 3.2 model to improve its accuracy on undergraduate integration problems from 1% to 82%, an unprecedented leap in mathematical reasoning capabilities. Also, the approach was extended to larger models, such as Qwen2.5 7B Deepseek-R1 Distilled, achieving 73% accuracy on the MIT Integration Bee qualifying examination, far surpassing models like GPT-4o, which gained only 42%, and typical human performance in the 15-30% range......\n\n \n\nRead full article: https://www.marktechpost.com/2025/03/08/tufa-labs-introduced-ladder-a-recursive-learning-framework-enabling-large-language-models-to-self-improve-without-human-intervention/\n\n \n\nPaper: https://arxiv.org/abs/2503.00735\n\n \n\nhttps://preview.redd.it/pz92bn0kvine1.jpg?width=2224&format=pjpg&auto=webp&s=1bc9a973ef8de701cdbf5bc85771309fc2b9ec5e\n\n    submitted by    /u/ai-lover  \n [link]   [comments]",
+            "author": "/u/ai-lover",
+            "updated": "2025-03-08T20:05:40",
+            "date_entered": "2025-03-15T05:52:00",
+            "marked": false,
+            "published": false,
+            "unread": false,
+            "score": 0,
+            "tags": [
+              "machinelearningnews"
+            ]
+          },
+          {
+            "id": 26,
+            "title": "CMU Researchers Introduce PAPRIKA: A Fine-Tuning Approach that Enables Language Models to Develop General Decision-Making Capabilities Not Confined to Particular Environment",
+            "link": "https://www.reddit.com/r/machinelearningnews/comments/1j6bpdq/cmu_researchers_introduce_paprika_a_finetuning/",
+            "content": "This method is designed to endow language models with general decision-making capabilities that are not limited to any single environment. Rather than relying on traditional training data, PAPRIKA leverages synthetic interaction data generated across a diverse set of tasks. These tasks range from classic guessing games like twenty questions to puzzles such as Mastermind and even scenarios simulating customer service interactions. By training on these varied trajectories, the model learns to adjust its behavior based on contextual feedback from its environment—without the need for additional gradient updates. This approach encourages the model to adopt a more flexible, in-context learning strategy that can be applied to a range of new tasks.\n\n \n\nPAPRIKA’s methodology is built on a two-stage fine-tuning process. The first stage involves exposing the LLM to a large set of synthetic trajectories generated using a method called Min‑p sampling, which ensures that the training data is both diverse and coherent. This step allows the model to experience a wide spectrum of interaction strategies, including both successful and less effective decision-making behaviors. The second stage refines the model using a blend of supervised fine-tuning (SFT) and a direct preference optimization (DPO) objective. In this setup, pairs of trajectories are compared, with the model gradually learning to favor those that lead more directly to task success.......\n\n \n\nRead full article: https://www.marktechpost.com/2025/03/07/cmu-researchers-introduce-paprika-a-fine-tuning-approach-that-enables-language-models-to-develop-general-decision-making-capabilities-not-confined-to-particular-environment/\n\n \n\nPaper: https://arxiv.org/abs/2502.17543\n\n \n\nGitHub Page: https://github.com/tajwarfahim/paprika\n\n \n\nModel on Hugging Face: https://huggingface.co/ftajwar/paprika_Meta-Llama-3.1-8B-Instruct\n\n \n\nhttps://preview.redd.it/j953b33v0fne1.png?width=1988&format=png&auto=webp&s=64877a8f9e1a6746f107ab1c51bddd13396009ea\n\n    submitted by    /u/ai-lover  \n [link]   [comments]",
+            "author": "/u/ai-lover",
+            "updated": "2025-03-08T07:08:12",
+            "date_entered": "2025-03-15T05:52:00",
+            "marked": false,
+            "published": false,
+            "unread": false,
+            "score": 0,
+            "tags": [
+              "machinelearningnews"
+            ]
+          },
+          {
+            "id": 27,
+            "title": "AutoAgent: A Fully-Automated and Highly Self-Developing Framework that Enables Users to Create and Deploy LLM Agents through Natural Language Alone",
+            "link": "https://www.reddit.com/r/machinelearningnews/comments/1j68kqh/autoagent_a_fullyautomated_and_highly/",
+            "content": "Researchers from The University of Hong Kong introduced AutoAgent, a fully automated and zero-code AI agent framework designed to bridge this gap. AutoAgent enables users to create and deploy LLM agents using natural language commands, eliminating the need for programming expertise. Unlike existing solutions, AutoAgent functions as a self-developing Agent Operating System, where users describe tasks in plain language and autonomously generates agents and workflows. The framework comprises four key components: Agentic System Utilities, an LLM-powered Actionable Engine, a Self-Managing File System, and a Self-Play Agent Customization module. These components allow users to create AI-driven solutions for various applications without writing a single line of code. AutoAgent aims to democratize AI development, making intelligent automation accessible to a broader audience.\n\n \n\nThe AutoAgent framework operates through an advanced multi-agent architecture. At its core, the LLM-powered Actionable Engine translates natural language instructions into structured workflows. Unlike conventional frameworks requiring manual coding, AutoAgent dynamically constructs AI agents based on user input. The Self-Managing File System enables efficient data handling by automatically converting various file formats into searchable knowledge bases. This ensures that AI agents can retrieve relevant information across multiple sources. The Self-Play Agent Customization module further enhances system adaptability by iteratively optimizing agent functions. These components allow AutoAgent to execute complex AI-driven tasks without human intervention. This approach significantly reduces the complexity of AI agent development, making it accessible to non-programmers while maintaining high efficiency.......\n\n \n\nRead full article: https://www.marktechpost.com/2025/03/07/autoagent-a-fully-automated-and-highly-self-developing-framework-that-enables-users-to-create-and-deploy-llm-agents-through-natural-language-alone/\n\n \n\nPaper: https://arxiv.org/abs/2502.05957\n\n \n\nGitHub Page: https://github.com/HKUDS/AutoAgent?tab=readme-ov-file\n\n \n\nhttps://preview.redd.it/30s4a3cx1ene1.png?width=1696&format=png&auto=webp&s=c2385c70312d0649f52aa1fe45e18d95719600b2\n\n    submitted by    /u/ai-lover  \n [link]   [comments]",
+            "author": "/u/ai-lover",
+            "updated": "2025-03-08T03:52:22",
+            "date_entered": "2025-03-15T05:52:00",
+            "marked": false,
+            "published": false,
+            "unread": false,
+            "score": 0,
+            "tags": [
+              "machinelearningnews"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
