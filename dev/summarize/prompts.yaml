@@ -1,0 +1,126 @@
+prompts:
+  summary:
+    version_1: |
+      You are an AI language model specialized in summarizing texts while preserving key information. Your task is to generate a structured summary.
+
+      **Input:**
+      Title: {title}
+      Content: {content}
+
+      **Instructions:**
+      - The summary must retain essential details without losing meaning.
+      - The output should be structured in two parts: 
+        1. The original title.
+        2. A detailed summary of the content.
+      - Ensure the summary is concise but complete.
+
+      **Output Format (Markdown):**
+      ### {title}
+
+      **Summary:** {summary}
+    version_2: |
+      아래의 컨텐츠를 보고 주요 내용을 템플릿에 맞게 재구성해줘.
+
+      Title: {title}
+      Contents: {content}
+      Reviewer Comments: {comments}
+
+      **Output Templete (Markdown):**
+
+      ## **Introducing [모델 이름]: 최신 AI 모델 공개!**
+      **🔍 오늘의 주제: [모델 요약]**
+      최신 AI 모델 **[모델 이름]**이 출시되었습니다! 이번 모델은 **[핵심 개선점 또는 특징 요약]**을 통해 **[적용 분야 및 주요 기대 효과]**에 강력한 성능을 제공합니다.
+      🔗 **공식 발표:** [출처 링크 (OpenAI, Meta, Google AI 등)]
+      ---
+
+      ### 🏆 **[모델 이름] 주요 특징**
+      ✅ **[기능 1]** - [설명]
+      ✅ **[기능 2]** - [설명]
+      ✅ **[기능 3]** - [설명]
+
+      📌 **주요 개선점 (이전 모델과 비교)**
+      | 기능 | 이전 모델 ([이전 모델 이름]) | 새로운 모델 ([모델 이름]) |
+      | --- | --- | --- |
+      | **정확도(%)** | XX.X% | XX.X% |
+      | **처리 속도(ms)** | XXXms | XXXms |
+      | **메모리 사용량** | XXGB | XXGB |
+      | **지원 언어** | [언어 목록] | [언어 목록] |
+
+      ### 📌 추가 정보
+
+      🔗 [공식 블로그 링크]
+      📄 [논문 링크]
+      👨‍💻 [GitHub / Hugging Face Repository]
+
+      ### 사용자 코멘트
+      - [코멘트]
+  classification:
+    version_1: |
+      You are an AI model that categorizes content into predefined categories. Your task is to classify the given text into **one** of the following categories:
+
+      1. **Research Paper** - Academic papers, studies, or research findings.
+      2. **Model** - AI/ML models, architectures, or improvements.
+      3. **Tool** - AI-related software, libraries, or frameworks.
+      4. **Updates & Trends** - News, developments, and AI/ML trends.
+
+      **Input:**
+      Title: {title}
+      Content: {content}
+
+      **Instructions:**
+      - Assign exactly **one** category from the list.
+      - Choose **Research Paper** if the content discusses a research study or academic findings.
+      - Choose **Model** if the content discusses AI model development or architectures.
+      - Choose **Tool** if the content introduces AI/ML tools or software.
+      - Choose **Updates & Trends** if the content reports industry trends or news.
+
+      **Output Format (Markdown):**
+      ### {title}
+
+      **Category:** {category}
+    version_2: |
+      Task: Categorize the given AI-related content into one of the predefined categories.
+
+      Instructions:
+      The classification should be based on the primary focus of the content.
+      If the content fits into multiple categories, choose the most dominant one.
+      Assign at least two relevant tags for more granular classification.
+
+      Categories:
+      - New AI Model Release: Announcements of new AI models and architectures (e.g., GPT-5 release, Mistral-7B).
+      - New Tool Introduction: Tutorials, reviews, or walkthroughs of AI software/tools (e.g., LangChain updates, Hugging Face spaces).
+      - Technical Deep Dive: In-depth explanations of AI concepts, mechanisms, or architectures (e.g., "How Transformers Work").
+      - Benchmark & Performance: Comparisons, speed tests, and efficiency analyses of AI models (e.g., Hugging Face Leaderboard rankings).
+      - Industry Trend Analysis: Analysis of AI adoption across industries (e.g., "How AI is Changing Finance").
+      - AI Ethics & Regulation: Discussions on AI risks, bias, governance, and regulations (e.g., EU AI Act updates).
+      - Open-Source Project: Highlights of new AI repositories and self-hosted projects (e.g., "Self-Hosted LLM on GitHub").
+      - Research Paper Review: Summaries and breakdowns of academic AI research papers (e.g., "Recent Paper on RLHF in LLMs").
+      - Event Coverage: Recaps, live updates, and summaries of AI conferences (e.g., NeurIPS, CVPR, ICLR reviews).
+      - Community Discussion: Debates, Q&A, or informal AI-related conversations (e.g., "Is GPT-4-Turbo Slower Than GPT-4?").
+      - Meme/Humor: AI-related jokes, memes, or viral content (e.g., "ChatGPT-generated Memes on Twitter").
+
+      Input Format:
+      Title: {title}
+      Content: {content}
+
+      Output Format:
+      Category: (The most relevant category from the list above)
+      Tags: (Relevant keywords based on the content)
+  keywords:
+    version_1: |
+      You are an AI model trained to extract distinct and relevant keywords from a given text. Your task is to generate **3 to 5 unique keywords** that best represent the content.
+
+      **Input:**
+      Title: {title}
+      Content: {content}
+
+      **Instructions:**   
+      - Identify 3 to 5 **distinct** keywords summarizing the content.
+      - Ensure the keywords are **MECE (Mutually Exclusive, Collectively Exhaustive)**.
+      - Avoid generic words and focus on domain-specific terms.
+      - Do not include redundant or overlapping keywords.
+
+      **Output Format (Markdown):**
+      ### {title}
+
+      **Keywords:** {keyword1}, {keyword2}, {keyword3}, {keyword4}, {keyword5}
