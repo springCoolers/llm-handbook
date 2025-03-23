@@ -66,6 +66,7 @@ def main():
             print(f"- Added from Notion: {results['added_from_notion']}")
             print(f"- Removed from sync table: {results['removed_from_sync']}")
             print(f"- Added from TTRSS: {results['added_from_ttrss']}")
+            print(f"- Updated matches by title: {results['updated_matches']}")
             print(f"- Synced to Notion: {results['synced_to_notion']}")
             
         elif args.command == 'check-notion':

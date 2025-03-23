@@ -223,7 +223,8 @@ class SyncManager:
         Perform a full synchronization between TTRSS, sync table, and Notion
         1. Sync Notion to sync table (Notion is source of truth)
         2. Sync TTRSS to sync table (only add, never delete)
-        3. Sync new entries from sync table to Notion
+        3. Check for title matches and update sync status
+        4. Sync new entries from sync table to Notion
         """
         # Step 1: Sync Notion to sync table
         logger.info("Step 1: Syncing Notion to sync table")
@@ -235,13 +236,18 @@ class SyncManager:
         ttrss_entries = self.check_ttrss_entries()
         added_ttrss = self.sync_ttrss_to_sync_table(ttrss_entries)
         
-        # Step 3: Sync new entries to Notion
-        logger.info("Step 3: Syncing new entries to Notion")
+        # Step 3: Check for title matches and update sync status
+        logger.info("Step 3: Checking for title matches and updating sync status")
+        updated_matches = self.db_manager.update_duplicate_entries_sync_status()
+        
+        # Step 4: Sync new entries to Notion
+        logger.info("Step 4: Syncing new entries to Notion")
         synced_to_notion = self.sync_to_notion()
         
         return {
             "added_from_notion": added_notion,
             "removed_from_sync": removed_notion,
             "added_from_ttrss": added_ttrss,
+            "updated_matches": updated_matches,
             "synced_to_notion": synced_to_notion
         }
