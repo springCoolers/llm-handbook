@@ -3,6 +3,7 @@ Database management module for handling TTRSS database operations.
 """
 import psycopg2
 from datetime import datetime
+from bs4 import BeautifulSoup
 from config import DB_CONFIG, TTRSS_ENTRIES_TABLE, SYNC_TABLE, logger
 
 class DatabaseManager:
@@ -161,6 +162,9 @@ class DatabaseManager:
             logger.info(f"Skipping duplicate TTRSS entry: {entry['id']} (title: {entry['title']})")
             return existing_entry['id']
             
+        # Convert HTML content to plain text
+        plain_text_content = self.html_to_text(entry['content'])
+            
         with self.conn.cursor() as cur:
             cur.execute(f"""
                 INSERT INTO {SYNC_TABLE} 
@@ -170,7 +174,7 @@ class DatabaseManager:
             """, (
                 entry['id'], 
                 entry['title'],
-                entry['content'],
+                plain_text_content,
                 entry['link'],
                 entry['date_entered'],
                 entry['date_updated'],
@@ -189,11 +193,45 @@ class DatabaseManager:
             logger.info(f"Skipping duplicate Notion entry: {entry['notion_page_id']} (title: {entry['title']})")
             return existing_entry['id']
             
+        # Check if content is empty and try to find matching TTRSS entry for content
+        if not entry.get('content') or entry.get('content') == "":
+            # First check if there's a TTRSS entry with the same title in the sync table
+            ttrss_entries = self.find_matching_entries_by_title(entry['title'])
+            ttrss_entries = [e for e in ttrss_entries if e['source'] == 'ttrss']
+            
+            if ttrss_entries:
+                # Get the content of the first matching TTRSS entry
+                with self.conn.cursor() as cur:
+                    cur.execute(f"""
+                        SELECT content FROM {SYNC_TABLE}
+                        WHERE id = %s
+                    """, (ttrss_entries[0]['id'],))
+                    result = cur.fetchone()
+                    if result and result[0]:
+                        entry['content'] = result[0]
+                        logger.info(f"Using content from matching TTRSS entry for Notion entry: {entry['title'][:50]}...")
+                        entry['source'] = 'ttrss'  # Change source to ttrss
+            
+            # If no matching entry in sync table, try to find in TTRSS entries table
+            if (not entry.get('content') or entry.get('content') == "") and entry.get('title'):
+                with self.conn.cursor() as cur:
+                    cur.execute(f"""
+                        SELECT content FROM {TTRSS_ENTRIES_TABLE}
+                        WHERE title = %s
+                        LIMIT 1
+                    """, (entry['title'],))
+                    result = cur.fetchone()
+                    if result and result[0]:
+                        # Convert HTML to text for better readability in Notion
+                        entry['content'] = self.html_to_text(result[0])
+                        logger.info(f"Using content from TTRSS entries table for Notion entry: {entry['title'][:50]}...")
+                        entry['source'] = 'ttrss'  # Change source to ttrss
+            
         with self.conn.cursor() as cur:
             cur.execute(f"""
                 INSERT INTO {SYNC_TABLE} 
-                (notion_page_id, title, content, link, published, updated, source)
-                VALUES (%s, %s, %s, %s, %s, %s, %s)
+                (notion_page_id, title, content, link, published, updated, source, synced_to_notion)
+                VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
                 RETURNING id
             """, (
                 entry['notion_page_id'],
@@ -202,11 +240,12 @@ class DatabaseManager:
                 entry['link'],
                 entry['published'],
                 entry['updated'],
-                'notion'
+                entry.get('source', 'notion'),  # Use the potentially updated source
+                True  # Notion 항목은 이미 Notion에 있으므로 synced_to_notion=TRUE로 설정
             ))
             new_id = cur.fetchone()[0]
             self.conn.commit()
-            logger.info(f"Added Notion page {entry['notion_page_id']} to sync table with ID {new_id}")
+            logger.info(f"Added Notion page {entry['notion_page_id']} to sync table with ID {new_id} (synced_to_notion=TRUE)")
             return new_id
             
     def update_sync_status(self, sync_id, notion_page_id):
@@ -251,6 +290,149 @@ class DatabaseManager:
             logger.info(f"Found {len(entries)} entries to sync to Notion")
             return entries
             
+    def find_matching_entries_by_title(self, title):
+        """Find entries in the sync table that have the same title"""
+        with self.conn.cursor() as cur:
+            cur.execute(f"""
+                SELECT id, notion_page_id, title, source, synced_to_notion
+                FROM {SYNC_TABLE}
+                WHERE title = %s
+            """, (title,))
+            columns = [desc[0] for desc in cur.description]
+            entries = [dict(zip(columns, row)) for row in cur.fetchall()]
+            return entries
+            
+    def update_duplicate_entries_sync_status(self):
+        """
+        Find entries with identical titles and update their sync status.
+        If a Notion entry and a TTRSS entry share the same title, mark the TTRSS entry as synced
+        """
+        updated_count = 0
+        content_updated_count = 0
+        with self.conn.cursor() as cur:
+            # Find all duplicate titles in the sync table
+            cur.execute(f"""
+                SELECT title
+                FROM {SYNC_TABLE}
+                GROUP BY title
+                HAVING COUNT(*) > 1
+            """)
+            duplicate_titles = [row[0] for row in cur.fetchall()]
+            
+            for title in duplicate_titles:
+                # For each duplicate title, check if there's a Notion entry
+                cur.execute(f"""
+                    SELECT id, notion_page_id, synced_to_notion, content
+                    FROM {SYNC_TABLE}
+                    WHERE title = %s AND source = 'notion'
+                """, (title,))
+                notion_entries = cur.fetchall()
+                
+                # Check for TTRSS entries with the same title
+                cur.execute(f"""
+                    SELECT id, content
+                    FROM {SYNC_TABLE}
+                    WHERE title = %s AND source = 'ttrss' AND synced_to_notion = FALSE
+                """, (title,))
+                ttrss_entries = cur.fetchall()
+                
+                if notion_entries and ttrss_entries:
+                    # Check if Notion entry has empty content
+                    notion_entry = notion_entries[0]
+                    notion_id = notion_entry[0]
+                    notion_page_id = notion_entry[1]
+                    notion_content = notion_entry[3]
+                    
+                    # If Notion content is empty, get content from TTRSS
+                    if not notion_content or notion_content.strip() == "":
+                        ttrss_entry = ttrss_entries[0]
+                        ttrss_content = ttrss_entry[1]
+                        
+                        if ttrss_content and ttrss_content.strip() != "":
+                            # Update Notion entry with TTRSS content and change source to 'ttrss'
+                            cur.execute(f"""
+                                UPDATE {SYNC_TABLE}
+                                SET content = %s, source = 'ttrss'
+                                WHERE id = %s
+                            """, (ttrss_content, notion_id))
+                            content_updated_count += 1
+                            logger.info(f"Updated Notion entry {notion_id} with content from TTRSS entry for title '{title[:30]}...'")
+                        else:
+                            # If sync table TTRSS content is also empty, try to get content from ttrss_entries table
+                            cur.execute(f"""
+                                SELECT content FROM {TTRSS_ENTRIES_TABLE}
+                                WHERE title = %s
+                                LIMIT 1
+                            """, (title,))
+                            result = cur.fetchone()
+                            if result and result[0]:
+                                # Convert HTML to text for better readability
+                                plain_text_content = self.html_to_text(result[0])
+                                # Update Notion entry with TTRSS content and change source to 'ttrss'
+                                cur.execute(f"""
+                                    UPDATE {SYNC_TABLE}
+                                    SET content = %s, source = 'ttrss'
+                                    WHERE id = %s
+                                """, (plain_text_content, notion_id))
+                                content_updated_count += 1
+                                logger.info(f"Updated Notion entry {notion_id} with content from TTRSS entries table for title '{title[:30]}...'")
+                    
+                    # Mark TTRSS entries as synced
+                    cur.execute(f"""
+                        UPDATE {SYNC_TABLE}
+                        SET synced_to_notion = TRUE,
+                            last_sync = NOW(),
+                            notion_page_id = %s
+                        WHERE title = %s 
+                          AND source = 'ttrss' 
+                          AND synced_to_notion = FALSE
+                    """, (notion_page_id, title))
+                    
+                    rows_updated = cur.rowcount
+                    if rows_updated > 0:
+                        updated_count += rows_updated
+                        logger.info(f"Updated {rows_updated} TTRSS entries with title '{title[:30]}...' to synced=TRUE based on matching Notion entry")
+            
+            # 추가: 마지막 단계에서 모든 Notion 항목 중 content가 비어있는 항목 확인
+            cur.execute(f"""
+                SELECT id, title
+                FROM {SYNC_TABLE}
+                WHERE source = 'notion' AND (content IS NULL OR content = '')
+            """)
+            empty_notion_entries = cur.fetchall()
+            
+            for notion_entry in empty_notion_entries:
+                notion_id, title = notion_entry
+                
+                # ttrss_entries 테이블에서 동일한 제목의 항목 찾기
+                cur.execute(f"""
+                    SELECT content FROM {TTRSS_ENTRIES_TABLE}
+                    WHERE title = %s
+                    LIMIT 1
+                """, (title,))
+                result = cur.fetchone()
+                
+                if result and result[0]:
+                    # HTML을 텍스트로 변환
+                    plain_text_content = self.html_to_text(result[0])
+                    
+                    # Notion 항목 업데이트
+                    cur.execute(f"""
+                        UPDATE {SYNC_TABLE}
+                        SET content = %s, source = 'ttrss'
+                        WHERE id = %s
+                    """, (plain_text_content, notion_id))
+                    
+                    content_updated_count += 1
+                    logger.info(f"Final update: Notion entry {notion_id} with content from TTRSS entries for title '{title[:30]}...'")
+            
+            self.conn.commit()
+        
+        logger.info(f"Total of {updated_count} entries were marked as synced based on title matching")
+        if content_updated_count > 0:
+            logger.info(f"Total of {content_updated_count} Notion entries were updated with content from TTRSS entries")
+        return updated_count
+
     def delete_sync_entry(self, sync_id):
         """Delete an entry from the sync table"""
         with self.conn.cursor() as cur:
@@ -276,3 +458,39 @@ class DatabaseManager:
             columns = [desc[0] for desc in cur.description]
             entries = [dict(zip(columns, row)) for row in cur.fetchall()]
             return entries
+            
+    def html_to_text(self, html_content):
+        """
+        Convert HTML content to plain text format
+        
+        Args:
+            html_content (str): HTML content to convert
+            
+        Returns:
+            str: Plain text content with HTML tags removed
+        """
+        if not html_content:
+            return ""
+            
+        try:
+            # Parse HTML using BeautifulSoup
+            soup = BeautifulSoup(html_content, 'html.parser')
+            
+            # Remove script and style elements
+            for script_or_style in soup(["script", "style"]):
+                script_or_style.extract()
+                
+            # Get text and normalize whitespace
+            text = soup.get_text(separator=' ')
+            
+            # Normalize whitespace and clean up text
+            lines = (line.strip() for line in text.splitlines())
+            chunks = (phrase.strip() for line in lines for phrase in line.split("  "))
+            text = '\n'.join(chunk for chunk in chunks if chunk)
+            
+            logger.debug(f"Converted HTML content to text (length: {len(text)} chars)")
+            return text
+        except Exception as e:
+            logger.error(f"Error converting HTML to text: {e}")
+            # Return original content if conversion fails
+            return html_content
