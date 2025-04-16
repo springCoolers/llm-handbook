@@ -2,9 +2,25 @@
 Database management module for handling TTRSS database operations.
 """
 import psycopg2
-from datetime import datetime
+from datetime import datetime, timedelta
+import pytz
 from bs4 import BeautifulSoup
 from config import DB_CONFIG, TTRSS_ENTRIES_TABLE, SYNC_TABLE, logger
+
+def convert_to_kst(utc_time):
+    """Convert UTC datetime to KST (UTC+9)"""
+    if utc_time is None:
+        return None
+        
+    # If the datetime object doesn't have tzinfo, assume it's UTC
+    if utc_time.tzinfo is None:
+        utc_time = utc_time.replace(tzinfo=pytz.UTC)
+    
+    # Convert to KST (UTC+9)
+    kst = pytz.timezone('Asia/Seoul')
+    kst_time = utc_time.astimezone(kst)
+    
+    return kst_time
 
 class DatabaseManager:
     """Class to manage database connections and operations"""
@@ -49,6 +65,60 @@ class DatabaseManager:
     def create_sync_table(self):
         """Create a new table to sync TTRSS entries with Notion database if it doesn't exist"""
         if self.table_exists(SYNC_TABLE):
+            # Check if category, tag, ai_summary, and why_it_matters columns exist, add them if not
+            with self.conn.cursor() as cur:
+                cur.execute(f"""
+                    SELECT EXISTS (
+                        SELECT FROM information_schema.columns 
+                        WHERE table_name = '{SYNC_TABLE}' AND column_name = 'category'
+                    )
+                """)
+                category_exists = cur.fetchone()[0]
+                
+                if not category_exists:
+                    cur.execute(f"ALTER TABLE {SYNC_TABLE} ADD COLUMN category TEXT")
+                    logger.info(f"Added category column to {SYNC_TABLE}")
+                
+                cur.execute(f"""
+                    SELECT EXISTS (
+                        SELECT FROM information_schema.columns 
+                        WHERE table_name = '{SYNC_TABLE}' AND column_name = 'tag'
+                    )
+                """)
+                tag_exists = cur.fetchone()[0]
+                
+                if not tag_exists:
+                    cur.execute(f"ALTER TABLE {SYNC_TABLE} ADD COLUMN tag TEXT")
+                    logger.info(f"Added tag column to {SYNC_TABLE}")
+                    
+                # Check for ai_summary column
+                cur.execute(f"""
+                    SELECT EXISTS (
+                        SELECT FROM information_schema.columns 
+                        WHERE table_name = '{SYNC_TABLE}' AND column_name = 'ai_summary'
+                    )
+                """)
+                ai_summary_exists = cur.fetchone()[0]
+                
+                if not ai_summary_exists:
+                    cur.execute(f"ALTER TABLE {SYNC_TABLE} ADD COLUMN ai_summary TEXT")
+                    logger.info(f"Added ai_summary column to {SYNC_TABLE}")
+                    
+                # Check for why_it_matters column
+                cur.execute(f"""
+                    SELECT EXISTS (
+                        SELECT FROM information_schema.columns 
+                        WHERE table_name = '{SYNC_TABLE}' AND column_name = 'why_it_matters'
+                    )
+                """)
+                why_it_matters_exists = cur.fetchone()[0]
+                
+                if not why_it_matters_exists:
+                    cur.execute(f"ALTER TABLE {SYNC_TABLE} ADD COLUMN why_it_matters TEXT")
+                    logger.info(f"Added why_it_matters column to {SYNC_TABLE}")
+                
+                self.conn.commit()
+            
             logger.info(f"Table {SYNC_TABLE} already exists, skipping creation")
             return False
             
@@ -61,6 +131,10 @@ class DatabaseManager:
                     notion_page_id TEXT,
                     title TEXT,
                     content TEXT,
+                    category TEXT,
+                    tag TEXT,
+                    ai_summary TEXT,
+                    why_it_matters TEXT,
                     link TEXT,
                     published TIMESTAMP,
                     updated TIMESTAMP,
@@ -86,7 +160,7 @@ class DatabaseManager:
             return schema
             
     def get_ttrss_entries(self):
-        """Get all entries from ttrss_entries table"""
+        """Get all entries from ttrss_entries table with timestamps converted to KST"""
         with self.conn.cursor() as cur:
             cur.execute(f"""
                 SELECT id, title, link, updated, content, date_entered, date_updated, author
@@ -94,22 +168,50 @@ class DatabaseManager:
                 ORDER BY date_updated DESC
             """)
             columns = [desc[0] for desc in cur.description]
-            entries = [dict(zip(columns, row)) for row in cur.fetchall()]
-            logger.info(f"Retrieved {len(entries)} entries from {TTRSS_ENTRIES_TABLE}")
+            entries = []
+            
+            for row in cur.fetchall():
+                entry = dict(zip(columns, row))
+                
+                # Convert datetime fields to KST
+                if 'date_entered' in entry and entry['date_entered']:
+                    entry['date_entered'] = convert_to_kst(entry['date_entered'])
+                if 'date_updated' in entry and entry['date_updated']:
+                    entry['date_updated'] = convert_to_kst(entry['date_updated'])
+                if 'updated' in entry and entry['updated']:
+                    entry['updated'] = convert_to_kst(entry['updated'])
+                    
+                entries.append(entry)
+                
+            logger.info(f"Retrieved {len(entries)} entries from {TTRSS_ENTRIES_TABLE} (timestamps converted to KST)")
             return entries
             
     def get_sync_entries(self):
-        """Get all entries from the sync table"""
+        """Get all entries from the sync table with timestamps converted to KST"""
         with self.conn.cursor() as cur:
             cur.execute(f"""
-                SELECT id, ttrss_entry_id, notion_page_id, title, content, link, 
+                SELECT id, ttrss_entry_id, notion_page_id, title, content, category, tag, ai_summary, why_it_matters, link, 
                        published, updated, source, synced_to_notion, last_sync
                 FROM {SYNC_TABLE}
                 ORDER BY updated DESC
             """)
             columns = [desc[0] for desc in cur.description]
-            entries = [dict(zip(columns, row)) for row in cur.fetchall()]
-            logger.info(f"Retrieved {len(entries)} entries from {SYNC_TABLE}")
+            entries = []
+            
+            for row in cur.fetchall():
+                entry = dict(zip(columns, row))
+                
+                # Convert datetime fields to KST
+                if 'published' in entry and entry['published']:
+                    entry['published'] = convert_to_kst(entry['published'])
+                if 'updated' in entry and entry['updated']:
+                    entry['updated'] = convert_to_kst(entry['updated'])
+                if 'last_sync' in entry and entry['last_sync']:
+                    entry['last_sync'] = convert_to_kst(entry['last_sync'])
+                    
+                entries.append(entry)
+                
+            logger.info(f"Retrieved {len(entries)} entries from {SYNC_TABLE} (timestamps converted to KST)")
             return entries
             
     def check_duplicate_entry(self, entry, source):
@@ -164,17 +266,25 @@ class DatabaseManager:
             
         # Convert HTML content to plain text
         plain_text_content = self.html_to_text(entry['content'])
+        
+        # Extract category and tag if available
+        category = entry.get('category', '')
+        tag = entry.get('tag', '')
             
         with self.conn.cursor() as cur:
             cur.execute(f"""
                 INSERT INTO {SYNC_TABLE} 
-                (ttrss_entry_id, title, content, link, published, updated, source)
-                VALUES (%s, %s, %s, %s, %s, %s, %s)
+                (ttrss_entry_id, title, content, category, tag, ai_summary, why_it_matters, link, published, updated, source)
+                VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
                 RETURNING id
             """, (
                 entry['id'], 
                 entry['title'],
                 plain_text_content,
+                category,
+                tag,
+                entry.get('ai_summary', ''),
+                entry.get('why_it_matters', ''),
                 entry['link'],
                 entry['date_entered'],
                 entry['date_updated'],
@@ -186,12 +296,14 @@ class DatabaseManager:
             return new_id
             
     def add_notion_entry_to_sync(self, entry):
-        """Add a Notion entry to the sync table if it doesn't exist already"""
+        """Add a Notion entry to the sync table, replacing any existing entry with the same title and URL"""
         # Check for duplicates first
         existing_entry = self.check_duplicate_entry(entry, 'notion')
+        
+        # If duplicate exists, delete it to replace with the new entry from Notion
         if existing_entry:
-            logger.info(f"Skipping duplicate Notion entry: {entry['notion_page_id']} (title: {entry['title']})")
-            return existing_entry['id']
+            logger.info(f"Found duplicate entry: {existing_entry['id']} (title: {entry['title']}). Replacing with Notion data.")
+            self.delete_sync_entry(existing_entry['id'])
             
         # Check if content is empty and try to find matching TTRSS entry for content
         if not entry.get('content') or entry.get('content') == "":
@@ -230,13 +342,17 @@ class DatabaseManager:
         with self.conn.cursor() as cur:
             cur.execute(f"""
                 INSERT INTO {SYNC_TABLE} 
-                (notion_page_id, title, content, link, published, updated, source, synced_to_notion)
-                VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
+                (notion_page_id, title, content, category, tag, ai_summary, why_it_matters, link, published, updated, source, synced_to_notion)
+                VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
                 RETURNING id
             """, (
                 entry['notion_page_id'],
                 entry['title'],
                 entry['content'],
+                entry.get('category', ''),
+                entry.get('tag', ''),
+                entry.get('ai_summary', ''),
+                entry.get('why_it_matters', ''),
                 entry['link'],
                 entry['published'],
                 entry['updated'],
@@ -459,6 +575,135 @@ class DatabaseManager:
             entries = [dict(zip(columns, row)) for row in cur.fetchall()]
             return entries
             
+    def update_ttrss_entries_in_sync(self):
+        """
+        Update all TTRSS entries in the sync table with the latest data from ttrss_entries table
+        This ensures any changes in TTRSS entries are reflected in the sync table
+        
+        Returns:
+            int: Number of entries updated
+        """
+        updated_count = 0
+        
+        # Get all entries from ttrss_entries table
+        ttrss_entries = self.get_ttrss_entries()
+        
+        # Get all entries in sync table with ttrss source
+        with self.conn.cursor() as cur:
+            cur.execute(f"""
+                SELECT id, ttrss_entry_id, title, link, category, tag, ai_summary, why_it_matters, updated
+                FROM {SYNC_TABLE}
+                WHERE source = 'ttrss'
+            """)
+            sync_entries = [dict(zip([desc[0] for desc in cur.description], row)) for row in cur.fetchall()]
+        
+        # Create a dictionary of TTRSS entries by ID for faster lookup
+        ttrss_entries_dict = {entry['id']: entry for entry in ttrss_entries}
+        
+        # Update each sync entry with the latest data from TTRSS
+        for sync_entry in sync_entries:
+            ttrss_id = sync_entry['ttrss_entry_id']
+            if ttrss_id in ttrss_entries_dict:
+                ttrss_entry = ttrss_entries_dict[ttrss_id]
+                
+                # Check if the TTRSS entry has been updated since the last sync
+                if ttrss_entry['date_updated'] > sync_entry['updated']:
+                    # Convert HTML content to plain text
+                    plain_text_content = self.html_to_text(ttrss_entry['content'])
+                    
+                    # Update the sync entry with the latest data
+                    # Preserve existing category, tag, ai_summary, and why_it_matters values
+                    category = sync_entry.get('category', '')
+                    tag = sync_entry.get('tag', '')
+                    ai_summary = sync_entry.get('ai_summary', '')
+                    why_it_matters = sync_entry.get('why_it_matters', '')
+                    
+                    with self.conn.cursor() as cur:
+                        cur.execute(f"""
+                            UPDATE {SYNC_TABLE}
+                            SET title = %s,
+                                content = %s,
+                                category = %s,
+                                tag = %s,
+                                ai_summary = %s,
+                                why_it_matters = %s,
+                                link = %s,
+                                updated = %s
+                            WHERE id = %s
+                        """, (
+                            ttrss_entry['title'],
+                            plain_text_content,
+                            category,
+                            tag,
+                            ai_summary,
+                            why_it_matters,
+                            ttrss_entry['link'],
+                            ttrss_entry['date_updated'],
+                            sync_entry['id']
+                        ))
+                        updated_count += 1
+        
+        if updated_count > 0:
+            self.conn.commit()
+            logger.info(f"Updated {updated_count} TTRSS entries in sync table with latest data")
+        
+        return updated_count
+    
+    def update_notion_entry_in_sync(self, notion_entry):
+        """
+        Update a sync table entry with the latest data from Notion
+        This ensures any changes in Notion are reflected in the sync table
+        
+        Args:
+            notion_entry (dict): Notion entry data
+            
+        Returns:
+            bool: True if entry was updated, False otherwise
+        """
+        # Find the sync entry with the matching Notion page ID
+        with self.conn.cursor() as cur:
+            cur.execute(f"""
+                SELECT id, updated
+                FROM {SYNC_TABLE}
+                WHERE notion_page_id = %s
+            """, (notion_entry['notion_page_id'],))
+            result = cur.fetchone()
+            
+            if not result:
+                logger.debug(f"No sync entry found with Notion page ID: {notion_entry['notion_page_id']}")
+                return False
+            
+            sync_id, sync_updated = result
+            
+            # Always update the sync entry with the latest data from Notion
+            # as per requirement 4: "notion database에서 데이터를 수정하면, 무조건 notion database에 존재하는 데이터로 업데이트"
+            cur.execute(f"""
+                UPDATE {SYNC_TABLE}
+                SET title = %s,
+                    content = %s,
+                    category = %s,
+                    tag = %s,
+                    ai_summary = %s,
+                    why_it_matters = %s,
+                    link = %s,
+                    updated = %s,
+                    source = 'notion'
+                WHERE id = %s
+            """, (
+                notion_entry['title'],
+                notion_entry['content'],
+                notion_entry.get('category', ''),
+                notion_entry.get('tag', ''),
+                notion_entry.get('ai_summary', ''),
+                notion_entry.get('why_it_matters', ''),
+                notion_entry['link'],
+                notion_entry['updated'],
+                sync_id
+            ))
+            self.conn.commit()
+            logger.info(f"Updated sync entry {sync_id} with latest data from Notion page {notion_entry['notion_page_id']}")
+            return True
+    
     def html_to_text(self, html_content):
         """
         Convert HTML content to plain text format

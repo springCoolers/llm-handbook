@@ -93,6 +93,17 @@ class SyncManager:
         for page in tqdm(pages, desc="Processing Notion pages"):
             page_data = self.notion_manager.extract_page_data(page)
             if page_data:
+                # Get the full page content
+                page_id = page_data['notion_page_id']
+                page_content = self.notion_manager.get_page_content(page_id)
+                
+                # Update the content field with the actual page content
+                if page_content:
+                    page_data['content'] = page_content
+                    logger.info(f"Retrieved page content for {page_data['title']}: {len(page_content)} characters")
+                else:
+                    logger.warning(f"Could not retrieve page content for {page_data['title']}")
+                    
                 extracted_pages.append(page_data)
                 
         logger.info(f"Processed {len(extracted_pages)} pages from Notion database")
@@ -136,23 +147,52 @@ class SyncManager:
         Method to sync between Notion database and sync table
         Uses Notion as the source of truth:
         - Adds new Notion pages to sync table
+        - Updates existing entries with latest data from Notion
         - Removes sync records that don't exist in Notion anymore
         """
+        # Get all pages from Notion if not provided
+        if notion_pages is None:
+            notion_pages = self.check_notion_database()
+            
         # Get comparison results
         new_in_notion, missing_from_notion = self.compare_notion_with_sync(notion_pages)
         
         # Add new Notion pages to sync table
+        added_count = 0
         for page in tqdm(new_in_notion, desc="Adding new Notion pages to sync table"):
             self.db_manager.add_notion_entry_to_sync(page)
+            added_count += 1
+            
+        # Update existing entries with latest data from Notion
+        updated_count = 0
+        existing_pages = [page for page in notion_pages if page['notion_page_id'] not in [p['notion_page_id'] for p in new_in_notion]]
+        for page in tqdm(existing_pages, desc="Updating existing entries with Notion data"):
+            # Get the full page content if not already retrieved
+            if 'content' not in page or not page['content'] or page['content'] == page.get('why_it_matters', ''):
+                page_id = page['notion_page_id']
+                page_content = self.notion_manager.get_page_content(page_id)
+                
+                # Update the content field with the actual page content
+                if page_content:
+                    page['content'] = page_content
+                    logger.info(f"Retrieved page content for update {page['title']}: {len(page_content)} characters")
+                else:
+                    logger.warning(f"Could not retrieve page content for update {page['title']}")
+            
+            if self.db_manager.update_notion_entry_in_sync(page):
+                updated_count += 1
             
         # Remove sync records missing from Notion
+        removed_count = 0
         for entry in tqdm(missing_from_notion, desc="Removing orphaned sync records"):
             self.db_manager.delete_sync_entry(entry['id'])
+            removed_count += 1
             
-        logger.info(f"Added {len(new_in_notion)} new Notion pages to sync table")
-        logger.info(f"Removed {len(missing_from_notion)} orphaned sync records")
+        logger.info(f"Added {added_count} new Notion pages to sync table")
+        logger.info(f"Updated {updated_count} existing entries with latest data from Notion")
+        logger.info(f"Removed {removed_count} orphaned sync records")
         
-        return len(new_in_notion), len(missing_from_notion)
+        return added_count, updated_count, removed_count
         
     def check_ttrss_entries(self):
         """
@@ -178,19 +218,27 @@ class SyncManager:
     def sync_ttrss_to_sync_table(self, ttrss_entries=None):
         """
         Method to sync TTRSS entries to sync table
-        Never deletes from sync table even if entries are deleted from TTRSS
-        Only adds new entries from TTRSS to sync table
+        - Adds new entries from TTRSS to sync table
+        - Updates existing entries with latest data from TTRSS
+        - Never deletes from sync table even if entries are deleted from TTRSS
         """
         # Get new entries from TTRSS
         new_entries = self.compare_ttrss_with_sync(ttrss_entries)
         
         # Add new entries to sync table
+        added_count = 0
         for entry in tqdm(new_entries, desc="Adding new TTRSS entries to sync table"):
             self.db_manager.add_ttrss_entry_to_sync(entry)
+            added_count += 1
             
-        logger.info(f"Added {len(new_entries)} new TTRSS entries to sync table")
+        # Update existing entries with latest data from TTRSS
+        logger.info("Updating existing TTRSS entries in sync table with latest data")
+        updated_count = self.db_manager.update_ttrss_entries_in_sync()
+            
+        logger.info(f"Added {added_count} new TTRSS entries to sync table")
+        logger.info(f"Updated {updated_count} existing TTRSS entries in sync table")
         
-        return len(new_entries)
+        return added_count, updated_count
         
     def sync_to_notion(self):
         """
@@ -222,19 +270,24 @@ class SyncManager:
         """
         Perform a full synchronization between TTRSS, sync table, and Notion
         1. Sync Notion to sync table (Notion is source of truth)
-        2. Sync TTRSS to sync table (only add, never delete)
+           - Add new Notion pages to sync table
+           - Update existing entries with latest data from Notion
+           - Remove sync records that don't exist in Notion anymore
+        2. Sync TTRSS to sync table
+           - Add new entries from TTRSS to sync table
+           - Update existing entries with latest data from TTRSS
         3. Check for title matches and update sync status
         4. Sync new entries from sync table to Notion
         """
         # Step 1: Sync Notion to sync table
         logger.info("Step 1: Syncing Notion to sync table")
         notion_pages = self.check_notion_database()
-        added_notion, removed_notion = self.sync_notion_to_sync_table(notion_pages)
+        added_notion, updated_notion, removed_notion = self.sync_notion_to_sync_table(notion_pages)
         
         # Step 2: Sync TTRSS to sync table
         logger.info("Step 2: Syncing TTRSS to sync table")
         ttrss_entries = self.check_ttrss_entries()
-        added_ttrss = self.sync_ttrss_to_sync_table(ttrss_entries)
+        added_ttrss, updated_ttrss = self.sync_ttrss_to_sync_table(ttrss_entries)
         
         # Step 3: Check for title matches and update sync status
         logger.info("Step 3: Checking for title matches and updating sync status")
@@ -246,8 +299,10 @@ class SyncManager:
         
         return {
             "added_from_notion": added_notion,
+            "updated_from_notion": updated_notion,
             "removed_from_sync": removed_notion,
             "added_from_ttrss": added_ttrss,
+            "updated_from_ttrss": updated_ttrss,
             "updated_matches": updated_matches,
             "synced_to_notion": synced_to_notion
         }
