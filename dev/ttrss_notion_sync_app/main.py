@@ -64,8 +64,10 @@ def main():
             results = sync_manager.perform_full_sync()
             print("\nSync Summary:")
             print(f"- Added from Notion: {results['added_from_notion']}")
+            print(f"- Updated from Notion: {results['updated_from_notion']}")
             print(f"- Removed from sync table: {results['removed_from_sync']}")
             print(f"- Added from TTRSS: {results['added_from_ttrss']}")
+            print(f"- Updated from TTRSS: {results['updated_from_ttrss']}")
             print(f"- Updated matches by title: {results['updated_matches']}")
             print(f"- Synced to Notion: {results['synced_to_notion']}")
             
@@ -86,13 +88,15 @@ def main():
                     print(f"- {entry['title']} (ID: {entry['id']})")
             
         elif args.command == 'sync-notion':
-            added, removed = sync_manager.sync_notion_to_sync_table()
+            added, updated, removed = sync_manager.sync_notion_to_sync_table()
             print(f"\nAdded {added} pages from Notion to sync table.")
+            print(f"Updated {updated} existing entries with latest data from Notion.")
             print(f"Removed {removed} orphaned records from sync table.")
             
         elif args.command == 'sync-ttrss':
-            added = sync_manager.sync_ttrss_to_sync_table()
+            added, updated = sync_manager.sync_ttrss_to_sync_table()
             print(f"\nAdded {added} entries from TTRSS to sync table.")
+            print(f"Updated {updated} existing entries with latest data from TTRSS.")
             
         elif args.command == 'sync-to-notion':
             synced = sync_manager.sync_to_notion()

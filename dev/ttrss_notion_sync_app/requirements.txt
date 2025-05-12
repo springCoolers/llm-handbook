@@ -2,3 +2,4 @@ psycopg2-binary==2.9.6
 notion-client==2.0.0
 tqdm==4.65.0
 python-dotenv==1.0.0
+beautifulsoup4==4.12.2

@@ -8,7 +8,21 @@
 - Notion 데이터베이스 변경사항 추적 및 동기화 테이블 업데이트
 - 중복 항목 감지 및 처리
 - 제목 기반 항목 매칭을 통한 효율적인 동기화 상태 관리
+- RSS 피드의 HTML 내용을 텍스트로 변환하여 Notion에 저장
+- 비어있는 Notion 항목 내용 자동 채우기
 - 로깅 기능을 통한 동기화 과정 모니터링
+
+## 📚 시스템 개요
+
+이 시스템은 TTRSS에서 구독하는 RSS 피드 항목들을 Notion 데이터베이스로 자동 동기화해줍니다. 이를 통해 RSS 피드의 내용을 Notion에서 체계적으로 관리하고 참조할 수 있습니다.
+
+## 🔄 동기화 원리
+
+동기화 과정은 세 개의 주요 요소로 이루어집니다:
+
+1. **TTRSS 데이터베이스**: RSS 피드 항목이 저장되는 곳
+2. **Notion 데이터베이스**: 최종적으로 보고 관리하려는 곳
+3. **동기화 테이블(ttrss_notion_sync)**: TTRSS와 Notion 사이의 중계자 역할
 
 ## 아키텍처
 
@@ -30,7 +44,7 @@ ttrss_notion_sync_app/
 ### 1. Python 패키지 설치
 
 ```bash
-pip install psycopg2-binary notion-client tqdm python-dotenv
+pip install psycopg2-binary notion-client tqdm python-dotenv beautifulsoup4
 ```
 
 또는 제공된 requirements.txt 파일을 사용:
@@ -85,9 +99,54 @@ NOTION_DATABASE_ID=your_notion_database_id
 NOTION_API_KEY=your_notion_api_key
 ```
 
+## 🚶‍♂️ 동기화 흐름 설명
+
+### 1단계: Notion에서 동기화 테이블로
+- Notion에 있는 모든 항목은 동기화 테이블에 복사됩니다
+- Notion은 "진실의 원천(source of truth)"으로 취급됩니다
+- Notion에서 항목이 삭제되면 동기화 테이블에서도 삭제됩니다
+- Notion 항목은 `synced_to_notion = TRUE`로 설정됩니다(이미 Notion에 있으므로)
+
+### 2단계: TTRSS에서 동기화 테이블로
+- TTRSS의 새로운 항목들이 동기화 테이블에 추가됩니다
+- 이때 기본적으로 `synced_to_notion = FALSE`로 설정됩니다(아직 Notion에 동기화되지 않았으므로)
+- TTRSS에서 항목이 삭제되어도 동기화 테이블에서는 유지됩니다
+- 동기화는 일방향으로만 이루어집니다(TTRSS → 동기화 테이블)
+
+### 3단계: 제목 기반 항목 매칭
+- 동기화 테이블 내에서 동일한 제목을 가진 항목들을 찾습니다
+- Notion 항목과 동일한 제목의 TTRSS 항목을 발견하면:
+  - TTRSS 항목의 `synced_to_notion` 값을 `TRUE`로 설정합니다
+  - 이를 통해 중복 동기화를 방지합니다
+- Notion 항목의 content가 비어있고 TTRSS 항목에 content가 있으면:
+  - TTRSS의 content를 Notion 항목에 복사합니다
+  - HTML 내용을 텍스트로 변환하여 저장합니다
+  - 출처를 'ttrss'로 변경합니다
+
+### 4단계: 동기화 테이블에서 Notion으로
+- `synced_to_notion = FALSE`인 항목들만 Notion으로 동기화됩니다
+- 이전 단계에서 이미 동일 제목이 있는 항목들은 `TRUE`로 설정되었으므로 제외됩니다
+- 새로운 항목들만 Notion에 추가됩니다
+
+## 💡 주요 기능 설명
+
+### 제목 기반 매칭
+- 동일한 제목을 가진 항목들은 자동으로 매칭됩니다
+- 이를 통해 같은 내용을 중복으로 Notion에 올리지 않습니다
+
+### 내용(Content) 자동 채우기
+- Notion 항목에 내용이 비어있는 경우:
+  1. 동일 제목의 TTRSS 항목이 동기화 테이블에 있으면 그 내용을 사용합니다
+  2. 동기화 테이블에 없거나 내용이 비어있으면 원본 TTRSS 데이터베이스에서 찾습니다
+  3. HTML 내용은 읽기 쉽게 텍스트로 변환됩니다
+
+### HTML → 텍스트 변환
+- RSS 피드의 HTML 내용을 깔끔한 텍스트로 변환합니다
+- Notion에서 읽기 쉬운 형태로 표시됩니다
+
 ## 사용 방법
 
-### 전체 동기화 실행
+### 전체 동기화 실행 (권장)
 
 ```bash
 python -m ttrss_notion_sync_app.main full-sync
@@ -99,10 +158,7 @@ python -m ttrss_notion_sync_app.main full-sync
 python run_sync.py
 ```
 
-이 명령은 다음 단계를 수행합니다:
-1. Notion 데이터베이스와 동기화 테이블 간 동기화 (Notion을 기준으로)
-2. TTRSS 항목과 동기화 테이블 간 동기화 (새 항목만 추가)
-3. 동기화 테이블의 새 항목을 Notion에 동기화
+이 명령은 위에서 설명한 모든 단계(1~4)를 자동으로 수행합니다.
 
 ### Notion 데이터베이스 확인
 
@@ -146,6 +202,15 @@ python -m ttrss_notion_sync_app.main sync-ttrss
 python -m ttrss_notion_sync_app.main sync-to-notion
 ```
 
+## 🏁 이상적인 사용 시나리오
+
+1. TTRSS에서 새로운 RSS 항목들이 수신됩니다
+2. `full-sync` 명령어를 실행합니다
+3. 새 항목들이 자동으로 Notion에 추가됩니다
+4. 이미 제목이 같은 항목은 중복 추가되지 않습니다
+5. Notion의 비어있는 내용(Why it matters) 필드는 TTRSS의 내용으로 자동 채워집니다
+6. 모든 내용이 HTML이 아닌 읽기 쉬운 텍스트로 변환됩니다
+
 ## 동기화 처리 원칙
 
 1. **Notion 기준 동기화**:
@@ -165,6 +230,7 @@ python -m ttrss_notion_sync_app.main sync-to-notion
 4. **제목 기반 항목 매칭**:
    - 동일한 제목을 가진 TTRSS 항목과 Notion 항목은 자동으로 매칭됨
    - 제목이 일치하는 항목이 발견되면 TTRSS 항목의 `synced_to_notion` 상태가 `TRUE`로 업데이트됨
+   - Notion 항목의 내용이 비어있으면 TTRSS 항목의 내용으로 자동 채워짐
    - 이를 통해 중복 동기화를 방지하고 효율적인 동기화 관리 가능
 
 ## 보안 참고사항
@@ -177,5 +243,6 @@ python -m ttrss_notion_sync_app.main sync-to-notion
 - **데이터베이스 연결 오류**: 데이터베이스 호스트, 포트, 인증 정보가 올바른지 확인하세요.
 - **Notion API 오류**: API 키가 올바르고 만료되지 않았는지 확인하세요.
 - **동기화 실패**: 로그 파일을 확인하여 구체적인 오류 메시지를 확인하세요.
+- **내용이 비어있는 Notion 항목**: 전체 동기화(full-sync)를 실행하여 TTRSS 내용으로 자동 채우기를 시도하세요.
 
 자세한 사용법과 고급 설정은 `USAGE_GUIDE.md`를 참조하세요.

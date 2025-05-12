@@ -4,7 +4,9 @@ Notion API management module for handling Notion database operations.
 from notion_client import Client
 from datetime import datetime
 import json
+import pytz
 from config import NOTION_DATABASE_ID, NOTION_API_KEY, logger
+from db_manager import convert_to_kst
 
 class NotionManager:
     """Class to manage Notion API operations"""
@@ -66,6 +68,48 @@ class NotionManager:
             logger.error(f"Error getting Notion pages: {e}")
             raise
             
+    def get_page_content(self, page_id):
+        """Get the content of a Notion page by retrieving all blocks"""
+        try:
+            all_blocks = []
+            has_more = True
+            start_cursor = None
+            
+            # Retrieve all blocks from the page
+            while has_more:
+                if start_cursor:
+                    response = self.client.blocks.children.list(
+                        block_id=page_id,
+                        start_cursor=start_cursor
+                    )
+                else:
+                    response = self.client.blocks.children.list(
+                        block_id=page_id
+                    )
+                    
+                blocks = response.get('results', [])
+                all_blocks.extend(blocks)
+                has_more = response.get('has_more', False)
+                start_cursor = response.get('next_cursor')
+            
+            # Extract text content from blocks
+            content_parts = []
+            for block in all_blocks:
+                block_type = block.get('type')
+                if block_type in ['paragraph', 'heading_1', 'heading_2', 'heading_3', 'bulleted_list_item', 'numbered_list_item']:
+                    text_content = block.get(block_type, {}).get('rich_text', [])
+                    if text_content:
+                        text = " ".join([t.get('plain_text', '') for t in text_content])
+                        content_parts.append(text)
+                        
+            # Join all content parts with newlines
+            full_content = "\n\n".join(content_parts)
+            logger.info(f"Retrieved content from Notion page {page_id}: {len(full_content)} characters")
+            return full_content
+        except Exception as e:
+            logger.error(f"Error retrieving Notion page content: {e}")
+            return ""
+    
     def extract_page_data(self, page):
         """Extract relevant data from a Notion page"""
         try:
@@ -85,21 +129,47 @@ class NotionManager:
                 if url_prop.get('type') == 'url':
                     url = url_prop.get('url', '')
             
+            # Extract AI summary
+            ai_summary = ""
+            ai_summary_prop = properties.get('AI summary', properties.get('AI 요약', {}))
+            if ai_summary_prop and ai_summary_prop.get('type') == 'rich_text':
+                ai_summary = " ".join([t.get('plain_text', '') for t in ai_summary_prop.get('rich_text', [])])
+                
             # Extract content/description from "Why it matters" field
-            content = ""
-            content_prop = properties.get('Why it matters', properties.get('내용', properties.get('Description', {})))
-            if content_prop and content_prop.get('type') == 'rich_text':
-                content = " ".join([t.get('plain_text', '') for t in content_prop.get('rich_text', [])])
+            why_it_matters = ""
+            why_it_matters_prop = properties.get('Why it matters', properties.get('중요성', properties.get('내용', {})))
+            if why_it_matters_prop and why_it_matters_prop.get('type') == 'rich_text':
+                why_it_matters = " ".join([t.get('plain_text', '') for t in why_it_matters_prop.get('rich_text', [])])
+                
+            # For backward compatibility, initialize content with why_it_matters
+            # The actual page content will be fetched separately
+            content = why_it_matters
             
-            # Extract last edited time
+            # Extract Category
+            category = ""
+            category_prop = properties.get('Category', properties.get('카테고리', {}))
+            if category_prop:
+                if category_prop.get('type') == 'select' and category_prop.get('select'):
+                    category = category_prop.get('select', {}).get('name', '')
+                    
+            # Extract Tags
+            tags = []
+            tags_prop = properties.get('Tags', properties.get('태그', {}))
+            if tags_prop and tags_prop.get('type') == 'multi_select':
+                tags = [tag.get('name', '') for tag in tags_prop.get('multi_select', [])]
+            tag = ", ".join(tags) if tags else ""
+            
+            # Extract last edited time and convert to KST
             last_edited = page.get('last_edited_time', '')
             if last_edited:
                 last_edited = datetime.fromisoformat(last_edited.replace('Z', '+00:00'))
+                last_edited = convert_to_kst(last_edited)
             
-            # Extract creation time
+            # Extract creation time and convert to KST
             created_time = page.get('created_time', '')
             if created_time:
                 created_time = datetime.fromisoformat(created_time.replace('Z', '+00:00'))
+                created_time = convert_to_kst(created_time)
             
             page_id = page.get('id', '')
             
@@ -107,7 +177,11 @@ class NotionManager:
                 'notion_page_id': page_id,
                 'title': title,
                 'link': url,
-                'content': content, 
+                'content': content,
+                'category': category,
+                'tag': tag,
+                'ai_summary': ai_summary,
+                'why_it_matters': why_it_matters,
                 'updated': last_edited,
                 'published': created_time
             }
@@ -146,6 +220,44 @@ class NotionManager:
                     "checkbox": False
                 }
             }
+            
+            # Add Category if available
+            if entry.get('category'):
+                properties["Category"] = {
+                    "select": {
+                        "name": entry['category']
+                    }
+                }
+                
+            # Add Tags if available
+            if entry.get('tag'):
+                tags = [tag.strip() for tag in entry['tag'].split(',') if tag.strip()]
+                if tags:
+                    properties["Tags"] = {
+                        "multi_select": [{
+                            "name": tag
+                        } for tag in tags]
+                    }
+                    
+            # Add AI summary if available
+            if entry.get('ai_summary'):
+                properties["AI summary"] = {
+                    "rich_text": [{
+                        "text": {
+                            "content": entry['ai_summary']
+                        }
+                    }]
+                }
+                
+            # Add Why it matters if available
+            if entry.get('why_it_matters'):
+                properties["Why it matters"] = {
+                    "rich_text": [{
+                        "text": {
+                            "content": entry['why_it_matters']
+                        }
+                    }]
+                }
             
             # Split content into paragraphs for better formatting
             paragraphs = []
