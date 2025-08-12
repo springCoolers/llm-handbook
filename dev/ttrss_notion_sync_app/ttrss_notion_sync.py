@@ -12,7 +12,7 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 logger = logging.getLogger(__name__)
 
 # Database connection parameters
-DB_HOST = "222.110.59.179"
+DB_HOST = "220.71.24.114"
 DB_PORT = "5432"
 DB_NAME = "ttrss"
 DB_USER = "ttrss"
