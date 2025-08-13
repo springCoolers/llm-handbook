@@ -77,12 +77,12 @@ parts:
 
 - caption: Contributior Introduction
   chapters:
-  - file: _contents/llm-engineering/contributor_introduction/intro
+  - file: _contents/llm-engineering/contributor_introduction/intro.md
     sections:
     - glob: _contents/llm-engineering/contributor_introduction/sections/**
 
 - caption: Contribution Guide
   chapters:
-  - file: _contents/contribution_intro/contribution-guide/intro
+  - file: _contents/contribution_intro/contribution-guide/intro.md
     sections:
     - glob: _contents/contribution_intro/contribution-guide/sections/**
