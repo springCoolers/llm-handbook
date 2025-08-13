@@ -73,6 +73,12 @@ parts:
     sections:
     - glob: _contents/llm-engineering/Newly Discovered/sections/**
 
+- caption: Contributior Introduction
+  chapters:
+  - file: _contents/llm-engineering/contributor_introduction/intro
+    sections:
+    - glob: _contents/llm-engineering/contributor_introduction/sections/**
+
 - caption: Contribution Guide
   chapters:
   - file: _contents/contribution_intro/contribution-guide/intro
