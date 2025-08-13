@@ -73,6 +73,7 @@ parts:
     - glob: _contents/llm-engineering/12. Extra materials/sections/**
     
 - caption: LLM Engineering 심화
+  chapters:
   - file: _contents/llm-engineering/MCP/MCP.md
     sections:
     - glob: _contents/llm-engineering/MCP/sections/**
@@ -92,6 +93,12 @@ parts:
   - file: _contents/llm-engineering/Voice Processing/Voice Processing.md
     sections:
     - glob: _contents/llm-engineering/Voice Processing/sections/**
+
+- caption: LLM Engineering - 더 심화
+  chapters:
+  - file: _contents/llm-engineering/Future Tech/Future Tech.md
+    sections:
+    - glob: _contents/llm-engineering/Future Tech/sections/**
 
 - caption: 컨트리뷰션 가이드
   chapters:
