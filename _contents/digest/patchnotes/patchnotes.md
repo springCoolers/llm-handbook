@@ -4,6 +4,15 @@
 LLM 테크의 주요 변경사항을 한 눈에 확인할 수 있습니다. 
 
 
-예시) 
-MCP - 
-Claude code - Hook/Plan 모드가 Update되었습니다.  
+형식 예시
+
+**8/41일** 
+
+MCP 단원 - “유용한 MCP 서버”  - “윈도우즈 MCP 서버 플러그인”이 추가되었습니다.  (링크)
+Foundation Model 소개 단원 - OpenAI/GPT 섹션 - “GPT 3.5 - 더 이상 서비스되지 않음” 이유로 아카이브 되었습니다 (링크) 
+
+---
+
+**7/99일** 
+
+MCP - Claude code - Hook/Plan 모드가 Update되었습니다.  (링크) 
