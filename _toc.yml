@@ -9,7 +9,6 @@ parts:
   - file: _contents/digest/weeklynews/weeklynews.md 
   - file: _contents/digest/patchnotes/patchnotes.md 
 
-
 - caption: LLM Engineering 기초
   chapters:
   - file: _contents/llm-engineering/0. Prologue - What is LLM/0. Prologue - What is LLM.md
