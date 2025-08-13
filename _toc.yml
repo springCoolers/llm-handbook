@@ -6,15 +6,11 @@ root: _contents/intro
 parts:
 - caption: 다이제스트
   chapters:
-  - file: _contents/digest/weekly/Weekly Update: intro.md 
+  - file: _contents/digest/weekly/한 주 요약.md 
     sections:
     - glob: _contents/digest/weekly/sections/**
 
-  - file: _contents/digest/weekly/Montly Report: intro.md 
-    sections:
-    - glob: _contents/digest/weekly/sections/**
-
-  - file: _contents/digest/changelog/Patch Notes: intro.md 
+  - file: _contents/digest/changelog/Patchnotes.md 
     sections:
     - glob: _contents/digest/changelog/sections/**
 
