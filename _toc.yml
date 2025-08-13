@@ -77,6 +77,6 @@ parts:
 
 - caption: Contributor Guide
   chapters:
-  - file: _contents/contribution-intro/intro.md
+  - file: _contents/contribution-guide/intro.md
     sections:
-    - glob: _contents/contribution_intro/sections/**
+    - glob: _contents/contribution-guide/sections/**
