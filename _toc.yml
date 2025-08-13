@@ -69,9 +69,9 @@ parts:
 
 - caption: Newly Discovered
   chapters:
-  - file: _contents/llm-engineering/Future Tech/Future Tech.md
+  - file: _contents/llm-engineering/Newly Discovered/Newly Discovered.md
     sections:
-    - glob: _contents/llm-engineering/Future Tech/sections/**
+    - glob: _contents/llm-engineering/Newly Discovered/sections/**
 
 - caption: Contribution Guide
   chapters:
