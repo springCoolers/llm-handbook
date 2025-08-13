@@ -66,8 +66,6 @@ parts:
 - caption: Advanced
   chapters:
   - file: _contents/llm-engineering/MCP/MCP.md
-    sections:
-    - glob: _contents/llm-engineering/MCP/sections/**
 
 - caption: Newly Discovered
   chapters:
