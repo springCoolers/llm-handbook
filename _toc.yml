@@ -70,22 +70,6 @@ parts:
     sections:
     - glob: _contents/llm-engineering/MCP/sections/**
 
-  - file: _contents/llm-engineering/A2A/A2A.md
-    sections:
-    - glob: _contents/llm-engineering/A2A/sections/**
-
-  - file: _contents/llm-engineering/Prompt Engineering - Advanced/Prompt Engineering - Advanced.md
-    sections:
-    - glob: _contents/llm-engineering/Prompt Engineering - Advanced/sections/**
-
-  - file: _contents/llm-engineering/RAG - Advanced/RAG - Advanced.md
-    sections:
-    - glob: _contents/llm-engineering/RAG - Advanced/sections/**
-
-  - file: _contents/llm-engineering/Voice Processing/Voice Processing.md
-    sections:
-    - glob: _contents/llm-engineering/Voice Processing/sections/**
-
 - caption: LLM Engineering - 더 심화
   chapters:
   - file: _contents/llm-engineering/Future Tech/Future Tech.md
