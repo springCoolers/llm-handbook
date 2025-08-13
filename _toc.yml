@@ -10,9 +10,9 @@ parts:
     sections:
     - glob: _contents/digest/weekly/sections/**
 
-  - file: _contents/digest/changelog/Patchnotes.md 
+  - file: _contents/digest/patchnotes/patchnotes.md 
     sections:
-    - glob: _contents/digest/changelog/sections/**
+    - glob: _contents/digest/patchnotes/sections/**
 
 - caption: LLM Engineering 기초
   chapters:
