@@ -64,19 +64,19 @@ parts:
     sections:
     - glob: _contents/llm-engineering/12. Extra materials/sections/**
     
-- caption: LLM Engineering 심화
+- caption: Advanced
   chapters:
   - file: _contents/llm-engineering/MCP/MCP.md
     sections:
     - glob: _contents/llm-engineering/MCP/sections/**
 
-- caption: LLM Engineering - 더 심화
+- caption: Newly Discovered
   chapters:
   - file: _contents/llm-engineering/Future Tech/Future Tech.md
     sections:
     - glob: _contents/llm-engineering/Future Tech/sections/**
 
-- caption: 컨트리뷰션 가이드
+- caption: Contribution Guide
   chapters:
   - file: _contents/contribution_intro/contribution-guide/intro
     sections:
