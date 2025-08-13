@@ -7,12 +7,8 @@ parts:
 - caption: 다이제스트
   chapters:
   - file: _contents/digest/weeklynews/weeklynews.md 
-    sections:
-    - glob: _contents/digest/weeklynews/sections/**
-
   - file: _contents/digest/patchnotes/patchnotes.md 
-    sections:
-    - glob: _contents/digest/patchnotes/sections/**
+
 
 - caption: LLM Engineering 기초
   chapters:
